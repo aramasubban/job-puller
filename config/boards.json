@@ -192,44 +192,38 @@
     ]
   },
   {
-    "provider": "official_html",
+    "provider": "apple_api",
     "company": "Apple",
     "slug": "apple",
-    "list_urls": [
-      "https://jobs.apple.com/en-us/search?location=united-states-USA&team=mechanical-engineering-HRDWR-ME&page=1",
-      "https://jobs.apple.com/en-us/search?location=united-states-USA&team=mechanical-engineering-HRDWR-ME&page=2"
+    "search_terms": [
+      "mechanical",
+      "manufacturing",
+      "hardware",
+      "battery",
+      "robotics"
     ],
-    "link_fragment": "/en-us/details/"
+    "pages_per_query": 2
   },
   {
-    "provider": "official_html",
+    "provider": "tesla_api",
     "company": "Tesla",
-    "slug": "tesla",
-    "list_urls": [
-      "https://www.tesla.com/careers/search/?country=US&location=Fremont&region=5&state=CA",
-      "https://www.tesla.com/careers/search/?country=US&location=Palo%20Alto&region=5&state=CA"
-    ],
-    "link_fragment": "/careers/search/job/"
+    "slug": "tesla"
   },
   {
-    "provider": "official_html",
+    "provider": "google_sitemap",
     "company": "Google",
     "slug": "google",
-    "list_urls": [
-      "https://www.google.com/about/careers/applications/jobs/results/?q=Mechanical%20Engineer",
-      "https://www.google.com/about/careers/applications/jobs/results/?q=Manufacturing%20Engineer",
-      "https://www.google.com/about/careers/applications/jobs/results/?q=Hardware%20Engineer"
-    ],
-    "link_fragment": "/about/careers/applications/jobs/results/"
+    "max_details": 45
   },
   {
-    "provider": "official_html",
+    "provider": "microsoft_eightfold",
     "company": "Microsoft",
     "slug": "microsoft",
-    "list_urls": [
-      "https://careers.microsoft.com/v2/global/en/search.html?query=mechanical%20engineer",
-      "https://careers.microsoft.com/v2/global/en/search.html?query=manufacturing%20engineer"
-    ],
-    "link_fragment": "/v2/global/en/job/"
+    "search_terms": [
+      "mechanical",
+      "manufacturing",
+      "hardware",
+      "robotics"
+    ]
   }
 ]
