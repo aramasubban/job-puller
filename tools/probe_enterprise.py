@@ -25,3 +25,32 @@ probe('TESLA','https://www.tesla.com/cua-api/apps/careers/state')
 probe('APPLE','https://jobs.apple.com/api/v1/search',{'query':'mechanical','filters':{},'page':1,'locale':'en-us','sort':'','format':{}})
 probe('MICROSOFT','https://apply.careers.microsoft.com/api/pcsx/search?'+urlencode({'query':'mechanical','location':'California','start':'0','size':'20'}))
 probe('GOOGLE_SITEMAP','https://careers.google.com/sitemap.xml')
+
+
+# Short shape diagnostics for the APIs we can read (do not log full descriptions)
+import re
+from urllib.error import HTTPError
+def read(url,body=None):
+ req=Request(url,data=None if body is None else json.dumps(body).encode(),headers={'User-Agent':'Mozilla/5.0 (compatible; BayAreaJobTracker/1.0)','Accept':'application/json, text/html, text/plain'})
+ try:
+  with urlopen(req,timeout=20) as r:return r.status,r.read(9000000).decode('utf-8','replace')
+ except HTTPError as e:return e.code,e.read(600).decode('utf-8','replace')
+for term in ('mechanical engineer','mechanical'):
+ status,body=read('https://jobs.apple.com/api/v1/search',{'query':term,'filters':{},'page':1,'locale':'en-us','sort':'','format':{'longDate':'MMMM D, YYYY','mediumDate':'MMM D, YYYY'}})
+ if status==200:
+  o=json.loads(body)['res'];print('APPLE_TERM',term,'total',o.get('totalRecords'),'fields',list(o['searchResults'][0]),'first',[(p.get('postingTitle'),p.get('jobTitle'),p.get('title'),p.get('id')) for p in o['searchResults'][:4]])
+  if o['searchResults']:
+   p=o['searchResults'][0];print('APPLE_JOB',str({k:v for k,v in p.items() if k not in ('jobSummary','jobDescription')})[:1700])
+status,body=read('https://apply.careers.microsoft.com/careers')
+print('MS_HOME',status,'group',re.findall(r'_EF_GROUP_ID\\s*=\\s*["\\\']([^"\\\']+)',body)[:4],'bytes',len(body))
+for grp in ('microsoft.com','microsoft',''):
+ params={'start':'0','query':'mechanical','sort_by':'relevance'}
+ if grp:params['domain']=grp
+ status,body=read('https://apply.careers.microsoft.com/api/pcsx/search?'+urlencode(params))
+ print('MS_SEARCH',grp,status,body[:550])
+for url in ('https://careers.google.com/jobs/sitemap','https://careers.google.com/sitemap.txt'):
+ status,body=read(url)
+ print('GOOGLE_MAP',url,status,'bytes',len(body),'head',body[:350].replace('\\n',' '),'count',body.count('https://'))
+for u in ('https://www.tesla.com/cua-api/careers/job/273339','https://www.tesla.com/cua-api/apps/careers/state?country=US'):
+ status,body=read(u)
+ print('TESLA_API',u,status,body[:140])
