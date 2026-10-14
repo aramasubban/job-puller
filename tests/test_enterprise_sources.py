@@ -38,7 +38,7 @@ class EnterpriseAPITests(unittest.TestCase):
   with patch('src.enterprise_sources._request',return_value=__import__('json').dumps(payload)):
    out=fetch_tesla({},ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
   self.assertEqual(len(out),1)
-  self.assertIn('/273339',out[0]['url'])
+  self.assertTrue(out[0]['url'].endswith('-273339'))
  def test_tesla_refusal_is_error(self):
   with patch('src.enterprise_sources._request',side_effect=PermissionError('HTTP 403')):
    with self.assertRaises(PermissionError):
