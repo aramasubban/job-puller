@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.env.*
+*.pyc
+.DS_Store
+*.log
+secrets*
+*credentials*.json
+*token*.json
+*resume*.pdf
