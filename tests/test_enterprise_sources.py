@@ -4,7 +4,7 @@ from src.enterprise_sources import (
   _apple_record, _ms_location, google_job_detail, fetch_tesla,
   fetch_apple, fetch_microsoft, fetch_google
 )
-from src.puller import ROLE_PATTERN, SENIOR, NON_ENGINEERING, BAY_AREA, qualifies
+from src.puller import ROLE_PATTERN, SENIOR, NON_ENGINEERING, BAY_AREA, qualifies, stable_external_id
 class EnterpriseAPITests(unittest.TestCase):
  def test_apple_record_official_link_and_locations(self):
   x={'positionId':'200687631','postingTitle':'Mechanical Product Design Engineer',
@@ -32,6 +32,12 @@ class EnterpriseAPITests(unittest.TestCase):
   self.assertTrue(qualifies({**r,'company':'Google'}))
  def test_google_unparsable_detail_is_not_invented(self):
   self.assertIsNone(google_job_detail('<h2>Mechanical Engineer</h2> no location','https://careers.google.com/jobs/results/123/',ROLE_PATTERN))
+ def test_apple_ids_distinct_for_same_title_slug(self):
+  a='https://jobs.apple.com/en-us/details/200681605/advanced-manufacturing-engineer-watch'
+  b='https://jobs.apple.com/en-us/details/200661437/advanced-manufacturing-engineer-watch'
+  source={'provider':'apple_api'}
+  self.assertNotEqual(stable_external_id(source,a),stable_external_id(source,b))
+  self.assertEqual(stable_external_id(source,a),'200681605')
  def test_tesla_state_fields(self):
   payload={'lookup':{'locations':{'33':'Fremont, California'}},
            'listings':[{'id':'273339','t':'Mechanical Design Engineer, Automation','l':'33'}]}
