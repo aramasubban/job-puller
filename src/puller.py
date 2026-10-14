@@ -20,6 +20,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlsplit
 from src.enrichment import enrich, SECTOR_COMPANIES, SECTOR_TITLES
 from src.direct_employers import fetch_official_html, fetch_workday
+from src.enterprise_sources import fetch_apple, fetch_microsoft, fetch_google, fetch_tesla
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -229,6 +230,24 @@ def parse_board(src, payload):
 
 def fetch_source(src):
     p=src["provider"]
+    if p in ('apple_api','microsoft_eightfold','google_sitemap','tesla_api'):
+        getter={'apple_api':fetch_apple,'microsoft_eightfold':fetch_microsoft,
+                'google_sitemap':fetch_google,'tesla_api':fetch_tesla}[p]
+        items=getter(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
+        rows=[]
+        for item in items:
+            title=item['title'];description=plain(item.get('description',''))
+            rec={'id':source_key(src)+':'+urlsplit(item['url']).path.strip('/').split('/')[-1],
+                 'company':src['company'],'title':title,'category':role_family(title),
+                 'location':item['location'],'workstyle':'Unknown',
+                 'employment':item.get('employment','Unspecified'),
+                 'experience_fit':experience_fit(title,description),
+                 'salary':str(item.get('salary') or ''),'posted':item.get('posted',''),
+                 'apply_url':item['url'],'source_url':item['url'],'source':source_key(src)}
+            if qualifies({**rec,'description':description}):
+                enriched=enrich(rec,description)
+                if enriched is not None:rows.append(enriched)
+        return rows
     if p in ('workday','official_html'):
         if p=='workday':
             items,detail=fetch_workday(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
@@ -279,7 +298,7 @@ def run():
             try:
                 results = fut.result()
                 successful.append(key)
-                source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html") else "OK","matching":len(results)})
+                source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results)})
                 for job in results:
                     job["last_seen"] = now
                     found[job["id"]] = job
