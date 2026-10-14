@@ -1,0 +1,235 @@
+[
+  {
+    "provider": "ashby",
+    "slug": "applied",
+    "company": "Applied Intuition"
+  },
+  {
+    "provider": "ashby",
+    "slug": "cobot",
+    "company": "Collaborative Robotics"
+  },
+  {
+    "provider": "ashby",
+    "slug": "coram-ai",
+    "company": "Coram AI"
+  },
+  {
+    "provider": "ashby",
+    "slug": "gritt",
+    "company": "Gritt Robotics"
+  },
+  {
+    "provider": "ashby",
+    "slug": "genesis",
+    "company": "Genesis"
+  },
+  {
+    "provider": "ashby",
+    "slug": "glacier",
+    "company": "Glacier"
+  },
+  {
+    "provider": "ashby",
+    "slug": "gradientrobotics",
+    "company": "Gradient Robotics"
+  },
+  {
+    "provider": "ashby",
+    "slug": "specter",
+    "company": "Specter"
+  },
+  {
+    "provider": "ashby",
+    "slug": "maticrobots",
+    "company": "Matic"
+  },
+  {
+    "provider": "ashby",
+    "slug": "eightsleep",
+    "company": "Eight Sleep"
+  },
+  {
+    "provider": "ashby",
+    "slug": "impulse",
+    "company": "Impulse Labs"
+  },
+  {
+    "provider": "ashby",
+    "slug": "american-turbines",
+    "company": "American Turbines"
+  },
+  {
+    "provider": "ashby",
+    "slug": "tar",
+    "company": "TAR"
+  },
+  {
+    "provider": "ashby",
+    "slug": "aurora-operations-inc",
+    "company": "Aurora"
+  },
+  {
+    "provider": "ashby",
+    "slug": "rhoda-ai",
+    "company": "Rhoda AI"
+  },
+  {
+    "provider": "ashby",
+    "slug": "watney",
+    "company": "Watney"
+  },
+  {
+    "provider": "ashby",
+    "slug": "openai",
+    "company": "OpenAI"
+  },
+  {
+    "provider": "ashby",
+    "slug": "cerebras",
+    "company": "Cerebras"
+  },
+  {
+    "provider": "ashby",
+    "slug": "aerovect",
+    "company": "AeroVect"
+  },
+  {
+    "provider": "ashby",
+    "slug": "westmag",
+    "company": "Western Magnetics"
+  },
+  {
+    "provider": "ashby",
+    "slug": "human-computer-lab",
+    "company": "Human Computer Lab"
+  },
+  {
+    "provider": "ashby",
+    "slug": "foundry-robotics",
+    "company": "Foundry Robotics"
+  },
+  {
+    "provider": "ashby",
+    "slug": "dexmate",
+    "company": "Dexmate"
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "pacificfusion",
+    "company": "Pacific Fusion"
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "atomicmachines",
+    "company": "Atomic Machines"
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "atoms",
+    "company": "Atoms"
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "pebblelife",
+    "company": "Pebble"
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "fulfil",
+    "company": "Fulfil"
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "doordashusa",
+    "company": "DoorDash"
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "deterrencedefenseinc",
+    "company": "Deterrence Defense"
+  },
+  {
+    "provider": "workday",
+    "company": "NVIDIA",
+    "host": "nvidia.wd5.myworkdayjobs.com",
+    "tenant": "nvidia",
+    "site": "NVIDIAExternalCareerSite",
+    "search_terms": [
+      "mechanical",
+      "manufacturing",
+      "product design",
+      "robotics",
+      "hardware",
+      "quality",
+      "thermal"
+    ]
+  },
+  {
+    "provider": "workday",
+    "company": "Intel",
+    "host": "intel.wd1.myworkdayjobs.com",
+    "tenant": "intel",
+    "site": "External",
+    "search_terms": [
+      "mechanical",
+      "manufacturing",
+      "equipment",
+      "packaging",
+      "reliability"
+    ]
+  },
+  {
+    "provider": "workday",
+    "company": "Adobe",
+    "host": "adobe.wd5.myworkdayjobs.com",
+    "tenant": "adobe",
+    "site": "external_experienced",
+    "search_terms": [
+      "mechanical",
+      "hardware",
+      "manufacturing"
+    ]
+  },
+  {
+    "provider": "official_html",
+    "company": "Apple",
+    "slug": "apple",
+    "list_urls": [
+      "https://jobs.apple.com/en-us/search?location=united-states-USA&team=mechanical-engineering-HRDWR-ME&page=1",
+      "https://jobs.apple.com/en-us/search?location=united-states-USA&team=mechanical-engineering-HRDWR-ME&page=2"
+    ],
+    "link_fragment": "/en-us/details/"
+  },
+  {
+    "provider": "official_html",
+    "company": "Tesla",
+    "slug": "tesla",
+    "list_urls": [
+      "https://www.tesla.com/careers/search/?country=US&location=Fremont&region=5&state=CA",
+      "https://www.tesla.com/careers/search/?country=US&location=Palo%20Alto&region=5&state=CA"
+    ],
+    "link_fragment": "/careers/search/job/"
+  },
+  {
+    "provider": "official_html",
+    "company": "Google",
+    "slug": "google",
+    "list_urls": [
+      "https://www.google.com/about/careers/applications/jobs/results/?q=Mechanical%20Engineer",
+      "https://www.google.com/about/careers/applications/jobs/results/?q=Manufacturing%20Engineer",
+      "https://www.google.com/about/careers/applications/jobs/results/?q=Hardware%20Engineer"
+    ],
+    "link_fragment": "/about/careers/applications/jobs/results/"
+  },
+  {
+    "provider": "official_html",
+    "company": "Microsoft",
+    "slug": "microsoft",
+    "list_urls": [
+      "https://careers.microsoft.com/v2/global/en/search.html?query=mechanical%20engineer",
+      "https://careers.microsoft.com/v2/global/en/search.html?query=manufacturing%20engineer"
+    ],
+    "link_fragment": "/v2/global/en/job/"
+  }
+]
