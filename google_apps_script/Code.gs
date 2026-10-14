@@ -7,7 +7,7 @@ const HEADERS=['POSTING ↗','Company','Match / 100','Annual base pay','Pay chec
 const STATUS=['Not Applied','Applied','Interviewing','Offer','Rejected','Not Interested'];
 function book_(){return SpreadsheetApp.openById(SHEET_ID)}
 function tab_(s){const b=book_();return b.getSheetByName(s)||b.insertSheet(s)}
-function onOpen(){SpreadsheetApp.getUi().createMenu('Job Puller').addItem('Sync now','syncJobs').addItem('Activate daily sync','activateTracker').addItem('Set up tracker','setupTracker').addItem('Organize applications','refreshApplyNext_').addToUi()}
+function onOpen(){SpreadsheetApp.getUi().createMenu('Job Puller').addItem('Sync now','syncJobs').addItem('Activate tracker','activateTracker').addItem('Set up tracker','setupTracker').addItem('Organize applications','refreshApplyNext_').addToUi()}
 function safe_(x){const t=String(x==null?'':x);return /^[=+@]/.test(t)?"'"+t:t}
 function link_(u,t){return /^https:\/\/[A-Za-z0-9.-]+\//.test(u||'')?'=HYPERLINK("'+String(u).replace(/"/g,'""')+'","'+String(t).replace(/"/g,'""')+'")':safe_(t)}
 function header_(s,h){s.getRange(1,1,1,h.length).setValues([h]).setBackground('#13223A').setFontColor('white').setFontWeight('bold');s.setFrozenRows(1);s.setRowHeight(1,40)}
@@ -52,7 +52,7 @@ function archived_(r){return ['Applied','Interviewing','Offer','Rejected'].inclu
 function writeRows_(s,rows){
  const old=Math.max(0,s.getLastRow()-1);header_(s,HEADERS);
  if(rows.length>=s.getMaxRows())s.insertRowsAfter(s.getMaxRows(),rows.length-s.getMaxRows()+1);
- const output=rows.map(r=>{const x=r.slice();x[0]=link_(x[17],x[0]);return x});
+ const output=rows.map(r=>{const x=r.slice();x[0]=String(x[0]).startsWith('=HYPERLINK(')?x[0]:link_(x[17],x[0]);return x});
  if(output.length)s.getRange(2,1,output.length,24).setValues(output);
  if(old>output.length)s.getRange(output.length+2,1,old-output.length,24).clearContent();
  if(s.getFilter())s.getFilter().remove();s.getRange(1,1,Math.max(2,output.length+1),24).createFilter();
@@ -64,9 +64,10 @@ function writeRows_(s,rows){
 function writeSplit_(rows){
  const unique=new Map(rows.filter(r=>r[18]).map(r=>[String(r[18]),r]));
  const all=Array.from(unique.values());
+ writeRows_(tab_('Applied'),all.filter(archived_).sort((a,b)=>Number(new Date(b[9]||0))-Number(new Date(a[9]||0))));
  writeRows_(tab_('Jobs'),all.filter(r=>!archived_(r)).sort((a,b)=>Number(b[2])-Number(a[2])));
- writeRows_(tab_('Applied'),all.filter(archived_).sort((a,b)=>String(b[9]).localeCompare(String(a[9]))));
  const legacy=book_().getSheetByName('Apply Next');if(legacy)book_().deleteSheet(legacy);
+ book_().setActiveSheet(tab_('Applied'));book_().moveActiveSheet(2);
 }
 // Keep the old function name compatible with existing menus/triggers.
 function refreshApplyNext_(){writeSplit_(readRows_(tab_('Jobs')).concat(readRows_(tab_('Applied'))))}
@@ -74,7 +75,7 @@ function buildDashboard_(){
  const s=tab_('Dashboard');s.getRange('A1:L26').getMergedRanges().forEach(x=>x.breakApart());s.clearContents();
  s.getRange('A1:L2').merge().setValue('BAY AREA  /  ENGINEERING JOB SEARCH').setBackground('#13223A').setFontColor('white').setFontWeight('bold').setFontSize(19);
  s.getRange('A3:L3').merge().setValue('MECHANICAL • ROBOTICS • BATTERY / EV • MANUFACTURING EQUIPMENT  |  MAY 2027').setBackground('#EAF3F4');
- const cards=[['A5:C5','A6:C8','OPEN POSITIONS','=COUNTIF(Jobs!M2:M,"Open")+COUNTIF(Applied!M2:M,"Open")'],['D5:F5','D6:F8','READY TO APPLY','=COUNTIFS(Jobs!F2:F,"Not Applied",Jobs!M2:M,"Open")'],['G5:I5','G6:I8','APPLICATIONS','=COUNTIF(Applied!F2:F,"Applied")'],['J5:L5','J6:L8','INTERVIEWS','=COUNTIF(Applied!F2:F,"Interviewing")']];
+ const cards=[['A5:C5','A6:C8','OPEN POSITIONS','=COUNTIF(Jobs!M2:M,"Open")+COUNTIF(Applied!M2:M,"Open")'],['D5:F5','D6:F8','READY TO APPLY','=COUNTIFS(Jobs!F2:F,"Not Applied",Jobs!M2:M,"Open")'],['G5:I5','G6:I8','APPLICATIONS','=COUNTIF(Applied!S2:S,"?*")'],['J5:L5','J6:L8','INTERVIEWS','=COUNTIF(Applied!F2:F,"Interviewing")']];
  cards.forEach(v=>{s.getRange(v[0]).merge().setValue(v[2]).setBackground('#E7EDF4').setFontColor('#52667A').setFontWeight('bold');s.getRange(v[1]).merge().setFormula(v[3]).setBackground('#F6F9FC').setFontColor('#13223A').setFontSize(28).setFontWeight('bold')});
  s.getRange('A10:L10').merge().setValue('APPLICATION PIPELINE').setBackground('#13223A').setFontColor('white').setFontWeight('bold');
  const lines=[['Applied','=COUNTIF(Applied!F2:F,"Applied")'],['Interviewing','=COUNTIF(Applied!F2:F,"Interviewing")'],['Offers','=COUNTIF(Applied!F2:F,"Offer")'],['Employers scanned','=COUNTIF(Coverage!C2:C,"OK*")'],['Employer errors','=COUNTIF(Coverage!C2:C,"ERROR")']];
@@ -82,14 +83,14 @@ function buildDashboard_(){
  s.getRange('A20:L21').merge().setValue('Click the job title to open the employer posting • Set Applied in Jobs to move it to Applied; update progress there • Check Coverage for source errors').setBackground('#EAF3F4');
  s.setColumnWidths(1,12,93);
 }
-function activateTracker(){syncJobs();installDailySync()}
+function activateTracker(){installDailySync();refreshApplyNext_();buildDashboard_();console.log('Applied workflow activated; daily refresh is managed by the 9 a.m. Pacific scheduled task.')}
 function installDailySync(){
- // The 9 a.m. America/New_York refresh is owned by the ChatGPT scheduled task.
+ // The 9 a.m. America/Los_Angeles refresh is owned by the ChatGPT scheduled task.
  // Remove the older Pacific-time refresh to avoid competing writers.
  const triggers=ScriptApp.getProjectTriggers();
  triggers.filter(t=>['syncJobs','onEdit'].includes(t.getHandlerFunction())).forEach(t=>ScriptApp.deleteTrigger(t));
  ScriptApp.newTrigger('onEdit').forSpreadsheet(book_()).onEdit().create();
- book_().setSpreadsheetTimeZone('America/New_York');
+ book_().setSpreadsheetTimeZone('America/Los_Angeles');
 }
 function onEdit(e){
  if(!e||!['Jobs','Applied'].includes(e.range.getSheet().getName())||e.range.getColumn()>6||e.range.getLastColumn()<6||e.range.getLastRow()<2)return;
