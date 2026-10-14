@@ -1,9 +1,12 @@
 // Private Google Sheets tracker; public GitHub contains employer job listings only.
 const OWNER='aramasubban', REPO='job-puller', BRANCH='main';
+// Using an explicit ID lets this run as either a bound or standalone Apps Script.
+const SHEET_ID='1uy2bZwnVGelp7PbFo7xltleZS1Atpqz648Wc67yDrT4';
 const FEED='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/data/jobs.json';
 const HEADERS=['POSTING ↗','Company','Match / 100','Annual base pay','Pay check','YOUR STATUS','Role area','Location','Experience check','Applied on','Follow-up','YOUR NOTES','Listing','First seen','Last seen','Source','Work style','Application URL','Job ID','Base min','Base max','Why it matches','Employment','Posted'];
 const STATUS=['Not Applied','Applied','Interviewing','Offer','Rejected','Not Interested'];
-function tab_(s){const b=SpreadsheetApp.getActiveSpreadsheet();return b.getSheetByName(s)||b.insertSheet(s)}
+function book_(){return SpreadsheetApp.openById(SHEET_ID)}
+function tab_(s){const b=book_();return b.getSheetByName(s)||b.insertSheet(s)}
 function onOpen(){SpreadsheetApp.getUi().createMenu('Job Puller').addItem('Sync now','syncJobs').addItem('Activate daily sync','activateTracker').addItem('Set up tracker','setupTracker').addItem('Refresh shortlist','refreshApplyNext_').addToUi()}
 function safe_(x){const t=String(x==null?'':x);return /^[=+@]/.test(t)?"'"+t:t}
 function link_(u,t){return /^https:\/\/[A-Za-z0-9.-]+\//.test(u||'')?'=HYPERLINK("'+String(u).replace(/"/g,'""')+'","'+String(t).replace(/"/g,'""')+'")':safe_(t)}
@@ -21,7 +24,7 @@ function jobRow_(j,old){
  return [link_(u,j.title),safe_(j.company),Number(j.fit_score)||0,safe_(j.salary||'Not disclosed'),safe_(j.salary_fit||'Undisclosed — review'),o[5]||'Not Applied',safe_(j.category),safe_(j.location),safe_(j.experience_fit),o[9]||'',o[10]||'',o[11]||'','Open',o[13]||j.last_seen||'',j.last_seen||'',safe_(j.source),safe_(j.workstyle),safe_(u),safe_(j.id),j.salary_min==null?'':Number(j.salary_min),j.salary_max==null?'':Number(j.salary_max),safe_(j.match_reasons),safe_(j.employment),safe_(j.posted)];
 }
 function syncJobs(){
- const lock=LockService.getDocumentLock();if(!lock.tryLock(10000))throw new Error('Another sync is running');
+ const lock=LockService.getDocumentLock()||LockService.getScriptLock();if(!lock.tryLock(10000))throw new Error('Another sync is running');
  try{
   const res=UrlFetchApp.fetch(FEED,{muteHttpExceptions:true});
   if(res.getResponseCode()!=200)throw new Error('GitHub job feed not ready: HTTP '+res.getResponseCode());
@@ -69,5 +72,13 @@ function buildDashboard_(){
  s.setColumnWidths(1,12,93);
 }
 function activateTracker(){syncJobs();installDailySync()}
-function installDailySync(){ScriptApp.getProjectTriggers().filter(t=>t.getHandlerFunction()=='syncJobs').forEach(ScriptApp.deleteTrigger);ScriptApp.newTrigger('syncJobs').timeBased().atHour(9).everyDays(1).inTimezone('America/Los_Angeles').create()}
+function installDailySync(){
+ const triggers=ScriptApp.getProjectTriggers();
+ triggers.filter(t=>t.getHandlerFunction()=='syncJobs').forEach(t=>ScriptApp.deleteTrigger(t));
+ ScriptApp.newTrigger('syncJobs').timeBased().atHour(9).everyDays(1).inTimezone('America/Los_Angeles').create();
+ // Standalone projects do not get a Sheet-bound simple onEdit trigger.
+ if(!SpreadsheetApp.getActiveSpreadsheet()&&!triggers.some(t=>t.getHandlerFunction()=='onEdit')){
+   ScriptApp.newTrigger('onEdit').forSpreadsheet(book_()).onEdit().create();
+ }
+}
 function onEdit(e){if(!e||e.range.getSheet().getName()!=='Jobs'||e.range.getColumn()!=6||e.range.getRow()<2)return;const s=e.range.getSheet();if(e.value=='Applied'&&!s.getRange(e.range.getRow(),10).getValue())s.getRange(e.range.getRow(),10).setValue(new Date());refreshApplyNext_();buildDashboard_()}
