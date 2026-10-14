@@ -18,6 +18,7 @@ import sys
 import time
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlsplit
+from src.matching import score_match, VERSION as MATCH_VERSION
 from src.enrichment import enrich, SECTOR_COMPANIES, SECTOR_TITLES
 from src.direct_employers import fetch_official_html, fetch_workday
 from src.enterprise_sources import fetch_apple, fetch_microsoft, fetch_google, fetch_tesla
@@ -326,6 +327,8 @@ def run():
     # declare them closed; keep their previous last_seen unchanged.
     for job in previous.get("jobs", []):
         if job.get("source") in failed and job.get("id") not in found:
+            if job.get("match_version") != MATCH_VERSION:
+                job.update(score_match(job, ""))
             found[job["id"]] = job
 
     output = {

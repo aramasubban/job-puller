@@ -3,7 +3,7 @@ const OWNER='aramasubban', REPO='job-puller', BRANCH='main';
 // Using an explicit ID lets this run as either a bound or standalone Apps Script.
 const SHEET_ID='1uy2bZwnVGelp7PbFo7xltleZS1Atpqz648Wc67yDrT4';
 const FEED='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/data/jobs.json';
-const HEADERS=['POSTING ↗','Company','Match / 100','Annual base pay','Pay check','YOUR STATUS','Role area','Location','Experience check','Applied on','Follow-up','YOUR NOTES','Listing','First seen','Last seen','Source','Work style','Application URL','Job ID','Base min','Base max','Why it matches','Employment','Posted'];
+const HEADERS=['POSTING ↗','Company','Match / 100','Annual base pay','Pay check','YOUR STATUS','Role area','Location','Experience check','Applied on','Follow-up','YOUR NOTES','Listing','First seen','Last seen','Source','Work style','Application URL','Job ID','Base min','Base max','Fit evidence / gaps','Employment','Posted'];
 const STATUS=['Not Applied','Applied','Interviewing','Offer','Rejected','Not Interested'];
 function book_(){return SpreadsheetApp.openById(SHEET_ID)}
 function tab_(s){const b=book_();return b.getSheetByName(s)||b.insertSheet(s)}
@@ -53,10 +53,11 @@ function syncJobs(){
  }finally{lock.releaseLock()}
 }
 function refreshApplyNext_(){
- const jobs=tab_('Jobs'),s=tab_('Apply Next');s.clearContents();header_(s,['CLICK POSTING ↗','Company','Match','Annual pay','Location','Experience','Why this fits']);
+ const jobs=tab_('Jobs'),s=tab_('Apply Next');s.clearContents();header_(s,['CLICK POSTING ↗','Company','Match','Annual pay','Location','Experience','Fit evidence / gaps']);
  const n=jobs.getLastRow()-1;if(n<1)return;
  const rows=jobs.getRange(2,1,n,24).getValues().filter(r=>r[5]=='Not Applied'&&r[12]=='Open').sort((a,b)=>Number(b[2])-Number(a[2])).slice(0,100);
  if(rows.length)s.getRange(2,1,rows.length,7).setValues(rows.map(r=>[link_(r[17],r[0]),r[1],r[2],r[3],r[7],r[8],r[21]]));
+ if(s.getFilter())s.getFilter().remove();s.getRange(1,1,s.getMaxRows(),7).createFilter().setColumnFilterCriteria(3,SpreadsheetApp.newFilterCriteria().whenNumberGreaterThanOrEqualTo(70).build());
  s.setColumnWidth(1,370);s.setColumnWidth(2,165);s.setColumnWidth(4,190);s.setColumnWidth(5,185);s.setColumnWidth(7,275);
 }
 function buildDashboard_(){

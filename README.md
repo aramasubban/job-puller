@@ -44,3 +44,9 @@ The standalone job collector does not require paid job data or API keys. Large-e
 
 Microsoft returns HTTP 429 (too many requests) at times. The Microsoft collector spaces requests by at least six seconds, limits description/detail calls to four per run, and reports a 429 as a failed source (never an empty, successful board). No credentials, rate-limit bypasses, or aggressive retries are used. A successful 0-match result is still marked **OK — partial** because the search only samples specific query terms and pages.
 
+
+## Mechanical fit scoring (me-v2)
+
+Scores are heuristic prioritization, not hiring probabilities. Pay is screened separately and contributes no fit points. Scoring uses role duties and required qualifications, strips company introductions and preferred-only sections, and bounds discipline (35), mechanical-duty breadth (30), demonstrated tool groups (20), and early-career alignment (15). Scores cap at 95, unknown career level at 79, two-year requirements at 74, three-year requirements at 64, and ECE-dominant work at 25. Incomplete descriptions and graduation-window conflicts stay out of the shortlist. Explicit new-grad exceptions are recognized. Specialist motor roles carry an experience-gap warning. Repetition of keywords never adds points.
+
+Apply Next uses a native numeric filter of 70+ so plausible stretches remain visible with their gaps; all original records remain in Jobs. This filter persists when the existing Apps Script refreshes cell contents. Fit evidence includes missing requirements, not just positive keyword matches. Scores from an old model on a failed source are demoted pending description review, rather than retaining stale 100s. Listings with only employer introductions (some Apple records) remain low-confidence; they are not proof of a technical mismatch.
