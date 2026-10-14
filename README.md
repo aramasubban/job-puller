@@ -4,7 +4,7 @@ Private application tracker: [Google Sheets](https://docs.google.com/spreadsheet
 
 ## What it searches
 
-- 37 configured employer sources, including startups using Ashby/Greenhouse and major employers: Apple, Tesla, Microsoft, Google, NVIDIA, Intel and Adobe.
+- 36 configured employer sources, including startups using Ashby/Greenhouse and major employers: Apple, Microsoft, Google, NVIDIA, Intel and Adobe. **Tesla is intentionally excluded** while its public career feed blocks automation.
 - Bay Area full-time mechanical/product design, robotics mechanisms, equipment/process engineering, EV and batteries, NPI/manufacturing and reliability roles.
 - New graduate / 0–3 years of required experience; excludes explicit 4+ year requirements, senior titles, HVAC, medical devices, and software-only roles.
 - Published **base salary ranges whose upper bound is at least $140,000**. Jobs without disclosed salary remain in review.
@@ -16,11 +16,11 @@ The workflow [Daily Bay Area engineering jobs](https://github.com/aramasubban/jo
 
 1. Inspect a completed Actions run (success should include the **Fetch employer job listings** and **Validate feed and save public results** steps).
 2. Open [data/jobs.json](data/jobs.json) and check `sources_checked`, `sources_failed`, `source_status` (per-employer status) and the actual `jobs` array.
-3. **Do not assume all companies are covered**: Apple/Tesla/Google/Microsoft HTML search and NVIDIA/Intel/Adobe Workday adapters are experimental and may fail due to website changes, anti-automation measures, or missing jobs. Source status `OK — partial` is **not exhaustive coverage**.
+3. **Do not assume all companies are covered**: Apple and Microsoft use public JSON career feeds, Google uses its published sitemap and job pages, and NVIDIA/Intel/Adobe use Workday adapters. Results are partial or may fail due to website changes, access restrictions, or limits. Tesla is not scanned. Source status `OK — partial` is **not exhaustive coverage**.
 4. When the first public feed exists, open the private [Google Sheet](https://docs.google.com/spreadsheets/d/1uy2bZwnVGelp7PbFo7xltleZS1Atpqz648Wc67yDrT4/edit), choose **Extensions → Apps Script**, replace the code with [google_apps_script/Code.gs](google_apps_script/Code.gs), save, and run `setupTracker` then `activateTracker`. Google will ask you to approve permissions. The latter starts a daily 9 a.m. Pacific sheet sync. ChatGPT cannot install Apps Script directly into your Google account via this connection.
 **Apps Script editor error workaround:** If **Extensions → Apps Script** says "Sorry, unable to open the file at this time", verify the Google account matches the Sheet's owner, then open [script.google.com/home/projects/create](https://script.google.com/home/projects/create) in that account to create a **standalone** project. Paste `google_apps_script/Code.gs`, save, run `setupTracker`, approve authorization, then run `activateTracker`. The script uses the explicit Sheet ID and installs the scheduled sync plus an edit trigger in standalone mode. Do not create a new spreadsheet; the script writes to the existing tracker.
 
-5. Click a posting title in the Jobs or Apply Next tab to open the employer listing. Set YOUR STATUS to Not Applied / Applied / Interviewing / Offer / Rejected / Not Interested. Application notes, date and statuses stay private in the Google Sheet and survive repeated syncs.
+5. The private Google Sheet shows **three visible tabs: Jobs, Apply Next, Dashboard**. Demo and Start Here are removed; Run Log and Coverage are hidden to preserve compatibility with the already-authorized daily Apps Script. To inspect the latter, unhide them from Google Sheets' View menu. Click a posting title in the Jobs or Apply Next tab to open the employer listing. Set YOUR STATUS to Not Applied / Applied / Interviewing / Offer / Rejected / Not Interested. Application notes, date and statuses stay private in the Google Sheet and survive repeated syncs.
 
 **Job listings are not automatically applied to.** The title links lead to the employer career page; an extra Apply action and/or account sign-in may be required.
 
@@ -39,3 +39,8 @@ python -m src.puller
 ```
 
 The standalone job collector does not require paid job data or API keys. Large-employer coverage is **best effort, not comprehensive**, and should be checked against official career pages until validated.
+
+## Microsoft pacing and completeness
+
+Microsoft returns HTTP 429 (too many requests) at times. The Microsoft collector spaces requests by at least six seconds, limits description/detail calls to four per run, and reports a 429 as a failed source (never an empty, successful board). No credentials, rate-limit bypasses, or aggressive retries are used. A successful 0-match result is still marked **OK — partial** because the search only samples specific query terms and pages.
+
