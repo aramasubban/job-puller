@@ -75,3 +75,27 @@ if code==200:
  p=json.loads(body)['res']; items=p.get('searchResults',[])
  print('APPLE_SHAPE',p.get('totalRecords'),list(items[0]) if items else [],str({k:v for k,v in items[0].items() if k not in ('jobSummary','jobDescription')})[:1600] if items else '')
 else:print('APPLE_SHAPE_HTTP',code,body[:250])
+
+
+# Page semantics for sitemap-listed Google role (content is server rendered)
+from html import unescape as html_unescape
+from bs4 import BeautifulSoup
+status,site=read('https://careers.google.com/jobs/sitemap')
+if status==200:
+ links=[x.text for x in ET.fromstring(site).findall('.//{*}loc') if x.text and ('mechanical' in x.text.lower() or 'manufacturing' in x.text.lower())]
+ print('GOOGLE_MECH_LINKS',links[:8])
+ if links:
+  status,html=read(links[0]);soup=BeautifulSoup(html,'html.parser')
+  title_nodes=[(z.name,z.get_text(' ',strip=True)[:140]) for z in soup.select('h1,h2,meta[property="og:title"],meta[name="description"]')[:16]]
+  print('GOOGLE_PAGE_FIELDS',status,title_nodes)
+  txt=soup.get_text(' ',strip=True)
+  for pat in ('Minimum qualifications','About the job','Location','Base salary','salary range','Job not found'):
+   at=txt.find(pat);print('GOOGLE_PAGE_NEAR',pat,at,txt[max(0,at-110):at+620] if at>=0 else '')
+# Apple one response, avoiding any retries or flooding
+status,body=read('https://jobs.apple.com/api/v1/search',{'query':'mechanical','filters':{},'page':1,'locale':'en-us','sort':'newest','format':{'longDate':'MMMM D, YYYY','mediumDate':'MMM D, YYYY'}})
+print('APPLE_FINAL_STATUS',status)
+if status==200:
+ items=json.loads(body)['res'].get('searchResults',[])
+ print('APPLE_FIELDS',len(items),list(items[0]) if items else [])
+ print('APPLE_FIRST',[(x.get('postingTitle'),x.get('title'),x.get('jobTitle'),x.get('id')) for x in items[:3]])
+ print('APPLE_JSON',str({k:v for k,v in items[0].items() if k!='jobSummary'})[:2600] if items else '')
