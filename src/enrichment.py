@@ -4,7 +4,7 @@ TARGET=140_000
 MONEY_RANGE=re.compile(r"\$\s*([\d,]{2,9})(?:\.\d+)?\s*(?:-|–|—|to)\s*\$?\s*([\d,]{2,9})(?:\.\d+)?",re.I)
 K_RANGE=re.compile(r"\$\s*(\d{2,3}(?:\.\d+)?)\s*[kK]\s*(?:-|–|—|to)\s*\$?\s*(\d{2,3}(?:\.\d+)?)\s*[kK]",re.I)
 SECTOR_COMPANIES=re.compile(r"\b(medtronic|stryker|intuitive surgical|intuitive|abbott|dexcom|boston scientific|edwards lifesciences|neuralink|nudge|align technology|illumina)\b",re.I)
-SECTOR_TITLES=re.compile(r"\b(hvac|heating,? ventilation|air conditioning|building services|mep engineer|plumbing|refrigeration|medical devices?|surgical devices?|implant devices?)\b",re.I)
+SECTOR_TITLES=re.compile(r"\b(hvac|heating,? ventilation|air conditioning|building services|mep engineer|data center mechanical engineer|facilities mechanical engineer|plumbing|refrigeration|medical devices?|surgical devices?|implant devices?)\b",re.I)
 KEYWORDS=[(r"\b(equipment|tooling|factory|laser weld|production line|cell manufactur)\b",19,"Tesla manufacturing equipment"),(r"\b(mechanical design|product design|cad|solidworks|gd&t|dfm|fea|structures)\b",18,"Mechanical design / FEA"),(r"\b(robotics?|actuator|quadruped|humanoid|mechanisms?|mechatronics?|linkage)\b",17,"Robotics / mechanisms"),(r"\b(battery|cell|energy storage|ev|vehicle|automotive|powertrain)\b",17,"EV / battery systems"),(r"\b(validation|test engineer|reliability|quality|npi|doe|root cause|process engineer)\b",14,"Validation / NPI")]
 def salary_range(text):
     text=str(text or ''); matches=[]
