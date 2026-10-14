@@ -228,6 +228,15 @@ def parse_board(src, payload):
             if enriched is not None: parsed.append(enriched)
     return parsed
 
+def stable_external_id(src, url):
+    """Stable posting identifier; don't collapse Apple's distinct job numbers by slug."""
+    segments=urlsplit(url).path.strip('/').split('/')
+    if src.get('provider')=='apple_api' and 'details' in segments:
+        idx=segments.index('details')+1
+        if idx<len(segments):
+            return segments[idx]
+    return segments[-1]
+
 def fetch_source(src):
     p=src["provider"]
     if p in ('apple_api','microsoft_eightfold','google_sitemap','tesla_api'):
@@ -237,7 +246,7 @@ def fetch_source(src):
         rows=[]
         for item in items:
             title=item['title'];description=plain(item.get('description',''))
-            rec={'id':source_key(src)+':'+urlsplit(item['url']).path.strip('/').split('/')[-1],
+            rec={'id':source_key(src)+':'+stable_external_id(src,item['url']),
                  'company':src['company'],'title':title,'category':role_family(title),
                  'location':item['location'],'workstyle':'Unknown',
                  'employment':item.get('employment','Unspecified'),
