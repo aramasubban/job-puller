@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T02:14:00+00:00",
+  "generated_at": "2026-10-14T02:15:48+00:00",
   "sources_checked": [
     "apple_api:apple",
     "ashby:aerovect",
@@ -32,13 +32,13 @@
     "greenhouse:doordashusa",
     "greenhouse:fulfil",
     "greenhouse:pacificfusion",
-    "microsoft_eightfold:microsoft",
     "workday:adobe",
     "workday:intel",
     "workday:nvidia"
   ],
   "sources_failed": [
-    "greenhouse:pebblelife"
+    "greenhouse:pebblelife",
+    "microsoft_eightfold:microsoft"
   ],
   "source_status": [
     {
@@ -200,8 +200,9 @@
     {
       "source": "microsoft_eightfold:microsoft",
       "company": "Microsoft",
-      "state": "OK — partial",
-      "matching": 0
+      "state": "ERROR",
+      "matching": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "source": "workday:nvidia",
@@ -280,7 +281,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 43,
       "match_reasons": "Mechanical design / FEA",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:american-turbines:5461d41a-41a0-4cf9-bc4b-1e3285473784",
@@ -301,7 +302,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 44,
       "match_reasons": "Tesla manufacturing equipment",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:american-turbines:c789eac8-a3f0-4ef5-9b55-359a4f383b58",
@@ -322,7 +323,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 45,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200681605",
@@ -343,7 +344,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 25,
       "match_reasons": "Relevant hardware role",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200683619",
@@ -364,7 +365,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 43,
       "match_reasons": "Mechanical design / FEA",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200681279",
@@ -385,7 +386,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 39,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200668994",
@@ -406,7 +407,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 25,
       "match_reasons": "Relevant hardware role",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200682031",
@@ -427,7 +428,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 25,
       "match_reasons": "Relevant hardware role",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200669835",
@@ -448,7 +449,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 42,
       "match_reasons": "EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200679791",
@@ -469,7 +470,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 42,
       "match_reasons": "EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200667070",
@@ -490,7 +491,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 43,
       "match_reasons": "Mechanical design / FEA",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200688554",
@@ -511,7 +512,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 43,
       "match_reasons": "Mechanical design / FEA",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200685472",
@@ -532,7 +533,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 25,
       "match_reasons": "Relevant hardware role",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200685159",
@@ -553,7 +554,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 39,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200685429",
@@ -574,7 +575,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 39,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200674956",
@@ -595,7 +596,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 39,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200674144",
@@ -616,7 +617,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 39,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200688657",
@@ -637,7 +638,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 25,
       "match_reasons": "Relevant hardware role",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200688798",
@@ -658,7 +659,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 25,
       "match_reasons": "Relevant hardware role",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200671854",
@@ -679,7 +680,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 57,
       "match_reasons": "Mechanical design / FEA; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200687631",
@@ -700,7 +701,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 43,
       "match_reasons": "Mechanical design / FEA",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200678799",
@@ -721,7 +722,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 56,
       "match_reasons": "Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200680263",
@@ -742,7 +743,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 25,
       "match_reasons": "Relevant hardware role",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200680257",
@@ -763,7 +764,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 39,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200687527",
@@ -784,7 +785,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 56,
       "match_reasons": "Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "apple_api:apple:200681340",
@@ -805,7 +806,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 39,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:503a7627-c530-4565-9408-e3ea99439742",
@@ -826,7 +827,7 @@
       "salary_fit": "Target met",
       "fit_score": 85,
       "match_reasons": "Tesla manufacturing equipment; EV / battery systems; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:0820cc79-9305-43d3-836e-2c9654afb39e",
@@ -847,7 +848,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:4c3cd892-2ef0-40b6-877a-39540a224a5c",
@@ -868,7 +869,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:536a0431-e023-439d-8ead-cb584c433d41",
@@ -889,7 +890,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 98,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:d8b7286e-bd47-407b-859d-f2b7f5822a8c",
@@ -910,7 +911,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 81,
       "match_reasons": "Tesla manufacturing equipment; EV / battery systems; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:6e57a97e-62bb-46fb-92ec-dd12831fd6f9",
@@ -931,7 +932,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 100,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:c65ae625-09d2-4e94-ab37-7ae2444b84a0",
@@ -952,7 +953,7 @@
       "salary_fit": "Target met",
       "fit_score": 87,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:4cb44794-7b3b-46fc-9408-104a6d0f379e",
@@ -973,7 +974,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 79,
       "match_reasons": "Robotics / mechanisms; EV / battery systems; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:applied:932de549-2882-4c0d-aeca-b4a8ef5f1f41",
@@ -994,7 +995,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4038127009",
@@ -1015,7 +1016,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 79,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4436391009",
@@ -1036,7 +1037,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 61,
       "match_reasons": "Tesla manufacturing equipment; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4436390009",
@@ -1057,7 +1058,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 61,
       "match_reasons": "Tesla manufacturing equipment; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4437065009",
@@ -1078,7 +1079,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4437584009",
@@ -1099,7 +1100,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4443962009",
@@ -1120,7 +1121,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 74,
       "match_reasons": "Mechanical design / FEA; EV / battery systems; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atoms:8806871002",
@@ -1141,7 +1142,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atoms:8637501002",
@@ -1162,7 +1163,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:atoms:8541658002",
@@ -1183,7 +1184,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:cerebras:d0baac54-76cb-4e8d-93bd-24e121113870",
@@ -1204,7 +1205,7 @@
       "salary_fit": "Target met",
       "fit_score": 35,
       "match_reasons": "Relevant hardware role",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:cobot:f060d83e-3b73-4a41-b8e1-c19359d572b4",
@@ -1225,7 +1226,7 @@
       "salary_fit": "Target met",
       "fit_score": 70,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:cobot:a29470cd-18d2-40b0-bf85-47a3a038e980",
@@ -1246,7 +1247,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:coram-ai:3dbdcba0-0d78-4e98-b62a-126572a4f01d",
@@ -1267,7 +1268,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 74,
       "match_reasons": "Mechanical design / FEA; EV / battery systems; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:doordashusa:8082005",
@@ -1288,7 +1289,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 92,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:doordashusa:8017150",
@@ -1309,7 +1310,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 93,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:foundry-robotics:f4a52fae-cf78-4294-a4be-e70ef6099542",
@@ -1330,7 +1331,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:foundry-robotics:681e7d19-5716-4694-b63c-b5a16039bba1",
@@ -1351,7 +1352,7 @@
       "salary_fit": "Target met",
       "fit_score": 66,
       "match_reasons": "Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:genesis:e260b061-68b2-43d5-9f11-45261234f901",
@@ -1372,7 +1373,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 56,
       "match_reasons": "Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "google_sitemap:google:95058423325827782-hardware-systems-test-engineer",
@@ -1393,7 +1394,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 45,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "google_sitemap:google:97895150440587974-mechanical-product-design-engineer",
@@ -1414,7 +1415,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 80,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "google_sitemap:google:88033579111457478-product-design-engineer",
@@ -1435,7 +1436,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 82,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:gradientrobotics:79c1cbc9-a8ca-4cad-9803-bdfdbb6af9b5",
@@ -1456,7 +1457,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 97,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:gritt:ed459ec7-84ba-415c-9c44-5be778a7c6b0",
@@ -1477,7 +1478,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:gritt:5a834deb-09aa-406c-8c8d-c5d7cc6818ad",
@@ -1498,7 +1499,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 75,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:maticrobots:535fbc23-57ee-41f7-a949-190572402889",
@@ -1519,7 +1520,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 65,
       "match_reasons": "Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:maticrobots:bfb0df27-bb17-46a1-919c-afd8c3d09a7d",
@@ -1540,7 +1541,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:maticrobots:1858e85e-c3be-4d05-9a43-083a84ba3255",
@@ -1561,7 +1562,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:maticrobots:76c07009-73b5-43e3-affb-d4fc20b9fe49",
@@ -1582,7 +1583,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 79,
       "match_reasons": "Robotics / mechanisms; EV / battery systems; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "workday:nvidia:Board-Product-Development-Engineer_JR2017024",
@@ -1603,7 +1604,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 75,
       "match_reasons": "Tesla manufacturing equipment; EV / battery systems; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "workday:nvidia:Characterization-Product-Development-Engineer_JR2021756",
@@ -1624,7 +1625,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 58,
       "match_reasons": "Tesla manufacturing equipment; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:e7594296-a38b-43a1-b4f8-01253a3b7732",
@@ -1645,7 +1646,7 @@
       "salary_fit": "Target met",
       "fit_score": 85,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:56aafd17-7db9-473a-b3b4-957b6d926cdf",
@@ -1666,7 +1667,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:ece054ea-ac75-4b8a-bdbf-5cdf19368312",
@@ -1687,7 +1688,7 @@
       "salary_fit": "Target met",
       "fit_score": 49,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:a8a421d1-c9bb-4e37-8418-4e4d6b2ba29d",
@@ -1708,7 +1709,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:2b87bb06-ba33-4cab-b950-0df12ca85dcf",
@@ -1729,7 +1730,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:5a265d2b-683f-4cea-9b69-8e137e704ab3",
@@ -1750,7 +1751,7 @@
       "salary_fit": "Target met",
       "fit_score": 49,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:65b255da-4fd9-414e-98d4-0bec4eecf8ff",
@@ -1771,7 +1772,7 @@
       "salary_fit": "Range reaches $140k",
       "fit_score": 82,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:8a86b02b-6063-4124-863f-7e41e9849e22",
@@ -1792,7 +1793,7 @@
       "salary_fit": "Target met",
       "fit_score": 68,
       "match_reasons": "Tesla manufacturing equipment; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:6cf91ff5-a811-435c-bf93-f3d958896599",
@@ -1813,7 +1814,7 @@
       "salary_fit": "Target met",
       "fit_score": 66,
       "match_reasons": "Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:openai:393b88d7-1fbc-466a-9108-a7c1bafeb8d8",
@@ -1834,7 +1835,7 @@
       "salary_fit": "Target met",
       "fit_score": 68,
       "match_reasons": "Tesla manufacturing equipment; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "greenhouse:pacificfusion:4329610009",
@@ -1855,7 +1856,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 57,
       "match_reasons": "Mechanical design / FEA; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:rhoda-ai:6d9ea8a2-925a-46bb-b854-cb904df2d47a",
@@ -1876,7 +1877,7 @@
       "salary_fit": "Target met",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:specter:4849bffc-5399-4fcb-83c6-ac805656b7a7",
@@ -1897,7 +1898,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 75,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:specter:dab4adfc-971b-4f8e-b0c8-f36ed9df75f9",
@@ -1918,7 +1919,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 39,
       "match_reasons": "Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:specter:463b9708-1e48-436e-894e-17a014be99e2",
@@ -1939,7 +1940,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 93,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:specter:5cd498d6-9f71-474f-a0c7-964ed4d24282",
@@ -1960,7 +1961,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 60,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:specter:ab171ab2-8811-4fef-8d63-b3e2e6bb2703",
@@ -1981,7 +1982,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 75,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:specter:9ed686f2-1948-4ca8-bc89-8ac11085e5a8",
@@ -2002,7 +2003,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 42,
       "match_reasons": "Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:specter:5442f447-03cc-4734-b9c1-b6723aa818c8",
@@ -2023,7 +2024,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 75,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:tar:fe58b0d9-b34d-47d7-bff2-f6e645124701",
@@ -2044,7 +2045,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 100,
       "match_reasons": "Tesla manufacturing equipment; Mechanical design / FEA; Robotics / mechanisms",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:westmag:24b151b6-87eb-46d9-b48d-5591e9cdc5b8",
@@ -2065,7 +2066,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 75,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:westmag:1eadb4b5-9b25-4f17-b115-73c5341e3745",
@@ -2086,7 +2087,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 75,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:westmag:64a93fb9-ce73-4fe1-8936-52ee259be5fe",
@@ -2107,7 +2108,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 74,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:westmag:9a01c8ea-c362-4a92-af6c-b02816acab8c",
@@ -2128,7 +2129,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 91,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; EV / battery systems",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:westmag:2b28a62e-2d3f-4bc8-b747-574fa17e5dd9",
@@ -2149,7 +2150,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 74,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:westmag:a276f437-4c6e-4bac-b7ac-9f4af09c2649",
@@ -2170,7 +2171,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 74,
       "match_reasons": "Mechanical design / FEA; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     },
     {
       "id": "ashby:westmag:cb993a12-13ba-440b-a70b-bdba7f3fc055",
@@ -2191,7 +2192,7 @@
       "salary_fit": "Undisclosed — review",
       "fit_score": 75,
       "match_reasons": "Tesla manufacturing equipment; Robotics / mechanisms; Validation / NPI",
-      "last_seen": "2026-10-14T02:14:00+00:00"
+      "last_seen": "2026-10-14T02:15:48+00:00"
     }
   ]
 }
