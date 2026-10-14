@@ -1,15 +1,8 @@
-name: Daily Bay Area engineering jobs
+name: MWF Bay Area engineering jobs
 on:
   schedule:
-    - cron: '23 14 * * *'
+    - cron: '23 14 * * 1,3,5'
   workflow_dispatch:
-  push:
-    paths:
-      - 'src/**'
-      - 'tests/**'
-      - 'config/**'
-      - 'requirements.txt'
-      - '.github/workflows/daily.yml'
 permissions:
   contents: write
 concurrency:
@@ -56,3 +49,4 @@ jobs:
             git commit -m 'chore: refresh Bay Area job feed'
             git push
           fi
+

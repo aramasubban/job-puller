@@ -28,6 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "boards.json"
 JSON_OUT = ROOT / "data" / "jobs.json"
 CSV_OUT = ROOT / "data" / "jobs.csv"
+MIN_FIT_SCORE = 50
 USER_AGENT = "BayAreaEarlyCareerEngineeringJobs/1.0 (public job feeds; daily refresh)"
 
 # Whole-word and explicit locale matching: 'California', 'United States', and
@@ -287,6 +288,13 @@ def fetch_source(src):
     else: raise ValueError('Unsupported provider: '+p)
     return parse_board(src,_download(url))
 
+def meets_fit_floor(job):
+    """Apply the same floor to fresh jobs and retained failed-source records."""
+    try:
+        return float(job.get("fit_score", 0)) >= MIN_FIT_SCORE
+    except (TypeError, ValueError):
+        return False
+
 def run():
     sources = json.loads(CONFIG.read_text(encoding="utf-8"))
     previous = {}
@@ -300,22 +308,27 @@ def run():
     successful = []
     failed = []
     source_status = []
+    filtered_out = set()
     with ThreadPoolExecutor(max_workers=6) as pool:
         futures = {pool.submit(fetch_source, src): src for src in sources}
         for fut in as_completed(futures):
             src = futures[fut]
             key = source_key(src)
             try:
-                results = fut.result()
+                raw_results = fut.result()
+                filtered_out.update(j['id'] for j in raw_results if j.get('id') and not meets_fit_floor(j))
+                results = [j for j in raw_results if meets_fit_floor(j)]
                 successful.append(key)
-                source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results)})
+                source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results),"company_context":src.get("company_context", ""),"careers_url":src.get("careers_url", "")})
                 for job in results:
+                    job["company_context"] = src.get("company_context", "")
+                    job["careers_url"] = src.get("careers_url", "")
                     job["last_seen"] = now
                     found[job["id"]] = job
                 print(f"OK {key}: {len(results)} matching")
             except Exception as e:
                 failed.append(key)
-                source_status.append({"source":key,"company":src["company"],"state":"ERROR","matching":0,"error":str(e)[:250]})
+                source_status.append({"source":key,"company":src["company"],"state":"ERROR","matching":0,"error":str(e)[:250],"company_context":src.get("company_context", ""),"careers_url":src.get("careers_url", "")})
                 print(f"ERROR {key}: {e}", file=sys.stderr)
 
     # Do not update the sheet when no boards succeeded. Keeps last healthy data.
@@ -329,7 +342,8 @@ def run():
         if job.get("source") in failed and job.get("id") not in found:
             if job.get("match_version") != MATCH_VERSION:
                 job.update(score_match(job, ""))
-            found[job["id"]] = job
+            if meets_fit_floor(job):
+                found[job["id"]] = job
 
     output = {
         "generated_at": now,
@@ -337,6 +351,8 @@ def run():
         "sources_failed": sorted(failed),
         "source_status": sorted(source_status,key=lambda x:x["company"]),
         "salary_target_usd": 140000,
+        "minimum_fit_score": MIN_FIT_SCORE,
+        "filtered_out_job_ids": sorted(filtered_out),
         "jobs": sorted(found.values(), key=lambda j: (j["company"].lower(), j["title"].lower(), j["id"])),
     }
     JSON_OUT.parent.mkdir(parents=True, exist_ok=True)

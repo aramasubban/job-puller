@@ -45,7 +45,16 @@ def fetch_official_html(src,role_pattern,senior_pattern,noneng_pattern,bay_match
     items=[]
     for url,title in candidates[:50]:
         try:
-            txt=detail_text(get_html(url));location=_extract_location(txt)
+            html=get_html(url)
+            if src.get('title_selector'):
+                heading=BeautifulSoup(html,'html.parser').select_one(src['title_selector'])
+                if heading:title=heading.get_text(' ',strip=True)
+            txt=detail_text(html);location=_extract_location(txt)
+            if not location and src.get('location_pattern'):
+                # Employer-specific patterns must match the job header, not
+                # cities mentioned elsewhere in a description or footer.
+                loc_match=re.search(src['location_pattern'],txt[:1000])
+                if loc_match:location=loc_match.group(1)
             if not bay_match.search(location):continue
             items.append({'url':url,'title':title,'location':location,'description':txt,'employment':'Unspecified'})
             time.sleep(.12)
@@ -74,3 +83,4 @@ def fetch_workday(src,role_pattern,senior_pattern,noneng_pattern,bay_match):
         except Exception:continue
     if jobs and not out:raise ValueError('Workday matching jobs found but no job details retrieved')
     return out,{'candidate_links':len(jobs),'considered':min(len(jobs),50),'partial':len(jobs)>50}
+

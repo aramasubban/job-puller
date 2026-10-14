@@ -2,152 +2,182 @@
   {
     "provider": "ashby",
     "slug": "applied",
-    "company": "Applied Intuition"
+    "company": "Applied Intuition",
+    "careers_url": "https://jobs.ashbyhq.com/applied"
   },
   {
     "provider": "ashby",
     "slug": "cobot",
-    "company": "Collaborative Robotics"
+    "company": "Collaborative Robotics",
+    "careers_url": "https://jobs.ashbyhq.com/cobot"
   },
   {
     "provider": "ashby",
     "slug": "coram-ai",
-    "company": "Coram AI"
+    "company": "Coram AI",
+    "careers_url": "https://jobs.ashbyhq.com/coram-ai"
   },
   {
     "provider": "ashby",
     "slug": "gritt",
-    "company": "Gritt Robotics"
+    "company": "Gritt Robotics",
+    "careers_url": "https://jobs.ashbyhq.com/gritt"
   },
   {
     "provider": "ashby",
     "slug": "genesis",
-    "company": "Genesis"
+    "company": "Genesis",
+    "careers_url": "https://jobs.ashbyhq.com/genesis"
   },
   {
     "provider": "ashby",
     "slug": "glacier",
-    "company": "Glacier"
+    "company": "Glacier",
+    "careers_url": "https://jobs.ashbyhq.com/glacier"
   },
   {
     "provider": "ashby",
     "slug": "gradientrobotics",
-    "company": "Gradient Robotics"
+    "company": "Gradient Robotics",
+    "careers_url": "https://jobs.ashbyhq.com/gradientrobotics"
   },
   {
     "provider": "ashby",
     "slug": "specter",
-    "company": "Specter"
+    "company": "Specter",
+    "careers_url": "https://jobs.ashbyhq.com/specter"
   },
   {
     "provider": "ashby",
     "slug": "maticrobots",
-    "company": "Matic"
+    "company": "Matic",
+    "careers_url": "https://jobs.ashbyhq.com/maticrobots"
   },
   {
     "provider": "ashby",
     "slug": "eightsleep",
-    "company": "Eight Sleep"
+    "company": "Eight Sleep",
+    "careers_url": "https://jobs.ashbyhq.com/eightsleep"
   },
   {
     "provider": "ashby",
     "slug": "impulse",
-    "company": "Impulse Labs"
+    "company": "Impulse Labs",
+    "careers_url": "https://jobs.ashbyhq.com/impulse"
   },
   {
     "provider": "ashby",
     "slug": "american-turbines",
-    "company": "American Turbines"
+    "company": "American Turbines",
+    "careers_url": "https://jobs.ashbyhq.com/american-turbines"
   },
   {
     "provider": "ashby",
     "slug": "tar",
-    "company": "TAR"
+    "company": "TAR",
+    "careers_url": "https://jobs.ashbyhq.com/tar"
   },
   {
     "provider": "ashby",
     "slug": "aurora-operations-inc",
-    "company": "Aurora"
+    "company": "Aurora",
+    "careers_url": "https://jobs.ashbyhq.com/aurora-operations-inc"
   },
   {
     "provider": "ashby",
     "slug": "rhoda-ai",
-    "company": "Rhoda AI"
+    "company": "Rhoda AI",
+    "careers_url": "https://jobs.ashbyhq.com/rhoda-ai"
   },
   {
     "provider": "ashby",
     "slug": "watney",
-    "company": "Watney"
+    "company": "Watney",
+    "careers_url": "https://jobs.ashbyhq.com/watney"
   },
   {
     "provider": "ashby",
     "slug": "openai",
-    "company": "OpenAI"
+    "company": "OpenAI",
+    "careers_url": "https://jobs.ashbyhq.com/openai"
   },
   {
     "provider": "ashby",
     "slug": "cerebras",
-    "company": "Cerebras"
+    "company": "Cerebras",
+    "careers_url": "https://jobs.ashbyhq.com/cerebras"
   },
   {
     "provider": "ashby",
     "slug": "aerovect",
-    "company": "AeroVect"
+    "company": "AeroVect",
+    "careers_url": "https://jobs.ashbyhq.com/aerovect"
   },
   {
     "provider": "ashby",
     "slug": "westmag",
-    "company": "Western Magnetics"
+    "company": "Western Magnetics",
+    "careers_url": "https://jobs.ashbyhq.com/westmag"
   },
   {
     "provider": "ashby",
     "slug": "human-computer-lab",
-    "company": "Human Computer Lab"
+    "company": "Human Computer Lab",
+    "careers_url": "https://jobs.ashbyhq.com/human-computer-lab"
   },
   {
     "provider": "ashby",
     "slug": "foundry-robotics",
-    "company": "Foundry Robotics"
+    "company": "Foundry Robotics",
+    "careers_url": "https://jobs.ashbyhq.com/foundry-robotics"
   },
   {
     "provider": "ashby",
     "slug": "dexmate",
-    "company": "Dexmate"
+    "company": "Dexmate",
+    "careers_url": "https://jobs.ashbyhq.com/dexmate"
   },
   {
     "provider": "greenhouse",
     "slug": "pacificfusion",
-    "company": "Pacific Fusion"
+    "company": "Pacific Fusion",
+    "careers_url": "https://job-boards.greenhouse.io/pacificfusion"
   },
   {
     "provider": "greenhouse",
     "slug": "atomicmachines",
-    "company": "Atomic Machines"
+    "company": "Atomic Machines",
+    "careers_url": "https://job-boards.greenhouse.io/atomicmachines"
   },
   {
     "provider": "greenhouse",
     "slug": "atoms",
-    "company": "Atoms"
+    "company": "Atoms",
+    "careers_url": "https://job-boards.greenhouse.io/atoms"
   },
   {
     "provider": "greenhouse",
     "slug": "pebblelife",
-    "company": "Pebble"
+    "company": "Pebble",
+    "careers_url": "https://job-boards.greenhouse.io/pebblelife"
   },
   {
     "provider": "greenhouse",
     "slug": "fulfil",
-    "company": "Fulfil"
+    "company": "Fulfil",
+    "careers_url": "https://job-boards.greenhouse.io/fulfil"
   },
   {
     "provider": "greenhouse",
     "slug": "doordashusa",
-    "company": "DoorDash"
+    "company": "DoorDash",
+    "careers_url": "https://job-boards.greenhouse.io/doordashusa"
   },
   {
     "provider": "greenhouse",
     "slug": "deterrencedefenseinc",
-    "company": "Deterrence Defense"
+    "company": "Deterrence Defense",
+    "careers_url": "https://job-boards.greenhouse.io/deterrencedefenseinc"
   },
   {
     "provider": "workday",
@@ -163,7 +193,8 @@
       "hardware",
       "quality",
       "thermal"
-    ]
+    ],
+    "careers_url": "https://www.nvidia.com/en-us/about-nvidia/careers/"
   },
   {
     "provider": "workday",
@@ -177,7 +208,8 @@
       "equipment",
       "packaging",
       "reliability"
-    ]
+    ],
+    "careers_url": "https://jobs.intel.com/"
   },
   {
     "provider": "workday",
@@ -189,7 +221,8 @@
       "mechanical",
       "hardware",
       "manufacturing"
-    ]
+    ],
+    "careers_url": "https://careers.adobe.com/"
   },
   {
     "provider": "apple_api",
@@ -202,13 +235,15 @@
       "battery",
       "robotics"
     ],
-    "pages_per_query": 2
+    "pages_per_query": 2,
+    "careers_url": "https://jobs.apple.com/"
   },
   {
     "provider": "google_sitemap",
     "company": "Google",
     "slug": "google",
-    "max_details": 45
+    "max_details": 45,
+    "careers_url": "https://www.google.com/about/careers/applications/"
   },
   {
     "provider": "microsoft_eightfold",
@@ -219,6 +254,157 @@
       "manufacturing",
       "hardware",
       "robotics"
-    ]
+    ],
+    "careers_url": "https://careers.microsoft.com/"
+  },
+  {
+    "provider": "ashby",
+    "company": "Bedrock Robotics",
+    "slug": "bedrock-robotics",
+    "careers_url": "https://bedrockrobotics.com/careers",
+    "company_context": "Autonomous construction equipment; rugged machine integration, mechanical reliability and field testing align with automotive/equipment work.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "ashby",
+    "company": "Skydio",
+    "slug": "skydio",
+    "careers_url": "https://www.skydio.com/careers",
+    "company_context": "Autonomous drones and docks; electromechanical product design, mechanisms, manufacturing and reliability are relevant ME paths.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Figure",
+    "slug": "figureai",
+    "careers_url": "https://www.figure.ai/careers",
+    "company_context": "San Jose humanoid robotics; mechanisms, actuators, mechanical design, test rigs and manufacturing are relevant to robotics and FSAE experience.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Zipline",
+    "slug": "flyzipline",
+    "careers_url": "https://www.zipline.com/open-roles",
+    "company_context": "Autonomous delivery aircraft and ground systems; structures, mechanisms, hardware testing and manufacturable product design.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "ashby",
+    "company": "Saronic",
+    "slug": "saronic",
+    "careers_url": "https://www.saronic.com/careers",
+    "company_context": "Autonomous maritime hardware; target Bay Area mechanical integration, payload packaging and testing, with location and experience screened.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Astranis",
+    "slug": "astranis",
+    "careers_url": "https://www.astranis.com/careers",
+    "company_context": "San Francisco satellite hardware; structures, thermal design, mechanisms, manufacturing equipment and environmental testing.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "ashby",
+    "company": "1X",
+    "slug": "1x",
+    "careers_url": "https://www.1x.tech/careers",
+    "company_context": "Bay Area humanoid robotics; robot mechanisms, actuators, manufacturing equipment, assembly processes and validation.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "lever",
+    "company": "Dexterity",
+    "slug": "dexterity",
+    "careers_url": "https://jobs.lever.co/dexterity",
+    "company_context": "Redwood City robotic handling systems; screen for mechanical hardware, fixtures and deployment work, excluding software-only and talent-network listings.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "ashby",
+    "company": "Form Energy",
+    "slug": "formenergy",
+    "careers_url": "https://formenergy.com/careers/open-jobs/",
+    "company_context": "Iron-air grid batteries with a Bay Area engineering facility; equipment, battery product design, process development and testing.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "ashby",
+    "company": "Hadrian",
+    "slug": "hadrian-automation",
+    "careers_url": "https://www.hadrian.co/careers",
+    "company_context": "Autonomous precision manufacturing for aerospace/defense; equipment, tooling, fixtures, process engineering and factory automation; Bay Area postings only.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Agility Robotics",
+    "slug": "agilityrobotics",
+    "careers_url": "https://www.agilityrobotics.com/careers",
+    "company_context": "Humanoid robots for logistics; mechanical systems, hardware validation and manufacturing. Only explicit Bay Area locations qualify.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "lever",
+    "company": "Zoox",
+    "slug": "zoox",
+    "careers_url": "https://zoox.com/careers",
+    "company_context": "Foster City/Hayward autonomous vehicles; mechanical packaging, vehicle test, battery systems, NPI and manufacturing align with automotive experience.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Lucid Motors",
+    "slug": "lucidmotors",
+    "careers_url": "https://lucidmotors.com/careers",
+    "company_context": "Bay Area EV engineering; battery/mechanical design, vehicle validation, equipment and manufacturing process work.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Redwood Materials",
+    "slug": "redwoodmaterials",
+    "careers_url": "https://www.redwoodmaterials.com/join/",
+    "company_context": "Battery materials and energy storage; equipment, automation, mechanical product development and testing. Nevada-only roles do not qualify.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Nuro",
+    "slug": "nuro",
+    "careers_url": "https://www.nuro.ai/careers",
+    "company_context": "Autonomous vehicle hardware; target mechanical integration, validation and manufacturing, excluding autonomy/software-only roles.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Waymo",
+    "slug": "waymo",
+    "careers_url": "https://waymo.com/careers/",
+    "company_context": "Autonomous vehicle hardware; mechanical packaging, sensor integration and reliability testing, with ECE-heavy work penalized.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Saildrone",
+    "slug": "saildroneinc",
+    "careers_url": "https://www.saildrone.com/careers/available-jobs",
+    "company_context": "Autonomous ocean vehicles; mechanical structures, rugged hardware, integration, manufacturing and reliability testing.",
+    "verified_on": "2026-10-14"
+  },
+  {
+    "provider": "official_html",
+    "company": "Antora Energy",
+    "slug": "antora",
+    "list_urls": [
+      "https://www.antora.com/careers"
+    ],
+    "link_fragment": "/job/",
+    "careers_url": "https://www.antora.com/careers",
+    "company_context": "Industrial thermal energy storage; high-temperature hardware, manufacturing equipment, mechanical testing and process development. Building HVAC is excluded.",
+    "verified_on": "2026-10-14",
+    "location_pattern": "\\b(San Jose, CA)\\s+Apply\\b",
+    "title_selector": "h1"
   }
 ]
