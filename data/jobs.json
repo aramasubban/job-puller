@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T02:32:16+00:00",
+  "generated_at": "2026-10-14T18:17:40+00:00",
   "sources_checked": [
     "apple_api:apple",
     "ashby:aerovect",
@@ -63,13 +63,13 @@
       "source": "apple_api:apple",
       "company": "Apple",
       "state": "OK — partial",
-      "matching": 23
+      "matching": 20
     },
     {
       "source": "ashby:applied",
       "company": "Applied Intuition",
       "state": "OK",
-      "matching": 9
+      "matching": 8
     },
     {
       "source": "greenhouse:atomicmachines",
@@ -123,7 +123,7 @@
       "source": "greenhouse:doordashusa",
       "company": "DoorDash",
       "state": "OK",
-      "matching": 2
+      "matching": 3
     },
     {
       "source": "ashby:eightsleep",
@@ -287,7 +287,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:american-turbines:5461d41a-41a0-4cf9-bc4b-1e3285473784",
@@ -314,7 +314,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:american-turbines:c789eac8-a3f0-4ef5-9b55-359a4f383b58",
@@ -342,7 +342,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200681605",
@@ -370,7 +370,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200683619",
@@ -398,7 +398,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200681279",
@@ -427,7 +427,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200668994",
@@ -455,7 +455,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200682031",
@@ -483,7 +483,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200669835",
@@ -511,7 +511,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200679791",
@@ -539,7 +539,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200667070",
@@ -567,14 +567,14 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200688554",
       "company": "Apple",
       "title": "Manufacturing Design Engineer (MDE), Brittles",
       "category": "Manufacturing / NPI",
-      "location": "Sunnyvale",
+      "location": "Cupertino",
       "workstyle": "Unknown",
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
@@ -595,7 +595,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200685472",
@@ -623,91 +623,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
-    },
-    {
-      "id": "apple_api:apple:200685159",
-      "company": "Apple",
-      "title": "Manufacturing Quality Engineer",
-      "category": "Manufacturing / NPI",
-      "location": "Cupertino",
-      "workstyle": "Unknown",
-      "employment": "Unspecified",
-      "experience_fit": "Experience not stated — review",
-      "salary": "Not disclosed",
-      "posted": "Oct 01, 2026",
-      "apply_url": "https://jobs.apple.com/en-us/details/200685159/manufacturing-quality-engineer",
-      "source_url": "https://jobs.apple.com/en-us/details/200685159/manufacturing-quality-engineer",
-      "source": "apple_api:apple",
-      "salary_min": null,
-      "salary_max": null,
-      "salary_fit": "Undisclosed — review",
-      "fit_score": 28,
-      "match_reasons": "Low fit / eligibility gap | No clear ME duties | Gaps: Limited mechanical-duty evidence; Experience/start date not confirmed",
-      "match_version": "me-v2",
-      "match_tier": "Low fit / eligibility gap",
-      "match_gaps": [
-        "Limited mechanical-duty evidence",
-        "Experience/start date not confirmed"
-      ],
-      "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
-    },
-    {
-      "id": "apple_api:apple:200685429",
-      "company": "Apple",
-      "title": "Manufacturing Quality Engineer",
-      "category": "Manufacturing / NPI",
-      "location": "Cupertino",
-      "workstyle": "Unknown",
-      "employment": "Unspecified",
-      "experience_fit": "Experience not stated — review",
-      "salary": "Not disclosed",
-      "posted": "Oct 01, 2026",
-      "apply_url": "https://jobs.apple.com/en-us/details/200685429/manufacturing-quality-engineer",
-      "source_url": "https://jobs.apple.com/en-us/details/200685429/manufacturing-quality-engineer",
-      "source": "apple_api:apple",
-      "salary_min": null,
-      "salary_max": null,
-      "salary_fit": "Undisclosed — review",
-      "fit_score": 28,
-      "match_reasons": "Low fit / eligibility gap | No clear ME duties | Gaps: Limited mechanical-duty evidence; Experience/start date not confirmed",
-      "match_version": "me-v2",
-      "match_tier": "Low fit / eligibility gap",
-      "match_gaps": [
-        "Limited mechanical-duty evidence",
-        "Experience/start date not confirmed"
-      ],
-      "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
-    },
-    {
-      "id": "apple_api:apple:200674956",
-      "company": "Apple",
-      "title": "Manufacturing Quality Engineer (MQE) – Module Components",
-      "category": "Manufacturing / NPI",
-      "location": "Cupertino",
-      "workstyle": "Unknown",
-      "employment": "Unspecified",
-      "experience_fit": "Experience not stated — review",
-      "salary": "Not disclosed",
-      "posted": "Aug 12, 2026",
-      "apply_url": "https://jobs.apple.com/en-us/details/200674956/manufacturing-quality-engineer-mqe-module-components",
-      "source_url": "https://jobs.apple.com/en-us/details/200674956/manufacturing-quality-engineer-mqe-module-components",
-      "source": "apple_api:apple",
-      "salary_min": null,
-      "salary_max": null,
-      "salary_fit": "Undisclosed — review",
-      "fit_score": 28,
-      "match_reasons": "Low fit / eligibility gap | No clear ME duties | Gaps: Limited mechanical-duty evidence; Experience/start date not confirmed",
-      "match_version": "me-v2",
-      "match_tier": "Low fit / eligibility gap",
-      "match_gaps": [
-        "Limited mechanical-duty evidence",
-        "Experience/start date not confirmed"
-      ],
-      "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200674144",
@@ -735,7 +651,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200688657",
@@ -763,7 +679,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200688798",
@@ -791,7 +707,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200671854",
@@ -819,7 +735,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200687631",
@@ -846,7 +762,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200678799",
@@ -874,7 +790,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200680263",
@@ -902,7 +818,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200680257",
@@ -930,7 +846,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200687527",
@@ -958,7 +874,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "apple_api:apple:200681340",
@@ -986,7 +902,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:applied:503a7627-c530-4565-9408-e3ea99439742",
@@ -1014,7 +930,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:applied:0820cc79-9305-43d3-836e-2c9654afb39e",
@@ -1041,7 +957,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:applied:4c3cd892-2ef0-40b6-877a-39540a224a5c",
@@ -1069,7 +985,7 @@
         "ECE-heavy core: PCB/board engineering, circuits/schematics"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:applied:536a0431-e023-439d-8ead-cb584c433d41",
@@ -1097,36 +1013,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
-    },
-    {
-      "id": "ashby:applied:d8b7286e-bd47-407b-859d-f2b7f5822a8c",
-      "company": "Applied Intuition",
-      "title": "Hardware Test Engineer",
-      "category": "Mechanical / hardware design",
-      "location": "Sunnyvale",
-      "workstyle": "OnSite",
-      "employment": "FullTime",
-      "experience_fit": "0–3 years specified",
-      "salary": "$110K - $190K",
-      "posted": "2026-06-15T22:52:06.976+00:00",
-      "apply_url": "https://jobs.ashbyhq.com/applied/d8b7286e-bd47-407b-859d-f2b7f5822a8c/application",
-      "source_url": "https://jobs.ashbyhq.com/applied/d8b7286e-bd47-407b-859d-f2b7f5822a8c",
-      "source": "ashby:applied",
-      "salary_min": 110000,
-      "salary_max": 190000,
-      "salary_fit": "Range reaches $140k",
-      "fit_score": 25,
-      "match_reasons": "Low fit / eligibility gap | Matches: process/reliability testing | Gaps: Limited mechanical-duty evidence; ECE-heavy core: PCB/board engineering, circuits/schematics; 6+ years required",
-      "match_version": "me-v2",
-      "match_tier": "Low fit / eligibility gap",
-      "match_gaps": [
-        "Limited mechanical-duty evidence",
-        "ECE-heavy core: PCB/board engineering, circuits/schematics",
-        "6+ years required"
-      ],
-      "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:applied:6e57a97e-62bb-46fb-92ec-dd12831fd6f9",
@@ -1153,7 +1040,7 @@
         "2026 graduation window conflicts with May 2027"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:applied:c65ae625-09d2-4e94-ab37-7ae2444b84a0",
@@ -1180,7 +1067,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:applied:4cb44794-7b3b-46fc-9408-104a6d0f379e",
@@ -1208,7 +1095,7 @@
         "Confirm internships satisfy experience minimum"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:applied:932de549-2882-4c0d-aeca-b4a8ef5f1f41",
@@ -1235,7 +1122,7 @@
         "Confirm internships satisfy experience minimum"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4038127009",
@@ -1262,19 +1149,19 @@
         "Software/ML core outside mechanical target"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4436391009",
       "company": "Atomic Machines",
-      "title": "Manufacturing Assembler (2:15pm-10:45pm)",
+      "title": "Manufacturing Assembler, Contract (2:15pm-10:45pm)",
       "category": "Manufacturing / NPI",
       "location": "Emeryville,  California",
       "workstyle": "Unknown",
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "Not disclosed",
-      "posted": "2026-10-09T11:56:32-04:00",
+      "posted": "2026-10-14T13:39:18-04:00",
       "apply_url": "https://job-boards.greenhouse.io/atomicmachines/jobs/4436391009",
       "source_url": "https://job-boards.greenhouse.io/atomicmachines/jobs/4436391009",
       "source": "greenhouse:atomicmachines",
@@ -1290,19 +1177,19 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4436390009",
       "company": "Atomic Machines",
-      "title": "Manufacturing Assembler (6:00am-2:30pm)",
+      "title": "Manufacturing Assembler, Contract (6:00am-2:30pm)",
       "category": "Manufacturing / NPI",
       "location": "Emeryville, California",
       "workstyle": "Unknown",
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "Not disclosed",
-      "posted": "2026-10-09T11:57:12-04:00",
+      "posted": "2026-10-14T13:38:53-04:00",
       "apply_url": "https://job-boards.greenhouse.io/atomicmachines/jobs/4436390009",
       "source_url": "https://job-boards.greenhouse.io/atomicmachines/jobs/4436390009",
       "source": "greenhouse:atomicmachines",
@@ -1318,7 +1205,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4437065009",
@@ -1345,7 +1232,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4437584009",
@@ -1372,7 +1259,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4443962009",
@@ -1399,7 +1286,7 @@
         "6+ years required"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atoms:8806871002",
@@ -1426,7 +1313,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atoms:8637501002",
@@ -1453,7 +1340,7 @@
         "5+ years required"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:atoms:8541658002",
@@ -1480,7 +1367,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": true,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:cerebras:d0baac54-76cb-4e8d-93bd-24e121113870",
@@ -1509,7 +1396,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:cobot:f060d83e-3b73-4a41-b8e1-c19359d572b4",
@@ -1536,7 +1423,7 @@
         "Confirm internships satisfy experience minimum"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:cobot:a29470cd-18d2-40b0-bf85-47a3a038e980",
@@ -1563,7 +1450,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:coram-ai:3dbdcba0-0d78-4e98-b62a-126572a4f01d",
@@ -1590,7 +1477,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": true,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:doordashusa:8082005",
@@ -1617,7 +1504,34 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
+    },
+    {
+      "id": "greenhouse:doordashusa:8269219",
+      "company": "DoorDash",
+      "title": "Mechanical Engineer, Consumer Electronics",
+      "category": "Mechanical / hardware design",
+      "location": "San Francisco, CA",
+      "workstyle": "Unknown",
+      "employment": "Unspecified",
+      "experience_fit": "Experience not stated — review",
+      "salary": "Not disclosed",
+      "posted": "2026-10-14T13:08:04-04:00",
+      "apply_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8269219",
+      "source_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8269219",
+      "source": "greenhouse:doordashusa",
+      "salary_min": null,
+      "salary_max": null,
+      "salary_fit": "Undisclosed — review",
+      "fit_score": 79,
+      "match_reasons": "Good ME fit | Matches: mechanical CAD/design, analysis/tolerances, equipment/fixtures | Gaps: Experience/start date not confirmed",
+      "match_version": "me-v2",
+      "match_tier": "Good ME fit",
+      "match_gaps": [
+        "Experience/start date not confirmed"
+      ],
+      "shortlist_eligible": true,
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:doordashusa:8017150",
@@ -1644,7 +1558,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:foundry-robotics:f4a52fae-cf78-4294-a4be-e70ef6099542",
@@ -1671,7 +1585,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:foundry-robotics:681e7d19-5716-4694-b63c-b5a16039bba1",
@@ -1700,7 +1614,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:genesis:e260b061-68b2-43d5-9f11-45261234f901",
@@ -1728,7 +1642,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "google_sitemap:google:95058423325827782-hardware-systems-test-engineer",
@@ -1757,7 +1671,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "google_sitemap:google:97895150440587974-mechanical-product-design-engineer",
@@ -1784,7 +1698,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "google_sitemap:google:88033579111457478-product-design-engineer",
@@ -1811,7 +1725,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:gradientrobotics:79c1cbc9-a8ca-4cad-9803-bdfdbb6af9b5",
@@ -1836,7 +1750,7 @@
       "match_tier": "Strong ME fit",
       "match_gaps": [],
       "shortlist_eligible": true,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:gritt:ed459ec7-84ba-415c-9c44-5be778a7c6b0",
@@ -1863,7 +1777,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:gritt:5a834deb-09aa-406c-8c8d-c5d7cc6818ad",
@@ -1890,7 +1804,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:maticrobots:535fbc23-57ee-41f7-a949-190572402889",
@@ -1920,7 +1834,7 @@
         "4+ years required"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:maticrobots:bfb0df27-bb17-46a1-919c-afd8c3d09a7d",
@@ -1947,7 +1861,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": true,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:maticrobots:1858e85e-c3be-4d05-9a43-083a84ba3255",
@@ -1974,7 +1888,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": true,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:maticrobots:76c07009-73b5-43e3-affb-d4fc20b9fe49",
@@ -2001,7 +1915,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "workday:nvidia:Board-Product-Development-Engineer_JR2017024",
@@ -2029,7 +1943,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "workday:nvidia:Characterization-Product-Development-Engineer_JR2021756",
@@ -2058,7 +1972,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:e7594296-a38b-43a1-b4f8-01253a3b7732",
@@ -2085,7 +1999,7 @@
         "8+ years required"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:56aafd17-7db9-473a-b3b4-957b6d926cdf",
@@ -2113,7 +2027,7 @@
         "Specialist motor design/manufacturing depth not demonstrated"
       ],
       "shortlist_eligible": true,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:ece054ea-ac75-4b8a-bdbf-5cdf19368312",
@@ -2141,7 +2055,7 @@
         "10+ years required"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:a8a421d1-c9bb-4e37-8418-4e4d6b2ba29d",
@@ -2169,7 +2083,7 @@
         "Specialist motor design/manufacturing depth not demonstrated"
       ],
       "shortlist_eligible": true,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:2b87bb06-ba33-4cab-b950-0df12ca85dcf",
@@ -2196,7 +2110,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": true,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:5a265d2b-683f-4cea-9b69-8e137e704ab3",
@@ -2226,7 +2140,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:65b255da-4fd9-414e-98d4-0bec4eecf8ff",
@@ -2253,7 +2167,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:8a86b02b-6063-4124-863f-7e41e9849e22",
@@ -2280,7 +2194,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:6cf91ff5-a811-435c-bf93-f3d958896599",
@@ -2308,7 +2222,7 @@
         "Electrical/embedded role"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:openai:393b88d7-1fbc-466a-9108-a7c1bafeb8d8",
@@ -2336,7 +2250,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "greenhouse:pacificfusion:4329610009",
@@ -2364,7 +2278,7 @@
         "2+ years: confirm internships count"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:rhoda-ai:6d9ea8a2-925a-46bb-b854-cb904df2d47a",
@@ -2391,7 +2305,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:specter:4849bffc-5399-4fcb-83c6-ac805656b7a7",
@@ -2418,7 +2332,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:specter:dab4adfc-971b-4f8e-b0c8-f36ed9df75f9",
@@ -2445,7 +2359,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:specter:463b9708-1e48-436e-894e-17a014be99e2",
@@ -2472,7 +2386,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:specter:5cd498d6-9f71-474f-a0c7-964ed4d24282",
@@ -2499,7 +2413,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:specter:ab171ab2-8811-4fef-8d63-b3e2e6bb2703",
@@ -2528,7 +2442,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:specter:9ed686f2-1948-4ca8-bc89-8ac11085e5a8",
@@ -2558,7 +2472,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:specter:5442f447-03cc-4734-b9c1-b6723aa818c8",
@@ -2586,7 +2500,7 @@
         "Experience/start date not confirmed"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:tar:fe58b0d9-b34d-47d7-bff2-f6e645124701",
@@ -2613,7 +2527,7 @@
         "4+ years required"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:westmag:24b151b6-87eb-46d9-b48d-5591e9cdc5b8",
@@ -2640,7 +2554,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:westmag:1eadb4b5-9b25-4f17-b115-73c5341e3745",
@@ -2667,7 +2581,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:westmag:64a93fb9-ce73-4fe1-8936-52ee259be5fe",
@@ -2694,7 +2608,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:westmag:9a01c8ea-c362-4a92-af6c-b02816acab8c",
@@ -2721,7 +2635,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:westmag:2b28a62e-2d3f-4bc8-b747-574fa17e5dd9",
@@ -2749,7 +2663,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:westmag:a276f437-4c6e-4bac-b7ac-9f4af09c2649",
@@ -2777,7 +2691,7 @@
         "Specialist motor design/manufacturing depth not demonstrated"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     },
     {
       "id": "ashby:westmag:cb993a12-13ba-440b-a70b-bdba7f3fc055",
@@ -2804,7 +2718,7 @@
         "3+ years: stretch beyond new-grad experience"
       ],
       "shortlist_eligible": false,
-      "last_seen": "2026-10-14T02:32:16+00:00"
+      "last_seen": "2026-10-14T18:17:40+00:00"
     }
   ]
 }
