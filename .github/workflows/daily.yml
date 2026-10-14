@@ -1,0 +1,53 @@
+name: Daily Bay Area engineering jobs
+on:
+  schedule:
+    - cron: '23 14 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'config/**'
+      - 'requirements.txt'
+      - '.github/workflows/daily.yml'
+permissions:
+  contents: write
+concurrency:
+  group: bay-area-daily-scan
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Validate collector
+        run: |
+          python -m compileall -q src
+          if [ -d tests ]; then python -m unittest discover -s tests -v; fi
+      - name: Fetch employer job listings
+        run: python -m src.puller
+      - name: Validate feed and save public results
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/jobs.json')
+          j=json.loads(p.read_text())
+          assert j.get('sources_checked'), 'No employer sources succeeded'
+          assert isinstance(j.get('jobs'),list), 'Malformed job feed'
+          print('Sources checked:',len(j['sources_checked']))
+          print('Failed:',len(j.get('sources_failed',[])))
+          print('Matching jobs:',len(j['jobs']))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/jobs.json data/jobs.csv
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: refresh Bay Area job feed'
+            git push
+          fi
