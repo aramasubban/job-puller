@@ -79,14 +79,17 @@ def _ms_location(pos):
 def fetch_microsoft(src, role, senior, noneng, bay):
     base="https://apply.careers.microsoft.com"
     collected={}; pages=0
+    # Query pacing instead of burst requests. If Microsoft sends 429, surface
+    # a source error and stop until the next daily run; do not circumvent it.
+    delay=max(4.0,min(float(src.get("min_interval_seconds",6)),30.0))
     for term in src.get("search_terms",["mechanical","manufacturing","product design"]):
         for offset in (0,10):
             params=urlencode({"domain":"microsoft.com","query":term,"location":"",
                               "start":offset,"sort_by":"relevance","filter_include_remote":1})
-            try:payload=json.loads(_request(base+"/api/pcsx/search?"+params))
-            except Exception:
-                if pages:break
-                raise
+            if pages:time.sleep(delay)
+            # Even partial pages are not proof of full coverage. HTTP 429
+            # propagates to the source-health report, retaining old job rows.
+            payload=json.loads(_request(base+"/api/pcsx/search?"+params))
             data=payload.get("data")
             if not isinstance(data,dict) or not isinstance(data.get("positions"),list):
                 raise ValueError("Microsoft Eightfold did not return positions")
@@ -101,11 +104,11 @@ def fetch_microsoft(src, role, senior, noneng, bay):
                         "description":str(p.get("jobDescription") or ""),
                         "employment":"Unspecified","posted":str(p.get("postedTs") or "")}
             if len(posts)<10:break
-            time.sleep(2)
     if not pages:raise ValueError("Microsoft jobs API returned no valid pages")
     # Details may be throttled even when the search works. Keep the listing and
     # mark qualifications/pay as requiring manual verification in that case.
-    for ident,j in list(collected.items())[:12]:
+    for ident,j in list(collected.items())[:4]:
+        time.sleep(delay)
         try:
             q=urlencode({"position_id":ident,"domain":"microsoft.com","hl":"en"})
             data=json.loads(_request(base+"/api/pcsx/position_details?"+q)).get("data",{})
@@ -113,8 +116,10 @@ def fetch_microsoft(src, role, senior, noneng, bay):
                 detail=data.get("position") if isinstance(data.get("position"),dict) else data
                 if isinstance(detail,dict):
                     j["description"]=str(detail.get("jobDescription") or j["description"])
-            time.sleep(1)
-        except Exception: break
+        except Exception as exc:
+            # Explicit throttling is never silently interpreted as no jobs.
+            if getattr(exc,"code",None)==429:raise
+            break
     return list(collected.values())
 
 def google_job_detail(html, url, role):
