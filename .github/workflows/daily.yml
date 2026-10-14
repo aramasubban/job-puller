@@ -46,10 +46,13 @@ jobs:
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Update onto remote main *before* staging generated data. This
+          # avoids rebasing two frequently changing feed files and protects
+          # newer code commits made while the scan was running.
+          git fetch origin main
+          git reset --mixed origin/main
           git add data/jobs.json data/jobs.csv
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh Bay Area job feed'
-            git fetch origin main
-            git rebase origin/main
             git push
           fi
