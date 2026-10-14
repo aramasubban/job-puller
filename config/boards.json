@@ -205,11 +205,6 @@
     "pages_per_query": 2
   },
   {
-    "provider": "tesla_api",
-    "company": "Tesla",
-    "slug": "tesla"
-  },
-  {
     "provider": "google_sitemap",
     "company": "Google",
     "slug": "google",
