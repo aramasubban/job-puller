@@ -49,5 +49,7 @@ jobs:
           git add data/jobs.json data/jobs.csv
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh Bay Area job feed'
+            git fetch origin main
+            git rebase origin/main
             git push
           fi
