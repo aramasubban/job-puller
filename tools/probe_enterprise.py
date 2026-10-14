@@ -54,3 +54,24 @@ for url in ('https://careers.google.com/jobs/sitemap','https://careers.google.co
 for u in ('https://www.tesla.com/cua-api/careers/job/273339','https://www.tesla.com/cua-api/apps/careers/state?country=US'):
  status,body=read(u)
  print('TESLA_API',u,status,body[:140])
+
+# One controlled Google detail check and one Apple field check
+from xml.etree import ElementTree as ET
+from urllib.parse import urlsplit
+status,sitemap=read('https://careers.google.com/jobs/sitemap')
+if status==200:
+ root=ET.fromstring(sitemap)
+ urls=[x.text for x in root.findall('.//{*}loc') if x.text]
+ needles=('mechanical','manufactur','product-design','robotics','mechatronic','battery')
+ eligible=[u for u in urls if any(z in u.lower() for z in needles)]
+ print('GOOGLE_CANDIDATE_COUNT',len(eligible),'first',eligible[:4])
+ for u in eligible[:2]:
+  code,body=read(u)
+  print('GOOGLE_DETAIL',code,u,'length',len(body),'head',body[:320].replace('\\n',' '))
+code,body=read('https://careers.google.com/robots.txt')
+print('GOOGLE_ROBOTS',code,body[:750])
+code,body=read('https://jobs.apple.com/api/v1/search',{'query':'mechanical','filters':{},'page':1,'locale':'en-us','sort':'','format':{}})
+if code==200:
+ p=json.loads(body)['res']; items=p.get('searchResults',[])
+ print('APPLE_SHAPE',p.get('totalRecords'),list(items[0]) if items else [],str({k:v for k,v in items[0].items() if k not in ('jobSummary','jobDescription')})[:1600] if items else '')
+else:print('APPLE_SHAPE_HTTP',code,body[:250])
