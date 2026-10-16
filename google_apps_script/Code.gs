@@ -32,7 +32,7 @@ function syncJobs(){
   const feed=JSON.parse(res.getContentText());
   if(!Array.isArray(feed.jobs)||!feed.sources_checked||!feed.sources_checked.length)throw new Error('No validated sources in feed; existing applications preserved');
   const s=tab_('Jobs');if(s.getRange(1,1).getValue()!==HEADERS[0])setupTracker();
-  const count=Math.max(0,s.getLastRow()-1),old=readRows_(s).concat(readRows_(tab_('Applied')));
+  const count=Math.max(0,s.getLastRow()-1),old=readRows_(s).concat(readRows_(tab_('Applied')),readRows_(tab_('Dismissed')));
   const byId=new Map(old.filter(r=>r[18]).map(r=>[String(r[18]),r]));
   const seen=new Set((feed.source_status||[]).filter(x=>x.state==='OK').map(x=>x.source)),fresh=new Map(feed.jobs.filter(j=>j.id).map(j=>[String(j.id),j]));
   const rows=[];let added=0;
@@ -51,6 +51,7 @@ function syncJobs(){
  }finally{lock.releaseLock()}
 }
 function readRows_(s){return s.getLastRow()>1?s.getRange(2,1,s.getLastRow()-1,HEADERS.length).getValues().filter(r=>r[18]):[]}
+function dismissed_(r){return r[5]=='Not Interested'&&!r[9]}
 function archived_(r){return ['Applied','Interviewing','Offer','Rejected'].includes(r[5])||(r[5]=='Not Interested'&&!!r[9])}
 function writeRows_(s,rows){
  const old=Math.max(0,s.getLastRow()-1);header_(s,HEADERS);
@@ -62,18 +63,20 @@ function writeRows_(s,rows){
  s.setFrozenColumns(2);s.setColumnWidth(1,370);s.setColumnWidth(2,145);s.setColumnWidth(6,140);s.setColumnWidth(12,255);
  s.getRange(2,6,s.getMaxRows()-1,1).setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(STATUS,true).setAllowInvalid(false).build());
  s.getRange(2,10,s.getMaxRows()-1,2).setNumberFormat('yyyy-mm-dd');
+ if(output.length)s.setRowHeights(2,output.length,32);s.getRange(2,1,Math.max(1,output.length),HEADERS.length).setFontSize(9).setWrap(false).setVerticalAlignment('middle');
  s.getRange(2,1,Math.max(1,output.length),1).setFontColor('#087E8B').setFontLine('underline');
 }
 function writeSplit_(rows){
  const unique=new Map(rows.filter(r=>r[18]).map(r=>[String(r[18]),r]));
  const all=Array.from(unique.values());
  writeRows_(tab_('Applied'),all.filter(archived_).sort((a,b)=>Number(new Date(b[9]||0))-Number(new Date(a[9]||0))));
- writeRows_(tab_('Jobs'),all.filter(r=>!archived_(r)&&Number(r[2])>=MIN_FIT_SCORE).sort((a,b)=>Number(b[2])-Number(a[2])));
+ writeRows_(tab_('Dismissed'),all.filter(dismissed_));tab_('Dismissed').hideSheet();
+ writeRows_(tab_('Jobs'),all.filter(r=>!archived_(r)&&!dismissed_(r)&&Number(r[2])>=MIN_FIT_SCORE).sort((a,b)=>Number(b[2])-Number(a[2])));
  const legacy=book_().getSheetByName('Apply Next');if(legacy)book_().deleteSheet(legacy);
  book_().setActiveSheet(tab_('Applied'));book_().moveActiveSheet(2);
 }
 // Keep the old function name compatible with existing menus/triggers.
-function refreshApplyNext_(){writeSplit_(readRows_(tab_('Jobs')).concat(readRows_(tab_('Applied'))))}
+function refreshApplyNext_(){writeSplit_(readRows_(tab_('Jobs')).concat(readRows_(tab_('Applied')),readRows_(tab_('Dismissed'))))}
 function buildDashboard_(){
  const s=tab_('Dashboard');s.getRange('A1:L26').getMergedRanges().forEach(x=>x.breakApart());s.clearContents();
  s.getRange('A1:L2').merge().setValue('BAY AREA  /  ENGINEERING JOB SEARCH').setBackground('#13223A').setFontColor('white').setFontWeight('bold').setFontSize(19);
