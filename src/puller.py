@@ -109,7 +109,7 @@ def plain(value):
 def is_bay_area(location):
     return bool(BAY_AREA.search(location or ""))
 
-def experience_fit(title, description):
+def required_experience_years(description):
     # Never let an entry-level title override an explicit 4+ year minimum.
     # Only explicit 'years of experience' or 'minimum X years' phrases;
     # does not mistake 'founded 5 years ago' for a requirement.
@@ -117,16 +117,18 @@ def experience_fit(title, description):
     # Preferred/nice-to-have years are not a mandatory minimum. When a board
     # provides heading-style qualification sections, screen the required text.
     text = re.split(r'\b(?:preferred|nice[- ]to[- ]have|bonus)\s+(?:qualifications|requirements|experience)\b',text,maxsplit=1,flags=re.I)[0]
-    minima = []
-    for match in EXP.finditer(text):
-        minima.append(int(match.group(1)))
-    for match in EXP_BEFORE.finditer(text):
-        minima.append(int(match.group(1)))
-    if any(x > 3 for x in minima):
+    minima = [int(m.group(1)) for pattern in (EXP, EXP_BEFORE) for m in pattern.finditer(text)]
+    minima += [int(m.group(1)) for m in re.finditer(
+        r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
+    return max(minima, default=0)
+
+def experience_fit(title, description):
+    minimum = required_experience_years(description)
+    if minimum > 3:
         return "EXCLUDE"
     if ENTRY.search(title):
-        return "New grad / early career" if not minima else "0–3 years specified"
-    if minima:
+        return "New grad / early career" if not minimum else "0–3 years specified"
+    if minimum:
         return "0–3 years specified"
     return "Experience not stated — review"
 
@@ -140,26 +142,46 @@ def role_family(title):
         return "Mechanical / hardware design"
     return "Hardware test / reliability"
 
-def qualifies(job):
+def exclusion_reasons(job):
     title = job.get("title", "") or ""
     desc = job.get("description", "") or ""
     location = job.get("location", "") or ""
     etype = (job.get("employment", "") or "").lower().replace(" ", "").replace("-", "")
+    reasons = []
     if SECTOR_COMPANIES.search(job.get("company", "")) or SECTOR_TITLES.search(title):
-        return False
+        reasons.append("Excluded sector/company")
     if not job_regions(location):
-        return False
+        reasons.append("Outside Bay Area / Greater LA")
     if not ROLE_PATTERN.search(title) or NON_ENGINEERING.search(title):
-        return False
+        reasons.append("Outside full-time physical engineering scope")
     if SENIOR.search(title):
-        return False
+        reasons.append("Senior/staff/lead title")
     if etype and etype not in ("fulltime", "regular", "permanent", "unspecified"):
-        return False
+        reasons.append("Not full-time permanent employment")
     # For Greenhouse with no structured employment type, reject explicit
     # internship or temporary wording in the title; full-time is unverified.
-    if experience_fit(title, desc) == "EXCLUDE":
-        return False
-    return True
+    minimum = required_experience_years(desc)
+    if minimum > 3:
+        reasons.append(f"Requires {minimum}+ years; maximum required experience is 3")
+    return reasons
+
+def qualifies(job):
+    return not exclusion_reasons(job)
+
+class ScreenedJobs(list):
+    """List-compatible result with public evidence explaining filtered roles."""
+    def __init__(self, raw_count=0):
+        super().__init__()
+        self.raw_count = raw_count
+        self.excluded_roles = []
+
+    def record_exclusion(self, job, reasons):
+        if not job_regions(job.get('location', '')) or not ROLE_PATTERN.search(job.get('title', '')):
+            return
+        if NON_ENGINEERING.search(job.get('title', '')):
+            return
+        self.excluded_roles.append({k: job.get(k, '') for k in
+            ('id', 'company', 'title', 'location', 'source', 'source_url')} | {'reasons': reasons})
 
 def _download(url, timeout=18):
     req = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
@@ -180,7 +202,7 @@ def parse_board(src, payload):
     jobs = payload.get("jobs", []) if isinstance(payload, dict) else payload
     if not isinstance(jobs, list):
         raise ValueError("Job API did not return a list")
-    parsed = []
+    parsed = ScreenedJobs(len(jobs))
     for j in jobs:
         if not isinstance(j, dict):
             continue
@@ -244,9 +266,17 @@ def parse_board(src, payload):
             "apply_url": j.get("applyUrl") or url, "source_url": url,
             "source": source_key(src),
         }
-        if qualifies({**record, "description": description}):
-            enriched=enrich(record, description)
-            if enriched is not None: parsed.append(enriched)
+        reasons = exclusion_reasons({**record, "description": description})
+        if reasons:
+            parsed.record_exclusion(record, reasons)
+            continue
+        enriched = enrich(record, description)
+        if enriched is None:
+            parsed.record_exclusion(record, ["Disclosed annual base upper band below $140,000"])
+        else:
+            parsed.append(enriched)
+            if not meets_fit_floor(enriched):
+                parsed.record_exclusion(enriched, [f"ME fit {enriched['fit_score']}/100 below 50", enriched['match_reasons']])
     return parsed
 
 def stable_external_id(src, url):
@@ -327,6 +357,7 @@ def run():
     successful = []
     failed = []
     source_status = []
+    excluded_roles = []
     filtered_out = set()
     with ThreadPoolExecutor(max_workers=6) as pool:
         futures = {pool.submit(fetch_source, src): src for src in sources}
@@ -337,8 +368,12 @@ def run():
                 raw_results = fut.result()
                 filtered_out.update(j['id'] for j in raw_results if j.get('id') and not meets_fit_floor(j))
                 results = [j for j in raw_results if meets_fit_floor(j)]
+                audit = getattr(raw_results, 'excluded_roles', [])
+                excluded_roles.extend(audit)
                 successful.append(key)
                 source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results),"company_context":src.get("company_context", ""),"careers_url":src.get("careers_url", "")})
+                source_status[-1].update({'raw_postings': getattr(raw_results, 'raw_count', None),
+                    'excluded_relevant': len(audit)})
                 for job in results:
                     job["company_context"] = src.get("company_context", "")
                     job["careers_url"] = src.get("careers_url", "")
@@ -360,8 +395,8 @@ def run():
     # declare them closed; keep their previous last_seen unchanged.
     for job in previous.get("jobs", []):
         if job.get("source") in failed and job.get("id") not in found:
-            if job.get("match_version") != MATCH_VERSION:
-                job.update(score_match(job, ""))
+            # A failed source supplies no fresh duties to rescore. Preserve
+            # the last evidence-backed score instead of scoring an empty JD.
             if meets_fit_floor(job):
                 found[job["id"]] = job
 
@@ -374,6 +409,7 @@ def run():
         "minimum_fit_score": MIN_FIT_SCORE,
         "regions": ["Bay Area", "LA"],
         "filtered_out_job_ids": sorted(filtered_out),
+        "excluded_roles": sorted(excluded_roles, key=lambda j: (j['company'], j['title'], j['id'])),
         "jobs": sorted(found.values(), key=lambda j: (j["company"].lower(), j["title"].lower(), j["id"])),
     }
     JSON_OUT.parent.mkdir(parents=True, exist_ok=True)

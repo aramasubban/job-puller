@@ -36,3 +36,10 @@ Only employer-published listing metadata belongs here. Never commit statuses, ap
 
 ## Regional search
 Search Bay Area and Greater LA, including LA/Orange County, Ventura and Antelope Valley/Mojave aerospace hubs. Bay Area and LA are live formula views over the Jobs working records; use their Edit status / notes links. Applied and Interviews are combined. Never count regional view rows as additional applications. Keep M/W/F cadence, fit >=50, base-salary upper band >=$140k when disclosed, and existing exclusions. Installing source changes in this repository does not deploy Apps Script.
+
+## Coverage and screening audit
+The source registry now includes ALSO (Ridealso), Freeform and Weave Robotics. Routine refreshes still run only M/W/F. Official posting titles and requirements are authoritative; LinkedIn/aggregators are discovery leads and can retain old staff titles or repost dates.
+
+Structured ATS scans retain public exclusion reasons in `excluded_roles`, plus `raw_postings` and `excluded_relevant` in source status. Zero eligible matches must not be presented as zero open jobs. For example, Bedrock's Mechanical Systems Integration Engineer is checked but excluded for its explicit 5+ years requirement. ALSO's Mechanical Hardware Test & Validation Engineer (All Levels) accepts academic/personal/internship testing projects and is eligible.
+
+The scheduled sheet task must compare a bounded discovery search against the registry before each existing refresh, validate new employer career sites, and enroll verified sources. It must also display useful exclusion evidence in existing Coverage/Overview, without extra tabs or extra collection cadence. Failed-source roles keep their prior evidence-backed scores when no fresh description is available.
