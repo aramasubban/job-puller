@@ -37,7 +37,7 @@ function syncJobs(){
   const seen=new Set((feed.source_status||[]).filter(x=>x.state==='OK').map(x=>x.source)),fresh=new Map(feed.jobs.filter(j=>j.id).map(j=>[String(j.id),j]));
   const rows=[];let added=0;
   const excluded=new Set(feed.filtered_out_job_ids||[]);
-  byId.forEach((r,id)=>{if(excluded.has(id)&&!archived_(r))return;if(fresh.has(id)){rows.push(jobRow_(fresh.get(id),r));fresh.delete(id)}else{const keep=r.slice();if(seen.has(String(r[15])))keep[12]='Not listed';rows.push(keep)}});
+  byId.forEach((r,id)=>{if(excluded.has(id)&&!archived_(r)&&!dismissed_(r))return;if(fresh.has(id)){rows.push(jobRow_(fresh.get(id),r));fresh.delete(id)}else{const keep=r.slice();if(seen.has(String(r[15])))keep[12]='Not listed';rows.push(keep)}});
   fresh.forEach(j=>{rows.push(jobRow_(j,null));added++});
   writeSplit_(rows);
   const c=tab_('Coverage');c.clearContents();const status=feed.source_status||[];
@@ -60,26 +60,25 @@ function writeRows_(s,rows){
  if(output.length)s.getRange(2,1,output.length,HEADERS.length).setValues(output);
  if(old>output.length)s.getRange(output.length+2,1,old-output.length,HEADERS.length).clearContent();
  if(s.getFilter())s.getFilter().remove();s.getRange(1,1,Math.max(2,output.length+1),HEADERS.length).createFilter();
- s.setFrozenColumns(2);s.setColumnWidth(1,370);s.setColumnWidth(2,145);s.setColumnWidth(6,140);s.setColumnWidth(12,255);
+ s.setFrozenColumns(2);s.setColumnWidth(1,330);s.setColumnWidth(2,125);s.setColumnWidth(6,125);s.setColumnWidth(12,255);
  s.getRange(2,6,s.getMaxRows()-1,1).setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(STATUS,true).setAllowInvalid(false).build());
  s.getRange(2,10,s.getMaxRows()-1,2).setNumberFormat('yyyy-mm-dd');
- if(output.length)s.setRowHeights(2,output.length,32);s.getRange(2,1,Math.max(1,output.length),HEADERS.length).setFontSize(9).setWrap(false).setVerticalAlignment('middle');
+ if(output.length)s.setRowHeights(2,output.length,32);s.getRange(2,1,Math.max(1,output.length),HEADERS.length).setFontSize(9).setWrapStrategy(SpreadsheetApp.WrapStrategy.CLIP).setVerticalAlignment('middle');
  s.getRange(2,1,Math.max(1,output.length),1).setFontColor('#087E8B').setFontLine('underline');
 }
 function writeSplit_(rows){
- const unique=new Map(rows.filter(r=>r[18]).map(r=>[String(r[18]),r]));
- const all=Array.from(unique.values());
- writeRows_(tab_('Applied'),all.filter(archived_).sort((a,b)=>Number(new Date(b[9]||0))-Number(new Date(a[9]||0))));
- writeRows_(tab_('Dismissed'),all.filter(dismissed_));tab_('Dismissed').hideSheet();
- writeRows_(tab_('Jobs'),all.filter(r=>!archived_(r)&&!dismissed_(r)&&Number(r[2])>=MIN_FIT_SCORE).sort((a,b)=>Number(b[2])-Number(a[2])));
- const legacy=book_().getSheetByName('Apply Next');if(legacy)book_().deleteSheet(legacy);
- book_().setActiveSheet(tab_('Applied'));book_().moveActiveSheet(2);
+ const unique=new Map(rows.filter(r=>r[18]).map(r=>[String(r[18]),r]));const all=Array.from(unique.values());
+ const groups=[['Applied',all.filter(archived_).sort((a,b)=>Number(new Date(b[9]||0))-Number(new Date(a[9]||0)))],['Dismissed',all.filter(dismissed_)],['Jobs',all.filter(r=>!archived_(r)&&!dismissed_(r)&&Number(r[2])>=MIN_FIT_SCORE).sort((a,b)=>Number(b[2])-Number(a[2])||String(a[1]).localeCompare(String(b[1])))]];
+ // Stage destination copies before removing any source record.
+ groups.forEach(([name,dest])=>{const sheet=tab_(name),existing=readRows_(sheet),ids=new Set(existing.map(r=>String(r[18]))),missing=dest.filter(r=>!ids.has(String(r[18])));if(missing.length)writeRows_(sheet,existing.concat(missing))});
+ groups.forEach(([name,dest])=>writeRows_(tab_(name),dest));
+ tab_('Dismissed').hideSheet();
 }
 // Keep the old function name compatible with existing menus/triggers.
 function refreshApplyNext_(){writeSplit_(readRows_(tab_('Jobs')).concat(readRows_(tab_('Applied')),readRows_(tab_('Dismissed'))))}
 function buildDashboard_(){
- const s=tab_('Dashboard');s.getRange('A1:L26').getMergedRanges().forEach(x=>x.breakApart());s.clearContents();
- s.getRange('A1:L2').merge().setValue('BAY AREA  /  ENGINEERING JOB SEARCH').setBackground('#13223A').setFontColor('white').setFontWeight('bold').setFontSize(19);
+ const s=tab_('Dashboard');s.getRange('A1:L26').getMergedRanges().forEach(x=>x.breakApart());s.getRange('A1:L26').clearContent();
+ s.getRange('A1:L2').merge().setValue('BAY AREA + GREATER LA / ENGINEERING JOB SEARCH').setBackground('#13223A').setFontColor('white').setFontWeight('bold').setFontSize(19);
  s.getRange('A3:L3').merge().setValue('MECHANICAL • ROBOTICS • BATTERY / EV • MANUFACTURING EQUIPMENT  |  MAY 2027').setBackground('#EAF3F4');
  const cards=[['A5:C5','A6:C8','OPEN POSITIONS','=COUNTIF(Jobs!M2:M,"Open")+COUNTIF(Applied!M2:M,"Open")'],['D5:F5','D6:F8','READY TO APPLY','=COUNTIFS(Jobs!F2:F,"Not Applied",Jobs!M2:M,"Open")'],['G5:I5','G6:I8','APPLICATIONS','=COUNTIF(Applied!S2:S,"?*")'],['J5:L5','J6:L8','INTERVIEWS','=COUNTIF(Applied!F2:F,"Interviewing")']];
  cards.forEach(v=>{s.getRange(v[0]).merge().setValue(v[2]).setBackground('#E7EDF4').setFontColor('#52667A').setFontWeight('bold');s.getRange(v[1]).merge().setFormula(v[3]).setBackground('#F6F9FC').setFontColor('#13223A').setFontSize(28).setFontWeight('bold')});
