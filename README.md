@@ -33,3 +33,6 @@ python -m src.puller
 ## Privacy
 Only employer-published listing metadata belongs here. Never commit statuses, application notes/dates, resumes, contact information or authorization secrets. Never apply for jobs or contact employers automatically.
 
+
+## Regional search
+Search Bay Area and Greater LA, including LA/Orange County, Ventura and Antelope Valley/Mojave aerospace hubs. Bay Area and LA are live formula views over the Jobs working records; use their Edit status / notes links. Applied and Interviews are combined. Never count regional view rows as additional applications. Keep M/W/F cadence, fit >=50, base-salary upper band >=$140k when disclosed, and existing exclusions. Installing source changes in this repository does not deploy Apps Script.

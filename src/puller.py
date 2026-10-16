@@ -11,6 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from html import unescape
 from html.parser import HTMLParser
+from bs4 import BeautifulSoup
 import json
 from pathlib import Path
 import re
@@ -50,6 +51,18 @@ BAY_AREA_PATTERNS = [
     r"\bhalf moon bay\b", r"\bpacifica\b", r"\beast palo alto\b",
 ]
 BAY_AREA = re.compile("|".join(BAY_AREA_PATTERNS), re.IGNORECASE)
+LA_CITIES = ["los angeles", "el segundo", "hawthorne", "torrance", "gardena", "redondo beach", "manhattan beach", "hermosa beach", "long beach", "carson", "inglewood", "culver city", "santa monica", "pasadena", "altadena", "burbank", "glendale", "sylmar", "chatsworth", "canoga park", "woodland hills", "northridge", "san fernando", "santa clarita", "valencia", "palmdale", "lancaster", "mojave", "costa mesa", "irvine", "tustin", "huntington beach", "newport beach", "santa ana", "anaheim", "fullerton", "orange county", "lake forest", "foothill ranch", "seal beach", "cypress", "brea", "thousand oaks", "simi valley", "camarillo", "oxnard", "ventura"]
+LA_PATTERNS = [r"\b"+re.escape(city)+r"\b" for city in LA_CITIES]
+GREATER_LA = re.compile("|".join(LA_PATTERNS), re.IGNORECASE)
+TARGET_AREA = re.compile("|".join(BAY_AREA_PATTERNS + LA_PATTERNS), re.IGNORECASE)
+def job_regions(location):
+    regions=[]
+    for segment in re.split(r";|\n|\s/\s",location or ""):
+        if re.search(r"\b(?:New Jersey|New York|Virginia|Texas|Ohio|Massachusetts|NJ|NY|VA|TX|OH|MA)\b",segment,re.I):continue
+        if BAY_AREA.search(segment) and 'Bay Area' not in regions:regions.append('Bay Area')
+        if GREATER_LA.search(segment) and 'LA' not in regions:regions.append('LA')
+    return regions
+
 
 # Avoid software-only robotics positions: titles need a physical/hardware hook.
 ROLE_PATTERN = re.compile(
@@ -59,7 +72,7 @@ ROLE_PATTERN = re.compile(
     r"hardware (?:design|test|development|integration|systems?)|"
     r"electromechanical|robotics? (?:engineer|hardware|integration)|"
     r"automation engineer|battery engineer|mechanism(?:s)? engineer|quality engineer|reliability engineer|test engineer|"
-    r"cad (?:engineer|designer)|structural engineer)\b", re.IGNORECASE
+    r"propulsion engineer|structures engineer|fluids? engineer|vehicle integration engineer|cad (?:engineer|designer)|structural engineer)\b", re.IGNORECASE
 )
 NON_ENGINEERING = re.compile(
     r"\b(technician|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
@@ -86,7 +99,7 @@ class _StripHTML(HTMLParser):
 def plain(value):
     if not value:
         return ""
-    value = str(value)
+    value = unescape(unescape(str(value)))
     if "<" not in value:
         return re.sub(r"\s+", " ", unescape(value)).strip()
     h = _StripHTML()
@@ -134,7 +147,7 @@ def qualifies(job):
     etype = (job.get("employment", "") or "").lower().replace(" ", "").replace("-", "")
     if SECTOR_COMPANIES.search(job.get("company", "")) or SECTOR_TITLES.search(title):
         return False
-    if not is_bay_area(location):
+    if not job_regions(location):
         return False
     if not ROLE_PATTERN.search(title) or NON_ENGINEERING.search(title):
         return False
@@ -192,7 +205,13 @@ def parse_board(src, payload):
             description = j.get("content", "")
             employment = "Unspecified"
             workstyle = "Unknown"
-            compensation = ""
+            soup = BeautifulSoup(unescape(unescape(description)), "html.parser")
+            pay_blocks = soup.select(".pay-input")
+            base_blocks = [b for b in pay_blocks if not re.search(r"total compensation|equity|bonus", b.select_one(".title").get_text(" ", strip=True) if b.select_one(".title") else "", re.I)]
+            compensation = " ".join(b.select_one(".pay-range").get_text(" ", strip=True) for b in base_blocks if b.select_one(".pay-range"))
+            for block in pay_blocks:
+                if block not in base_blocks: block.decompose()
+            description = str(soup)
             published = j.get("updated_at", "")
         elif p == "lever":
             categories = j.get("categories") or {}
@@ -244,7 +263,7 @@ def fetch_source(src):
     if p in ('apple_api','microsoft_eightfold','google_sitemap','tesla_api'):
         getter={'apple_api':fetch_apple,'microsoft_eightfold':fetch_microsoft,
                 'google_sitemap':fetch_google,'tesla_api':fetch_tesla}[p]
-        items=getter(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
+        items=getter(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         rows=[]
         for item in items:
             title=item['title'];description=plain(item.get('description',''))
@@ -261,9 +280,9 @@ def fetch_source(src):
         return rows
     if p in ('workday','official_html'):
         if p=='workday':
-            items,detail=fetch_workday(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
+            items,detail=fetch_workday(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         else:
-            items,detail=fetch_official_html(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
+            items,detail=fetch_official_html(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         rows=[]
         for item in items:
             title=item['title']
@@ -323,6 +342,7 @@ def run():
                 for job in results:
                     job["company_context"] = src.get("company_context", "")
                     job["careers_url"] = src.get("careers_url", "")
+                    job["regions"] = job_regions(job.get("location", ""))
                     job["last_seen"] = now
                     found[job["id"]] = job
                 print(f"OK {key}: {len(results)} matching")
@@ -352,6 +372,7 @@ def run():
         "source_status": sorted(source_status,key=lambda x:x["company"]),
         "salary_target_usd": 140000,
         "minimum_fit_score": MIN_FIT_SCORE,
+        "regions": ["Bay Area", "LA"],
         "filtered_out_job_ids": sorted(filtered_out),
         "jobs": sorted(found.values(), key=lambda j: (j["company"].lower(), j["title"].lower(), j["id"])),
     }

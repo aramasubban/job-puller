@@ -334,7 +334,7 @@
     "company": "Hadrian",
     "slug": "hadrian-automation",
     "careers_url": "https://www.hadrian.co/careers",
-    "company_context": "Autonomous precision manufacturing for aerospace/defense; equipment, tooling, fixtures, process engineering and factory automation; Bay Area postings only.",
+    "company_context": "Torrance and Bay Area autonomous precision manufacturing; equipment, tooling, fixtures and factory automation.",
     "verified_on": "2026-10-14"
   },
   {
@@ -406,5 +406,125 @@
     "verified_on": "2026-10-14",
     "location_pattern": "\\b(San Jose, CA)\\s+Apply\\b",
     "title_selector": "h1"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "SpaceX",
+    "slug": "spacex",
+    "careers_url": "https://job-boards.greenhouse.io/spacex",
+    "company_context": "Rocket and spacecraft design, tooling, manufacturing equipment and test; Hawthorne. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Rocket Lab",
+    "slug": "rocketlab",
+    "careers_url": "https://job-boards.greenhouse.io/rocketlab",
+    "company_context": "Long Beach spacecraft and launch hardware; Pasadena space robotics. Check base pay. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Relativity Space",
+    "slug": "relativity",
+    "careers_url": "https://job-boards.greenhouse.io/relativity",
+    "company_context": "Long Beach launch vehicles, structures, additive manufacturing and factory equipment. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Varda Space Industries",
+    "slug": "vardaspace",
+    "careers_url": "https://job-boards.greenhouse.io/vardaspace",
+    "company_context": "El Segundo reentry spacecraft; structures, mechanisms, manufacturing and testing. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Vast",
+    "slug": "vast",
+    "careers_url": "https://job-boards.greenhouse.io/vast",
+    "company_context": "Long Beach/Hawthorne space stations and propulsion; tooling, mechanisms and hardware production. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "K2 Space",
+    "slug": "k2spacecorporation",
+    "careers_url": "https://job-boards.greenhouse.io/k2spacecorporation",
+    "company_context": "Los Angeles satellite platforms; structures, tooling, thermal and test. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Anduril",
+    "slug": "andurilindustries",
+    "careers_url": "https://job-boards.greenhouse.io/andurilindustries",
+    "company_context": "Costa Mesa defense hardware; mechanical design, manufacturing automation and test. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Epirus",
+    "slug": "epirus",
+    "careers_url": "https://job-boards.greenhouse.io/epirus",
+    "company_context": "Torrance defense hardware; mechanical packaging, thermal and production. ECE core remains low fit. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Mach Industries",
+    "slug": "machindustries",
+    "careers_url": "https://job-boards.greenhouse.io/machindustries",
+    "company_context": "Huntington Beach defense hardware; manufacturing, mechanical design and May 2027 new-graduate roles. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Castelion",
+    "slug": "castelioncorporation",
+    "careers_url": "https://job-boards.greenhouse.io/castelioncorporation",
+    "company_context": "Torrance flight hardware, composites, manufacturing equipment and hardware testing. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Neros",
+    "slug": "nerostechnologies",
+    "careers_url": "https://job-boards.greenhouse.io/nerostechnologies",
+    "company_context": "Torrance drones; mechatronics, manufacturing design and electromechanical assembly. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "True Anomaly",
+    "slug": "trueanomalyinc",
+    "careers_url": "https://job-boards.greenhouse.io/trueanomalyinc",
+    "company_context": "Long Beach spacecraft production; mechanical integration and fluids hardware. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Icarus",
+    "slug": "icarus",
+    "careers_url": "https://job-boards.greenhouse.io/icarus",
+    "company_context": "El Segundo high-altitude aircraft; structures, manufacturing and mechanical systems. Review posting-specific export/clearance requirements separately.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "ashby",
+    "company": "Apex",
+    "slug": "apex-technology-inc",
+    "careers_url": "https://jobs.ashbyhq.com/apex-technology-inc",
+    "company_context": "Los Angeles satellite buses, payload packaging and mechanical ground equipment.",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "ashby",
+    "company": "Radiant",
+    "slug": "radiant-industries",
+    "careers_url": "https://jobs.ashbyhq.com/radiant-industries",
+    "company_context": "El Segundo portable nuclear microreactors; mechanisms and mechanical/fluids testing.",
+    "verified_on": "2026-10-15"
   }
 ]
