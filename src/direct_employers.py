@@ -53,7 +53,11 @@ def fetch_official_html(src,role_pattern,senior_pattern,noneng_pattern,bay_match
             if not location and src.get('location_pattern'):
                 # Employer-specific patterns must match the job header, not
                 # cities mentioned elsewhere in a description or footer.
-                loc_match=re.search(src['location_pattern'],txt[:1000])
+                location_text = txt[:1000]
+                if src.get('location_selector'):
+                    header = BeautifulSoup(html, 'html.parser').select_one(src['location_selector'])
+                    location_text = header.get_text(' ', strip=True) if header else ''
+                loc_match=re.search(src['location_pattern'],location_text)
                 if loc_match:location=loc_match.group(1)
             if not bay_match.search(location):continue
             items.append({'url':url,'title':title,'location':location,'description':txt,'employment':'Unspecified'})
