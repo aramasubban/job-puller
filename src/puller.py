@@ -370,6 +370,7 @@ def run():
                 results = [j for j in raw_results if meets_fit_floor(j)]
                 audit = getattr(raw_results, 'excluded_roles', [])
                 excluded_roles.extend(audit)
+                filtered_out.update(j['id'] for j in audit if j.get('id'))
                 successful.append(key)
                 source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results),"company_context":src.get("company_context", ""),"careers_url":src.get("careers_url", "")})
                 source_status[-1].update({'raw_postings': getattr(raw_results, 'raw_count', None),
