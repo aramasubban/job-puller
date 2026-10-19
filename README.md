@@ -11,7 +11,7 @@ Jobs must score **at least 50/100**. The collector filters fresh jobs and retain
 ## Search scope
 54 sources, including existing employers plus Bedrock Robotics, Skydio, Figure, Zipline, 1X, Astranis, Saronic, Dexterity, Form Energy, Hadrian, Agility Robotics, Zoox, Lucid Motors, Redwood Materials, Nuro, Waymo, Saildrone and Antora Energy.
 
-Bay Area full-time new-grad / 0–3 year mechanical design, mechanisms, equipment, manufacturing, NPI, automotive/battery, thermal hardware, testing and reliability. Exclude Tesla, medical devices, building HVAC, software-only roles, senior titles and explicit 4+ year minimums. Disclosed annual base salary must have an upper band of at least $140,000. Undisclosed pay requires review.
+Bay Area full-time new-grad / 0–3 year mechanical design, mechanisms, equipment, manufacturing, NPI, automotive/battery, thermal hardware, testing and reliability. Exclude Tesla, medical devices, building HVAC, software-only roles, senior titles and explicit 4+ year minimums. Pay is a preference, not an exclusion: retain >=50-fit jobs below $140,000 and flag pay. Distinguish published starting pay from a salary ceiling. Include Santa Cruz and Scotts Valley in Bay Area scope.
 
 Public company context and career URLs live in the source configuration/feed and are displayed in Coverage. Context explains engineering relevance. Fame, funding and pay add no fit points. Covered companies can have zero qualifying jobs.
 
@@ -43,3 +43,7 @@ The source registry now includes ALSO (Ridealso), Freeform and Weave Robotics. R
 Structured ATS scans retain public exclusion reasons in `excluded_roles`, plus `raw_postings` and `excluded_relevant` in source status. Zero eligible matches must not be presented as zero open jobs. For example, Bedrock's Mechanical Systems Integration Engineer is checked but excluded for its explicit 5+ years requirement. ALSO's Mechanical Hardware Test & Validation Engineer (All Levels) accepts academic/personal/internship testing projects and is eligible.
 
 The scheduled sheet task must compare a bounded discovery search against the registry before each existing refresh, validate new employer career sites, and enroll verified sources. It must also display useful exclusion evidence in existing Coverage/Overview, without extra tabs or extra collection cadence. Failed-source roles keep their prior evidence-backed scores when no fresh description is available.
+
+
+## Search-quality correction (October 19)
+Amazon, KLA, Joby Aviation and Applied Materials now have registered employer adapters. Amazon uses official search JSON with all listed locations; Joby uses paginated iCIMS plus independently discovered posting URLs; KLA and Applied Materials use Workday with configurable pagination, targeted queries and pinned known posting paths. Workday, iCIMS and search-limited sources are partial and their absence cannot establish closure. NPI equipment/motion-control work is scored as mechanical systems; mixed alternative-domain recruitment must not be treated as mandatory expertise in every electrical discipline. Degree-specific required experience is evaluated against the bachelor route. ECE-only roles remain below 50. Explicitly report registry coverage, candidate totals, exclusions and source failures separately. K2 Development Test Engineer 5038677008 was already present at 71.
