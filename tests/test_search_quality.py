@@ -30,3 +30,9 @@ class SearchQualityTests(unittest.TestCase):
   from src.puller import exclusion_reasons
   for title in ['Mechanical Engineer New College Grad - Masters Degree','New College Grad - Mechanical Engineer III - PhD (2027 Summer Cohort)']:
    self.assertTrue(any('Graduate-degree' in r for r in exclusion_reasons({'title':title,'company':'Applied Materials','location':'Santa Clara, CA'})))
+
+ def test_expected_employers_remain_registered(self):
+  import json
+  from pathlib import Path
+  employers={s['company'] for s in json.loads((Path(__file__).parents[1]/'config/boards.json').read_text())}
+  self.assertTrue({'Amazon','KLA','Joby Aviation','Applied Materials','K2 Space'} <= employers)
