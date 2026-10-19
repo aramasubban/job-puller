@@ -56,6 +56,8 @@ def score_match(job, description):
         r'\b(?:dfm|fabricat\w*|prototyp\w*|machining)\b', r'\b(?:doe|root.cause|spc|dfmea|pfmea)\b',
         r'\b(?:python|matlab|simulink|simscape|ros\s*2|ros2)\b']) * 4)
     gaps=[]; cap=95
+    if has(r'\b(?:ph\.?d|masters? degree)\b',title):
+        cap=39;gaps.append('Graduate-degree cohort; bachelor-level candidate')
     years=[int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s*(?:\+|[-–—]\s*\d{1,2})?\s*(?:years?|yrs?)\s+(?:of\s+)?(?:(?:[\w/-]+\s+){0,5})?experience\b',core,re.I)]
     years += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|designing|building|developing|working|leading|managing|taking)\b', core, re.I)]
     years += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s+or more\s+years?\s+(?:of\s+)?(?:[\w/-]+\s+){0,5}experience\b', core, re.I)]
