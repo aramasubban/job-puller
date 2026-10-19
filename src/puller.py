@@ -158,6 +158,8 @@ def exclusion_reasons(job):
         reasons.append("Outside full-time physical engineering scope")
     if SENIOR.search(title):
         reasons.append("Senior/staff/lead title")
+    if re.search(r'\b(?:ph\.?d|masters? degree)\b',title,re.I):
+        reasons.append('Graduate-degree cohort conflicts with bachelor-level target')
     if etype and etype not in ("fulltime", "regular", "permanent", "unspecified"):
         reasons.append("Not full-time permanent employment")
     # For Greenhouse with no structured employment type, reject explicit
