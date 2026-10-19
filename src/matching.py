@@ -5,7 +5,7 @@ bounded skill and experience scores. Preferred skills cannot supply core fit.
 """
 import re
 from html import unescape
-VERSION = 'me-v2.1'
+VERSION = 'me-v2.2'
 
 def has(pattern, text):
     return bool(re.search(pattern, text, re.I))
@@ -24,10 +24,10 @@ def role_text(description):
 
 # Distinct evidence groups; repeated words never accumulate points.
 ME = [
-    (r'\b(?:mechanical design|mechanical engineering|product design|3d cad|solidworks|creo|catia|nx cad)\b', 'mechanical CAD/design'),
-    (r'\b(?:gd\s*&\s*t|toleranc\w*|fea|finite element|structural analysis|stress analysis|thermal analysis)\b', 'analysis/tolerances'),
+    (r'\b(?:mechanical design|mechanical engineering|mechanical systems|opto.mechanical|electro.mechanical|product design|3d cad|solidworks|creo|catia|nx cad)\b', 'mechanical design/systems'),
+    (r'\b(?:gd\s*&\s*t|toleranc\w*|fea|finite element|structural analysis|stress analysis|thermal analysis|thermal and heat transfer design)\b', 'analysis/tolerances'),
     (r'\b(?:fixtures?|jigs?|tooling|production equipment|manufacturing equipment|automation equipment|test rigs?)\b', 'equipment/fixtures'),
-    (r'\b(?:mechanisms?|linkages?|actuators?|gearboxes?|end.effectors?|fasteners?|enclosures?|sheet metal)\b', 'mechanisms/assemblies'),
+    (r'\b(?:mechanisms?|linkages?|actuators?|gearboxes?|end.effectors?|fasteners?|enclosures?|sheet metal|motion control|wafer stage|wafer handling)\b', 'mechanisms/assemblies'),
     (r'\b(?:dfm|design for manufactur\w*|machining|fabricat\w*|rapid prototyp\w*|3d print\w*)\b', 'fabrication/DFM'),
     (r'\b(?:root.cause|doe|design of experiments|spc|process improvement|yield improvement|failure analysis|dfmea|pfmea|vibration|fatigue|durability|thermal testing)\b', 'process/reliability testing'),
 ]
@@ -41,11 +41,14 @@ ECE = [
 def score_match(job, description):
     title = job.get('title', '')
     core, full = role_text(description)
+    alternative_tracks = has(r'across a variety of domain expertise',description) and has(r'mechanical design|thermal and heat transfer',description) and has(r'process of obtaining.{0,100}mechanical',description)
+    if alternative_tracks:
+        core = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', unescape(description)))
     me = [label for pat,label in ME if has(pat, core)]
     ee = [label for pat,label in ECE if has(pat, core)]
-    direct = has(r'\b(?:mechanical|mechanisms?|thermal|manufacturing|process|equipment|tooling|product design|structural)\b', title)
+    direct = has(r'\b(?:mechanical|mechanisms?|thermal|manufacturing|process|equipment|tooling|product design|structural|npi)\b', title)
     related = has(r'\b(?:mechatronic\w*|robotic\w*|test|reliability|quality|integration)\b', title)
-    discipline = 35 if direct and len(me)>=2 else 28 if len(me)>=3 else 20 if direct else 15 if related and me else 5
+    discipline = 35 if (direct or alternative_tracks) and len(me)>=2 else 28 if len(me)>=3 else 20 if direct else 15 if related and me else 5
     # Duty breadth, tools/evidence, then career level. No salary bonus.
     duties = min(30, len(me)*6)
     skills = min(20, sum(has(p,core) for p in [
@@ -55,6 +58,8 @@ def score_match(job, description):
     gaps=[]; cap=95
     years=[int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s*(?:\+|[-–—]\s*\d{1,2})?\s*(?:years?|yrs?)\s+(?:of\s+)?(?:(?:[\w/-]+\s+){0,5})?experience\b',core,re.I)]
     years += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|designing|building|developing|working|leading|managing|taking)\b', core, re.I)]
+    years += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s+or more\s+years?\s+(?:of\s+)?(?:[\w/-]+\s+){0,5}experience\b', core, re.I)]
+    years += [int(m.group(1)) for m in re.finditer(r"bachelor.{0,40}?related work experience of\s+(\d+)", full, re.I)]
     minimum=max(years, default=0)
     grad_welcome=has(r'new grads?.{0,65}(?:welcome|encouraged|considered)|(?:welcome|encourage|consider).{0,50}new grads?',core)
     # Explicit acceptance of academic/personal/internship projects is evidence
@@ -73,11 +78,14 @@ def score_match(job, description):
         exp=15
     else:
         exp=8;cap=min(cap,79);gaps.append('Experience/start date not confirmed')
-    if len(ee)>=2 and (len(me)<3 or not direct):
+    if alternative_tracks:
+        gaps.append('Multi-track posting: confirm mechanical/thermal placement and May 2027 start')
+        cap=min(cap,74)
+    if not alternative_tracks and len(ee)>=2 and (len(me)<3 or not direct):
         cap=min(cap,25);gaps.insert(0,'ECE-heavy core: '+', '.join(ee[:2]))
-    elif len(ee)>=2:
+    elif not alternative_tracks and len(ee)>=2:
         cap=min(cap,59);gaps.insert(0,'Mixed ME/ECE: electronics depth not demonstrated')
-    elif has(r'\b(?:electrical|computer) engineering\b',core) and not has(r'\b(?:mechanical|mechatronics) engineering\b',core) and ee:
+    elif not alternative_tracks and has(r'\b(?:electrical|computer) engineering\b',core) and not has(r'\b(?:mechanical|mechatronics) engineering\b',core) and ee:
         cap=min(cap,39);gaps.insert(0,'EE/CE-focused requirements; ME fit weak')
     if has(r'\b(?:electrical|firmware|rf|fpga|asic|rtl|physical design)\b',title) or (has(r'\belectronics\b',title) and not direct and len(me)<3):
         cap=min(cap,25);gaps.insert(0,'Electrical/embedded role')
