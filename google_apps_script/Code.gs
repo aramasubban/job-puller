@@ -84,7 +84,26 @@ function lastIdRow_(s,col,start){
  return {ids:ids,last:ids.reduce((n,id,i)=>id?i+start:n,start-1)};
 }
 function normalized_(x){return x instanceof Date?x.getTime():x==null?'':x}
-function sameRecord_(a,b){return a.slice(1,25).every((x,i)=>normalized_(x)===normalized_(b[i+1]))}
+// Sheets may parse a public posting-date string when copying to a date-formatted
+// destination (e.g. July 8, 2026 -> Date). Compare that one public field by day;
+// user status, application/follow-up dates, notes and first-seen stay strict.
+function postedDay_(value,zone){
+ if(value instanceof Date)return Utilities.formatDate(value,zone,'yyyy-MM-dd');
+ const text=String(value==null?'':value).trim();
+ if(/^\d{4}-\d{2}-\d{2}(?:$|[T ])/.test(text))return text.slice(0,10);
+ const named=text.match(/^([A-Za-z]+)\.?\s+(\d{1,2}),?\s+(\d{4})$/);
+ if(named){
+  const month=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'].indexOf(named[1].slice(0,3).toLowerCase())+1;
+  if(month&&Number(named[2])>=1&&Number(named[2])<=31)return named[3]+'-'+String(month).padStart(2,'0')+'-'+named[2].padStart(2,'0');
+ }
+ return null;
+}
+function sameRecord_(a,b,zone){return a.slice(1,25).every((x,i)=>{
+ const y=b[i+1];if(normalized_(x)===normalized_(y))return true;
+ if(i+1!==23)return false;
+ const left=postedDay_(x,zone||'America/Los_Angeles'),right=postedDay_(y,zone||'America/Los_Angeles');
+ return left!==null&&left===right;
+})}
 function moveRecord_(b,s,row){
  let r=s.getRange(row,1,1,HEADERS.length).getValues()[0];if(!r[18])return false;
  const name=destination_(r);if(name===s.getName())return false;
@@ -93,12 +112,13 @@ function moveRecord_(b,s,row){
  const dest=existing>=0?existing+2:index.last+1;
  if(dest>target.getMaxRows())target.insertRowsAfter(target.getMaxRows(),100);
  if(r[5]==='Applied'&&!r[9]){s.getRange(row,10).setValue(new Date());r=s.getRange(row,1,1,HEADERS.length).getValues()[0]}
- const write=record=>{const out=record.slice();out[0]=link_(out[17],out[0]);target.getRange(dest,1,1,HEADERS.length).setValues([out]);SpreadsheetApp.flush();if(!sameRecord_(record,target.getRange(dest,1,1,HEADERS.length).getValues()[0]))throw new Error('Destination verification failed; source preserved')};
+ const zone=b.getSpreadsheetTimeZone();
+ const write=record=>{const out=record.slice();out[0]=link_(out[17],out[0]);target.getRange(dest,1,1,HEADERS.length).setValues([out]);SpreadsheetApp.flush();if(!sameRecord_(record,target.getRange(dest,1,1,HEADERS.length).getValues()[0],zone))throw new Error('Destination verification failed; source preserved')};
  // Destination first. If a user changes another field during the write, copy the latest record.
  write(r);
  const latest=s.getRange(row,1,1,HEADERS.length).getValues()[0];
  if(String(latest[18])!==String(r[18]))return false;
- if(!sameRecord_(latest,r)){
+ if(!sameRecord_(latest,r,zone)){
   if(destination_(latest)!==name){if(existing<0){target.getRange(dest,1,1,HEADERS.length).clearContent();target.hideRows(dest)}return false;}
   r=latest;write(r);
  }
@@ -108,15 +128,20 @@ function moveRecord_(b,s,row){
  return true;
 }
 function reconcileStatuses_(b){
- let moved=0;
+ let moved=0;const failures=new Map();
  for(let pass=0;pass<2;pass++){
   let changed=0;
   ['Jobs','Applied'].forEach(name=>{
    const s=b.getSheetByName(name),statuses=s.getRange(2,6,s.getMaxRows()-1,5).getValues();
-   statuses.forEach((v,i)=>{if(v[0]&&((name==='Jobs'&&v[0]!=='Not Applied')||(name==='Applied'&&(v[0]==='Not Applied'||(v[0]==='Not Interested'&&!v[4])))))if(moveRecord_(b,s,i+2)){changed++;moved++}});
+   statuses.forEach((v,i)=>{if(v[0]&&((name==='Jobs'&&v[0]!=='Not Applied')||(name==='Applied'&&(v[0]==='Not Applied'||(v[0]==='Not Interested'&&!v[4]))))){
+    const key=name+'!'+(i+2);
+    try{if(moveRecord_(b,s,i+2)){changed++;moved++}failures.delete(key)}
+    catch(error){failures.set(key,String(error));console.error('Status move pending; source preserved: '+key+' '+error)}
+   }});
   });
   if(!changed)break;
  }
+ if(failures.size)console.error('Pending status rows: '+JSON.stringify(Array.from(failures.entries())));
  return moved;
 }
 function observeStatus_(b,r){
