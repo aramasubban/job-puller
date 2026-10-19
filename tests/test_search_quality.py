@@ -26,3 +26,7 @@ class SearchQualityTests(unittest.TestCase):
    import re
    rows,_=fetch_amazon({'search_terms':['hardware']},re.compile('Hardware'),re.compile('Senior'),re.compile('Intern'),re.compile('Cupertino'))
    self.assertEqual(rows[0]['external_id'],'10530353')
+ def test_graduate_cohorts_are_not_bachelor_new_grad(self):
+  from src.puller import exclusion_reasons
+  for title in ['Mechanical Engineer New College Grad - Masters Degree','New College Grad - Mechanical Engineer III - PhD (2027 Summer Cohort)']:
+   self.assertTrue(any('Graduate-degree' in r for r in exclusion_reasons({'title':title,'company':'Applied Materials','location':'Santa Clara, CA'})))
