@@ -6,6 +6,12 @@ from src.matching import score_match
 
 
 class CoverageAuditTests(unittest.TestCase):
+    def test_or_more_years_is_an_experience_requirement(self):
+        desc = 'Requirements: 2 or more years of hands-on experience developing mechanical products using SolidWorks, FEA, fixtures and GD&T.'
+        self.assertEqual(puller.required_experience_years(desc), 2)
+        self.assertLessEqual(score_match({'title': 'Mechanical Engineer'}, desc)['fit_score'], 74)
+        self.assertEqual(puller.experience_fit('Mechanical Engineer', desc.replace('2 or more', '5 or more')), 'EXCLUDE')
+
     def payload(self, title, description):
         return {'jobs': [{'title': title, 'location': 'Palo Alto',
             'jobUrl': 'https://jobs.ashbyhq.com/test/abc',
