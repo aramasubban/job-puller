@@ -337,6 +337,7 @@ def fetch_source(src):
                 rich=enrich(rec,description)
                 if rich: rows.append(rich)
             else: rows.record_exclusion(rec,reasons)
+        rows[:] = list({j['id']:j for j in rows}.values())
         return rows
     slug=quote(src['slug'],safe='')
     if p=='ashby': url=f"https://api.ashbyhq.com/posting-api/job-board/{slug}?includeCompensation=true"
