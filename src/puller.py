@@ -21,7 +21,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlsplit
 from src.matching import score_match, VERSION as MATCH_VERSION
 from src.enrichment import enrich, SECTOR_COMPANIES, SECTOR_TITLES
-from src.direct_employers import fetch_official_html, fetch_workday
+from src.direct_employers import fetch_official_html, fetch_workday, fetch_amazon, fetch_icims
 from src.enterprise_sources import fetch_apple, fetch_microsoft, fetch_google, fetch_tesla
 from urllib.request import Request, urlopen
 
@@ -37,7 +37,7 @@ USER_AGENT = "BayAreaEarlyCareerEngineeringJobs/1.0 (public job feeds; daily ref
 BAY_AREA_PATTERNS = [
     r"\bsan francisco\b", r"\bsf bay area\b", r"\bbay area\b", r"\bsouth san francisco\b",
     r"\bsan jose\b", r"\bsanta clara\b", r"\bsunnyvale\b", r"\bmountain view\b",
-    r"\bpalo alto\b", r"\bmenlo park\b", r"\bredwood city\b", r"\bsan mateo\b",
+    r"\bpalo alto\b", r"\bmenlo park\b", r"\bredwood city\b", r"\bsan mateo\b", r"\bsanta cruz\b", r"\bscotts valley\b",
     r"\bfoster city\b", r"\bburlingame\b", r"\bsan bruno\b", r"\bbelmont\b",
     r"\bsan carlos\b", r"\bcupertino\b", r"\bmilpitas\b", r"\bfremont\b",
     r"\bnewark\b", r"\bunion city\b", r"\bhayward\b", r"\boakland\b",
@@ -75,7 +75,7 @@ ROLE_PATTERN = re.compile(
     r"propulsion engineer|structures engineer|fluids? engineer|vehicle integration engineer|cad (?:engineer|designer)|structural engineer)\b", re.IGNORECASE
 )
 NON_ENGINEERING = re.compile(
-    r"\b(technician|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
+    r"\b(technician|inspector|planner|temporary|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
     r"recruiter|technologist|research scientist|designer,? ux|product manager|"
     r"software engineer|firmware engineer|front[ -]?end|back[ -]?end|"
     r"data engineer|machine learning engineer|sales engineer|"
@@ -120,6 +120,8 @@ def required_experience_years(description):
     minima = [int(m.group(1)) for pattern in (EXP, EXP_BEFORE) for m in pattern.finditer(text)]
     minima += [int(m.group(1)) for m in re.finditer(
         r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
+    minima += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s+or more\s+years?\s+(?:of\s+)?(?:[\w/-]+\s+){0,5}experience\b', text, re.I)]
+    minima += [int(m.group(1)) for m in re.finditer(r"bachelor.{0,40}?related work experience of\s+(\d+)", description, re.I)]
     return max(minima, default=0)
 
 def experience_fit(title, description):
@@ -308,27 +310,31 @@ def fetch_source(src):
                 enriched=enrich(rec,description)
                 if enriched is not None:rows.append(enriched)
         return rows
-    if p in ('workday','official_html'):
+    if p in ('workday','official_html','amazon','icims'):
         if p=='workday':
             items,detail=fetch_workday(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
-        else:
+        elif p=='official_html':
             items,detail=fetch_official_html(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
-        rows=[]
+        else:
+            items,detail=({'amazon':fetch_amazon,'icims':fetch_icims}[p])(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
+        rows=ScreenedJobs(detail.get('candidate_links',len(items)))
         for item in items:
             title=item['title']
             description=plain(item.get('description',''))
             rec={
-                'id':source_key(src)+':'+urlsplit(item['url']).path.strip('/').split('/')[-1],
+                'id':source_key(src)+':'+str(item.get('external_id') or urlsplit(item['url']).path.strip('/').split('/')[-1]),
                 'company':src['company'],'title':title,'category':role_family(title),
                 'location':item['location'],'workstyle':'Unknown',
                 'employment':item.get('employment','Unspecified'),
                 'experience_fit':experience_fit(title,description),
-                'salary':'','posted':item.get('posted',''),
+                'salary':item.get('salary',''),'published_starting_pay':item.get('published_starting_pay'),'posted':item.get('posted',''),
                 'apply_url':item['url'],'source_url':item['url'],'source':source_key(src)
             }
-            if qualifies({**rec,'description':description}):
+            reasons=exclusion_reasons({**rec,'description':description})
+            if not reasons:
                 rich=enrich(rec,description)
                 if rich: rows.append(rich)
+            else: rows.record_exclusion(rec,reasons)
         return rows
     slug=quote(src['slug'],safe='')
     if p=='ashby': url=f"https://api.ashbyhq.com/posting-api/job-board/{slug}?includeCompensation=true"
@@ -372,7 +378,7 @@ def run():
                 excluded_roles.extend(audit)
                 filtered_out.update(j['id'] for j in audit if j.get('id'))
                 successful.append(key)
-                source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results),"company_context":src.get("company_context", ""),"careers_url":src.get("careers_url", "")})
+                source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","amazon","icims","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results),"company_context":src.get("company_context", ""),"careers_url":src.get("careers_url", "")})
                 source_status[-1].update({'raw_postings': getattr(raw_results, 'raw_count', None),
                     'excluded_relevant': len(audit)})
                 for job in results:
