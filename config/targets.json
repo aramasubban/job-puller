@@ -2,14 +2,14 @@
   "base_salary_target_usd": 140000,
   "graduation": "May 2027",
   "max_required_experience_years": 3,
-  "location": "Bay Area and Greater Los Angeles: LA/Orange County, Ventura corridor, Palmdale/Lancaster/Mojave",
+  "location": "Bay Area and Greater Los Angeles: LA/Orange County, Ventura corridor, Palmdale/Lancaster/Mojave; Santa Cruz and Scotts Valley",
   "exclude_sectors": [
     "medical devices",
     "HVAC / building services"
   ],
   "new_graduate_start_year": 2027,
   "undisclosed_pay": "retain_for_review",
-  "pay_logic": "Keep when disclosed annual salary range upper bound >= $140000; undisclosed => review",
+  "pay_logic": "Pay is a preference, never a hard exclusion; flag disclosed base below $140000. No fit points for salary.",
   "resume_fit": [
     "manufacturing equipment",
     "mechanical design",
