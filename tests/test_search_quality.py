@@ -36,3 +36,8 @@ class SearchQualityTests(unittest.TestCase):
   from pathlib import Path
   employers={s['company'] for s in json.loads((Path(__file__).parents[1]/'config/boards.json').read_text())}
   self.assertTrue({'Amazon','KLA','Joby Aviation','Applied Materials','K2 Space'} <= employers)
+ def test_discovered_and_pinned_posting_are_one_job(self):
+  item={'external_id':'2636601','title':'Mechanical Engineer','location':'Milpitas, CA','url':'https://example.com/role','description':'Responsibilities: mechanical engineering Solidworks CAD FEA fixtures and tooling. Requirements: 2 years experience.'}
+  with patch('src.puller.fetch_workday',return_value=([item,item],{'candidate_links':2})):
+   result=fetch_source({'provider':'workday','slug':'test','company':'Test'})
+   self.assertEqual(len(result),1)
