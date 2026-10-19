@@ -13,4 +13,6 @@ class RegionsPayTests(unittest.TestCase):
   desc+='<div class="pay-input"><div class="title">Total Compensation (base and equity)</div><div class="pay-range">$140,000 — $180,000</div></div>'
   desc+='<div class="pay-input"><div class="title">Base Salary</div><div class="pay-range">$87,000 — $109,000</div></div>'
   payload={'jobs':[{'id':1,'title':'Mechanical Engineer I','location':{'name':'Long Beach, CA'},'absolute_url':'https://example.com/jobs/1','content':escape(desc)}]}
-  self.assertEqual(parse_board({'provider':'greenhouse','slug':'test','company':'Test'},payload),[])
+  job=parse_board({'provider':'greenhouse','slug':'test','company':'Test'},payload)[0]
+  self.assertEqual(job['salary_max'],109000)
+  self.assertEqual(job['salary_fit'],'Below $140k preference — review')
