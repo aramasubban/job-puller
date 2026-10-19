@@ -3,6 +3,7 @@ import json,re,time
 from pathlib import PurePosixPath
 from urllib.parse import urljoin,urlsplit,unquote
 from urllib.request import Request,urlopen
+from urllib.error import HTTPError
 from bs4 import BeautifulSoup
 HEADERS={'User-Agent':'Mozilla/5.0 (compatible; JobSearchTracker/2.0; personal noncommercial daily search)','Accept':'text/html,application/json'}
 def get_html(url):
@@ -139,7 +140,12 @@ def fetch_icims(src,role,senior,noneng,bay):
     items=[]
     for u,t in names.items():
         if not role.search(t) or senior.search(t) or noneng.search(t):continue
-        soup=BeautifulSoup(get_html(u),'html.parser');h=soup.select_one('h1');title=h.get_text(' ',strip=True) if h else t
+        try:
+            soup=BeautifulSoup(get_html(u),'html.parser')
+        except HTTPError as error:
+            if error.code in (404,410):continue
+            raise
+        h=soup.select_one('h1');title=h.get_text(' ',strip=True) if h else t
         text=soup.get_text(' ',strip=True)
         text=re.sub(r'\bDesired\b.*?(?=\bAdditional Information\b|$)','',text,flags=re.S)
         loc=re.search(r'Job Locations\s+(.*?)\s+(?:ID|Category|Type)\b',text)
