@@ -21,10 +21,12 @@ def enrich(job,description):
     text=f"{job.get('title','')} {description or ''}"[:16000]
     lo,hi=salary_range(job.get('salary') or '')
     if lo is None:lo,hi=salary_range(description or '')
-    if hi is not None and hi<TARGET:return None
     job['salary_min']=lo;job['salary_max']=hi
-    job['salary_fit']='Target met' if lo is not None and lo>=TARGET else 'Range reaches $140k' if hi is not None else 'Undisclosed — review'
+    job['salary_fit']='Target met' if lo is not None and lo>=TARGET else 'Range reaches $140k' if hi is not None and hi>=TARGET else 'Below $140k preference — review' if hi is not None else 'Undisclosed — review'
     if hi is not None and not job.get('salary'):job['salary']=f"${lo:,}–${hi:,} base / year"
     if not job.get('salary'):job['salary']='Not disclosed'
+    if job.get('published_starting_pay'):
+        job['salary_min']=job['published_starting_pay'];job['salary_max']=None
+        job['salary_fit']='Published starting pay; ceiling unlisted — review'
     job.update(score_match(job, description))
     return job

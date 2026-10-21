@@ -526,5 +526,127 @@
     "careers_url": "https://jobs.ashbyhq.com/radiant-industries",
     "company_context": "El Segundo portable nuclear microreactors; mechanisms and mechanical/fluids testing.",
     "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "ashby",
+    "slug": "Ridealso",
+    "company": "ALSO",
+    "careers_url": "https://ridealso.com/pages/company",
+    "company_context": "Rivian-incubated small electric vehicles in Palo Alto; mechanical structures, battery validation, hardware test and manufacturing. Check level-specific ownership expectations."
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "freeformfuturecorp",
+    "company": "Freeform",
+    "careers_url": "https://job-boards.greenhouse.io/freeformfuturecorp",
+    "company_context": "Los Angeles metal additive manufacturing and factory automation; explicit Summer 2027 new-grad mechanical, manufacturing and process engineering roles."
+  },
+  {
+    "provider": "official_html",
+    "slug": "weave-robotics",
+    "company": "Weave Robotics",
+    "list_urls": [
+      "https://www.weaverobotics.com/careers"
+    ],
+    "link_fragment": "/careers/",
+    "title_selector": "h1",
+    "location_pattern": "(San Francisco, CA)\\s*[\u00b7\u2022]\\s*On-site",
+    "careers_url": "https://www.weaverobotics.com/careers",
+    "company_context": "San Francisco home robotics; articulated mechanisms, actuators, manufacturing equipment and mechatronics. Review each required experience level.",
+    "location_selector": "header:has(h1)"
+  },
+  {
+    "provider": "workday",
+    "slug": "kla",
+    "company": "KLA",
+    "host": "kla.wd1.myworkdayjobs.com",
+    "tenant": "kla",
+    "site": "Search",
+    "search_terms": [
+      "NPI",
+      "mechanical",
+      "product engineer"
+    ],
+    "max_pages": 5,
+    "max_details": 100,
+    "detail_paths": [
+      "/job/NPI-Product-Engineer_2636601"
+    ],
+    "careers_url": "https://kla.wd1.myworkdayjobs.com/en-US/Search",
+    "company_context": "Milpitas semiconductor inspection and metrology equipment; mechanical systems, motion control, NPI and hardware diagnostics. Degree-specific experience requirements must be checked."
+  },
+  {
+    "provider": "workday",
+    "slug": "applied-materials",
+    "company": "Applied Materials",
+    "host": "amat.wd1.myworkdayjobs.com",
+    "tenant": "amat",
+    "site": "External",
+    "search_terms": [
+      "mechanical",
+      "manufacturing",
+      "NPI"
+    ],
+    "max_pages": 9,
+    "max_details": 120,
+    "applied_facets": {
+      "State_Region_Province": [
+        "ec3d210e4240442e99a28fa70419aec5"
+      ]
+    },
+    "careers_url": "https://amat.wd1.myworkdayjobs.com/en-US/External",
+    "company_context": "Santa Clara semiconductor production equipment; mechanical design, vacuum/thermal hardware, fixtures and manufacturing. Different requisitions have different experience requirements."
+  },
+  {
+    "provider": "amazon",
+    "slug": "amazon",
+    "company": "Amazon",
+    "search_terms": [
+      "mechanical",
+      "hardware development",
+      "manufacturing"
+    ],
+    "max_pages": 3,
+    "careers_url": "https://www.amazon.jobs/en/search",
+    "company_context": "Cupertino AWS server mechanical/thermal design, packaging and reliability; mixed-track postings require mechanical placement confirmation. Pay is a preference."
+  },
+  {
+    "provider": "icims",
+    "slug": "joby",
+    "company": "Joby Aviation",
+    "max_pages": 6,
+    "careers_url": "https://careers-jobyaviation.icims.com/jobs",
+    "company_context": "San Carlos and Santa Cruz electric aircraft; actuators, mechanisms, mechanical design, battery hardware and manufacturing. Santa Cruz included by user preference.",
+    "detail_urls": [
+      "https://careers-jobyaviation.icims.com/jobs/5253/mechanical-design-engineer/job?in_iframe=1"
+    ]
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "rondoenergy",
+    "company": "Rondo Energy",
+    "careers_url": "https://job-boards.greenhouse.io/rondoenergy",
+    "company_context": "Alameda industrial heat batteries; high-temperature assemblies, thermal analysis, mechanical design and manufacturing."
+  },
+  {
+    "provider": "official_html",
+    "slug": "cargo-robotics",
+    "company": "Cargo Robotics",
+    "list_urls": [
+      "https://cargorobotics.ai/careers"
+    ],
+    "link_fragment": "/careers/",
+    "title_selector": "h1",
+    "location_selector": "main",
+    "location_pattern": "On-site: 5 days a week \\((Menlo Park)\\)",
+    "careers_url": "https://cargorobotics.ai/careers",
+    "company_context": "Menlo Park robotic delivery hardware; mechanisms, prototyping, manufacturing and mechatronics. 2+ years product development is a stretch."
+  },
+  {
+    "provider": "lever",
+    "slug": "hermeus",
+    "company": "Hermeus",
+    "careers_url": "https://jobs.lever.co/hermeus",
+    "company_context": "Los Angeles hypersonic aircraft; structures, fabrication, manufacturing tooling and propulsion test. Check posting-specific U.S. export controls and May 2027 availability."
   }
 ]
