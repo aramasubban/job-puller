@@ -82,7 +82,7 @@ NON_ENGINEERING = re.compile(
     r"engineering manager|program manager|project manager|director|"
     r"vice president|head of|chief of|operations manager)\b", re.IGNORECASE
 )
-SENIOR = re.compile(r"\b(senior|sr\.?|staff|principal|lead|manager|director|architect|expert|head of)\b", re.IGNORECASE)
+SENIOR = re.compile(r"\b(senior|sr\.?|staff|principal|lead|manager|supervisor|director|architect|expert|head of)\b", re.IGNORECASE)
 ENTRY = re.compile(r"\b(new grad(?:uate)?|graduate|entry.level|early.career|junior|associate|engineer i\b|engineer 1\b)\b", re.IGNORECASE)
 EXP = re.compile(r"(?<!\d)(\d{1,2})\s*(?:\+|[-–—]\s*(\d{1,2})|\s+to\s+(\d{1,2}))?\s*(?:years?|yrs?)\s+(?:of\s+)?(?:(?:[A-Za-z][A-Za-z/-]*\s+){0,5})?experience\b", re.IGNORECASE)
 EXP_BEFORE = re.compile(r"\b(?:minimum(?: of)?|at least|require[ds]?|have|possess|with)\s+(\d{1,2})\+?\s*(?:years?|yrs?)\b", re.IGNORECASE)
@@ -158,6 +158,10 @@ def exclusion_reasons(job):
         reasons.append("Outside full-time physical engineering scope")
     if SENIOR.search(title):
         reasons.append("Senior/staff/lead title")
+    if re.search(r'\b(?:future opportunities|talent community)\b', title, re.I):
+        reasons.append('Talent pool, not a specific open full-time role')
+    if re.search(r'able to start full[ -]time in 2026', desc, re.I):
+        reasons.append('Required 2026 full-time start conflicts with May 2027 graduation')
     if re.search(r'\b(?:ph\.?d|masters? degree)\b',title,re.I):
         reasons.append('Graduate-degree cohort conflicts with bachelor-level target')
     if etype and etype not in ("fulltime", "regular", "permanent", "unspecified"):
