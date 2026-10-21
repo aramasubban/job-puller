@@ -253,6 +253,11 @@ def parse_board(src, payload):
             employment = categories.get("commitment", "Unspecified")
             workstyle = j.get("workplaceType", "Unknown")
             compensation = (j.get("salaryRange") or {}).get("text", "")
+            pay_range = j.get("salaryRange") or {}
+            if not compensation and pay_range.get("currency") == "USD" and pay_range.get("interval") == "per-year-salary":
+                low, high = pay_range.get("min"), pay_range.get("max")
+                if isinstance(low, (int, float)) and isinstance(high, (int, float)):
+                    compensation = f"${low:,.0f}–${high:,.0f} base / year"
             published = ""
         else:
             raise ValueError("Unexpected provider: " + p)

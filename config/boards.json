@@ -641,5 +641,12 @@
     "location_pattern": "On-site: 5 days a week \\((Menlo Park)\\)",
     "careers_url": "https://cargorobotics.ai/careers",
     "company_context": "Menlo Park robotic delivery hardware; mechanisms, prototyping, manufacturing and mechatronics. 2+ years product development is a stretch."
+  },
+  {
+    "provider": "lever",
+    "slug": "hermeus",
+    "company": "Hermeus",
+    "careers_url": "https://jobs.lever.co/hermeus",
+    "company_context": "Los Angeles hypersonic aircraft; structures, fabrication, manufacturing tooling and propulsion test. Check posting-specific U.S. export controls and May 2027 availability."
   }
 ]
