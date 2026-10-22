@@ -550,7 +550,7 @@
     ],
     "link_fragment": "/careers/",
     "title_selector": "h1",
-    "location_pattern": "(San Francisco, CA)\\s*[\u00b7\u2022]\\s*On-site",
+    "location_pattern": "(San Francisco, CA)\\s*[·•]\\s*On-site",
     "careers_url": "https://www.weaverobotics.com/careers",
     "company_context": "San Francisco home robotics; articulated mechanisms, actuators, manufacturing equipment and mechatronics. Review each required experience level.",
     "location_selector": "header:has(h1)"
@@ -648,5 +648,37 @@
     "company": "Hermeus",
     "careers_url": "https://jobs.lever.co/hermeus",
     "company_context": "Los Angeles hypersonic aircraft; structures, fabrication, manufacturing tooling and propulsion test. Check posting-specific U.S. export controls and May 2027 availability."
+  },
+  {
+    "provider": "ashby",
+    "slug": "triumph-arcade",
+    "company": "Triumph Labs",
+    "careers_url": "https://www.triumphlabs.com/careers",
+    "company_context": "Mountain View/Fremont robotic hardware; CAD, fabrication, prototyping, motor controls and hands-on tests. Early-career candidates and build-team experience welcome."
+  },
+  {
+    "provider": "ashby",
+    "slug": "helogen",
+    "company": "Helogen",
+    "careers_url": "https://www.helogen.com/careers",
+    "company_context": "Los Angeles space manufacturing infrastructure; mechanical structures and vehicle development. Screen individual experience requirements."
+  },
+  {
+    "provider": "workday",
+    "slug": "hpe",
+    "company": "Hewlett Packard Enterprise",
+    "host": "hpe.wd5.myworkdayjobs.com",
+    "tenant": "hpe",
+    "site": "Jobsathpe",
+    "search_terms": [
+      "mechanical"
+    ],
+    "max_pages": 2,
+    "max_details": 30,
+    "detail_paths": [
+      "/job/Mechanical-Hardware-Engineer-I-Graduate_1214998"
+    ],
+    "careers_url": "https://hpe.wd5.myworkdayjobs.com/en-US/Jobsathpe",
+    "company_context": "Server and compute hardware; mechanical packaging, thermal systems and validation. Bachelor-level cohorts only; verify work location and 2027 availability."
   }
 ]
