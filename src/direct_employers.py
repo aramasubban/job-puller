@@ -86,6 +86,10 @@ def fetch_workday(src,role_pattern,senior_pattern,noneng_pattern,bay_match):
         try:
             info=get_json(base+path).get('jobPostingInfo',{})
             rec['title']=info.get('title') or rec['title'];rec['description']=info.get('jobDescription','');rec['employment']=info.get('timeType','Unspecified')
+            # Some Workday employers publish numeric USD bands without a dollar sign.
+            pay_text=BeautifulSoup(rec['description'],'html.parser').get_text(' ',strip=True)
+            pay=re.search(r'Annual Salary USD\s*([\d,]+)\s*[-–—]\s*([\d,]+)',pay_text,re.I)
+            if pay:rec['salary']=f"${pay.group(1)}–${pay.group(2)} base / year"
             rec['location']=info.get('location') or rec['location'];out.append(rec)
         except Exception:continue
     if jobs and not out:raise ValueError('Workday matching jobs found but no job details retrieved')
@@ -154,3 +158,4 @@ def fetch_icims(src,role,senior,noneng,bay):
         if not bay.search(location):continue
         items.append({'external_id':re.search(r'/jobs/(\d+)/',u).group(1),'url':u,'title':title,'location':location,'description':text,'employment':'FullTime' if 'Regular Full-Time' in text else 'Unspecified'})
     return items,{'candidate_links':len(names),'partial':True}
+
