@@ -680,5 +680,12 @@
     ],
     "careers_url": "https://hpe.wd5.myworkdayjobs.com/en-US/Jobsathpe",
     "company_context": "Server and compute hardware; mechanical packaging, thermal systems and validation. Bachelor-level cohorts only; verify work location and 2027 availability."
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "generalmatter",
+    "company": "General Matter",
+    "careers_url": "https://job-boards.greenhouse.io/generalmatter",
+    "company_context": "Los Angeles uranium-enrichment equipment: mechanisms, structures, manufacturing tooling and validation. Check posting-specific export controls and Q clearance; May 2027 availability unconfirmed."
   }
 ]
