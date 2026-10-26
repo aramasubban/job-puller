@@ -75,7 +75,10 @@ def fetch_workday(src,role_pattern,senior_pattern,noneng_pattern,bay_match):
             if not isinstance(listing,list):raise ValueError('Unexpected Workday response')
             for item in listing:
                 title=item.get('title','');loc=item.get('locationsText') or (item.get('bulletFields') or [''])[0]
-                if not role_pattern.search(title) or senior_pattern.search(title) or noneng_pattern.search(title) or not bay_match.search(str(loc)):continue
+                # Workday may collapse alternative locations to "5 Locations".
+                # Inspect those bounded candidates before deciding geography.
+                multiple_locations=re.search(r'\b\d+\s+locations?\b',str(loc),re.I)
+                if not role_pattern.search(title) or senior_pattern.search(title) or noneng_pattern.search(title) or not (bay_match.search(str(loc)) or multiple_locations):continue
                 ext=item.get('externalPath')
                 if ext:jobs[ext]={'title':title,'location':str(loc),'url':f"https://{src['host']}/en-US/{src['site']}{ext}",'posted':item.get('postedOn','')}
             if not listing or offset+len(listing)>=page.get('total',0):break
@@ -90,7 +93,12 @@ def fetch_workday(src,role_pattern,senior_pattern,noneng_pattern,bay_match):
             pay_text=BeautifulSoup(rec['description'],'html.parser').get_text(' ',strip=True)
             pay=re.search(r'Annual Salary USD\s*([\d,]+)\s*[-–—]\s*([\d,]+)',pay_text,re.I)
             if pay:rec['salary']=f"${pay.group(1)}–${pay.group(2)} base / year"
-            rec['location']=info.get('location') or rec['location'];out.append(rec)
+            if src.get('salary_pattern'):
+                local_pay=re.search(src['salary_pattern'],pay_text,re.I)
+                if local_pay:rec['salary']=f"${local_pay.group(1)}–${local_pay.group(2)} base / year (California)"
+            locations=[info.get('location') or rec['location']]+info.get('additionalLocations',[])
+            rec['location']='; '.join(dict.fromkeys(str(loc) for loc in locations if loc))
+            out.append(rec)
         except Exception:continue
     if jobs and not out:raise ValueError('Workday matching jobs found but no job details retrieved')
     return out,{'candidate_links':len(jobs),'considered':min(len(jobs),50),'partial':len(jobs)>50}
