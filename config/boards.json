@@ -687,5 +687,31 @@
     "company": "General Matter",
     "careers_url": "https://job-boards.greenhouse.io/generalmatter",
     "company_context": "Los Angeles uranium-enrichment equipment: mechanisms, structures, manufacturing tooling and validation. Check posting-specific export controls and Q clearance; May 2027 availability unconfirmed."
+  },
+  {
+    "provider": "workday",
+    "slug": "blue-origin",
+    "company": "Blue Origin",
+    "host": "blueorigin.wd5.myworkdayjobs.com",
+    "tenant": "blueorigin",
+    "site": "BlueOrigin",
+    "search_terms": [
+      "Structural Mechanical Engineer I"
+    ],
+    "max_pages": 1,
+    "max_details": 12,
+    "detail_paths": [
+      "/job/Structural---Mechanical-Engineer-I---Early-Career--2027-Starts-_R71329"
+    ],
+    "salary_pattern": "CA applicants is \\$([\\d,]+\\.\\d+)\\s*[-–]\\s*\\$([\\d,]+\\.\\d+)",
+    "careers_url": "https://blueorigin.wd5.myworkdayjobs.com/en-US/BlueOrigin",
+    "company_context": "Launch and spacecraft hardware; 2027 structural/mechanical early-career hiring includes LA among alternative placements. Confirm LA team assignment and start date; posting-specific export controls apply."
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "mavenrobotics",
+    "company": "Maven Robotics",
+    "careers_url": "https://careers.mavenrobotics.ai/",
+    "company_context": "Santa Clara industrial robots; integration, actuation, test systems and hardware deployment. Review hands-on actuation/fieldbus depth and May 2027 availability; senior mechanical roles excluded."
   }
 ]
