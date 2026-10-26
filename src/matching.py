@@ -5,7 +5,7 @@ bounded skill and experience scores. Preferred skills cannot supply core fit.
 """
 import re
 from html import unescape
-VERSION = 'me-v2'
+VERSION = 'me-v2.1'
 
 def has(pattern, text):
     return bool(re.search(pattern, text, re.I))
@@ -54,9 +54,12 @@ def score_match(job, description):
         r'\b(?:python|matlab|simulink|simscape|ros\s*2|ros2)\b']) * 4)
     gaps=[]; cap=95
     years=[int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s*(?:\+|[-–—]\s*\d{1,2})?\s*(?:years?|yrs?)\s+(?:of\s+)?(?:(?:[\w/-]+\s+){0,5})?experience\b',core,re.I)]
-    years += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|designing|building|developing|working|leading|managing)\b', core, re.I)]
+    years += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|designing|building|developing|working|leading|managing|taking)\b', core, re.I)]
     minimum=max(years, default=0)
     grad_welcome=has(r'new grads?.{0,65}(?:welcome|encouraged|considered)|(?:welcome|encourage|consider).{0,50}new grads?',core)
+    # Explicit acceptance of academic/personal/internship projects is evidence
+    # of junior eligibility; "all levels" alone does not establish this.
+    academic_welcome=has(r'experience through (?:academic|personal|internship).{0,100}projects',core)
     if grad_welcome and minimum<=3: minimum=0
     if minimum>=4:
         exp=0;cap=29;gaps.append(f'{minimum}+ years required')
@@ -66,7 +69,7 @@ def score_match(job, description):
         exp=7;cap=74;gaps.append('2+ years: confirm internships count')
     elif minimum==1:
         exp=11;gaps.append('Confirm internships satisfy experience minimum')
-    elif grad_welcome or has(r'new.grad|early.career|entry.level|junior|engineer (?:i|1)\b',title+' '+core):
+    elif grad_welcome or academic_welcome or has(r'new.grad|early.career|entry.level|junior|engineer (?:i|1)\b',title+' '+core):
         exp=15
     else:
         exp=8;cap=min(cap,79);gaps.append('Experience/start date not confirmed')

@@ -526,5 +526,33 @@
     "careers_url": "https://jobs.ashbyhq.com/radiant-industries",
     "company_context": "El Segundo portable nuclear microreactors; mechanisms and mechanical/fluids testing.",
     "verified_on": "2026-10-15"
+  },
+  {
+    "provider": "ashby",
+    "slug": "Ridealso",
+    "company": "ALSO",
+    "careers_url": "https://ridealso.com/pages/company",
+    "company_context": "Rivian-incubated small electric vehicles in Palo Alto; mechanical structures, battery validation, hardware test and manufacturing. Check level-specific ownership expectations."
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "freeformfuturecorp",
+    "company": "Freeform",
+    "careers_url": "https://job-boards.greenhouse.io/freeformfuturecorp",
+    "company_context": "Los Angeles metal additive manufacturing and factory automation; explicit Summer 2027 new-grad mechanical, manufacturing and process engineering roles."
+  },
+  {
+    "provider": "official_html",
+    "slug": "weave-robotics",
+    "company": "Weave Robotics",
+    "list_urls": [
+      "https://www.weaverobotics.com/careers"
+    ],
+    "link_fragment": "/careers/",
+    "title_selector": "h1",
+    "location_pattern": "(San Francisco, CA)\\s*[\u00b7\u2022]\\s*On-site",
+    "careers_url": "https://www.weaverobotics.com/careers",
+    "company_context": "San Francisco home robotics; articulated mechanisms, actuators, manufacturing equipment and mechatronics. Review each required experience level.",
+    "location_selector": "header:has(h1)"
   }
 ]
