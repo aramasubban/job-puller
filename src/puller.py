@@ -18,6 +18,7 @@ import re
 import sys
 import time
 from urllib.error import HTTPError, URLError
+from http.client import IncompleteRead
 from urllib.parse import quote, urlsplit
 from src.matching import score_match, VERSION as MATCH_VERSION
 from src.enrichment import enrich, SECTOR_COMPANIES, SECTOR_TITLES
@@ -197,7 +198,7 @@ def _download(url, timeout=18):
         try:
             with urlopen(req, timeout=timeout) as response:
                 return json.load(response)
-        except (HTTPError, URLError, TimeoutError, ValueError) as error:
+        except (HTTPError, URLError, TimeoutError, ValueError, IncompleteRead) as error:
             if retry == 2 or isinstance(error, HTTPError) and error.code in (400, 401, 403, 404):
                 raise
             time.sleep(retry + 1)
