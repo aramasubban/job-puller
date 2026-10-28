@@ -155,6 +155,10 @@ def exclusion_reasons(job):
         reasons.append("Excluded sector/company")
     if not job_regions(location):
         reasons.append("Outside Bay Area / Greater LA")
+    # A mandatory work-location clause overrides broader portal metadata.
+    explicit_work = re.search(r'\bWork Location\s*:\s*This position is based in\s+([^.]+)', desc, re.I)
+    if explicit_work and re.search(r'\b(?:India|Singapore|China|Taiwan|Japan|Korea|Israel|Germany|United Kingdom|Netherlands|France|Canada|Mexico)\b', explicit_work.group(1), re.I):
+        reasons.append('Required work location outside Bay Area / Greater LA: '+explicit_work.group(1).strip())
     if not ROLE_PATTERN.search(title) or NON_ENGINEERING.search(title):
         reasons.append("Outside full-time physical engineering scope")
     if SENIOR.search(title):
