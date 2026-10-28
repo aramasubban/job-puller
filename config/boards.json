@@ -713,5 +713,26 @@
     "company": "Maven Robotics",
     "careers_url": "https://careers.mavenrobotics.ai/",
     "company_context": "Santa Clara industrial robots; integration, actuation, test systems and hardware deployment. Review hands-on actuation/fieldbus depth and May 2027 availability; senior mechanical roles excluded."
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "chaosindustries",
+    "company": "CHAOS Industries",
+    "careers_url": "https://job-boards.greenhouse.io/chaosindustries",
+    "company_context": "El Segundo/Hawthorne defense sensing and ruggedized hardware; mechanical structures, thermal design, manufacturing and integration. Check required years and posting-specific export/clearance requirements."
+  },
+  {
+    "provider": "official_html",
+    "slug": "efference",
+    "company": "Efference",
+    "list_urls": [
+      "https://efference.ai/careers/"
+    ],
+    "link_fragment": "/careers/",
+    "title_selector": "h1",
+    "location_selector": "body",
+    "location_pattern": "Location\\s+(San Francisco)\\s+Employment Type",
+    "careers_url": "https://efference.ai/careers/",
+    "company_context": "San Francisco robotic perception and compute hardware; mechanical packaging and reliability fixtures. Electronics-dominant roles require screening separately from ME work."
   }
 ]
