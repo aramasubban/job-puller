@@ -734,5 +734,19 @@
     "location_pattern": "Location\\s+(San Francisco)\\s+Employment Type",
     "careers_url": "https://efference.ai/careers/",
     "company_context": "San Francisco robotic perception and compute hardware; mechanical packaging and reliability fixtures. Electronics-dominant roles require screening separately from ME work."
+  },
+  {
+    "provider": "lever",
+    "slug": "diamondfoundry",
+    "company": "Diamond Foundry",
+    "careers_url": "https://www.df.com/working-at-df",
+    "company_context": "Single-crystal diamond semiconductor substrates; thermal management, reactor equipment, wafer manufacturing and hardware reliability."
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "muonspace",
+    "company": "Muon Space",
+    "careers_url": "https://www.muonspace.com/positions/",
+    "company_context": "Designs, builds and operates low-Earth-orbit satellite constellations; spacecraft hardware, manufacturing, integration and test in San Jose."
   }
 ]

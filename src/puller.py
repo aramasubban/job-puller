@@ -123,6 +123,9 @@ def required_experience_years(description):
         r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s+or more\s+years?\s+(?:of\s+)?(?:[\w/-]+\s+){0,5}experience\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r"bachelor.{0,40}?related work experience of\s+(\d+)", description, re.I)]
+    # Explicit degree-route shorthand still defines the bachelor minimum,
+    # even when parenthesized between 'years' and the engineering field.
+    minima += [int(m.group(1)) for m in re.finditer(r'\bB\.?S\.?\s*\+\s*(\d{1,2})\b', text, re.I)]
     return max(minima, default=0)
 
 def experience_fit(title, description):

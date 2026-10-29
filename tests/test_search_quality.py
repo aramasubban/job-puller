@@ -20,6 +20,9 @@ class SearchQualityTests(unittest.TestCase):
   self.assertEqual(required_experience_years(s),5)
  def test_santa_cruz_in_scope(self):
   self.assertEqual(job_regions('Santa Cruz, CA'),['Bay Area'])
+ def test_parenthesized_degree_route_minimum(self):
+  for text,years in [('5+ years (BS+5 / MS+3) in spacecraft thermal engineering.',5),('8+ years (BS+8 / MS+6) in aerospace structural analysis.',8),('2+ years (BS+2 / MS+0) in thermal engineering.',2)]:
+   self.assertEqual(required_experience_years(text),years)
  def test_amazon_location_and_stable_identifier(self):
   j={'id':'10530353','title':'Cloud Hardware Development Engineer','location':'USA, WA, Seattle','locations':['USA, CA, Cupertino'],'description':'Mechanical design','job_path':'/en/jobs/10530353/role'}
   with patch('src.direct_employers.get_json',return_value={'jobs':[j],'hits':1}):
