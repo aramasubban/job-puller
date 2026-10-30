@@ -66,6 +66,22 @@ def fetch_official_html(src,role_pattern,senior_pattern,noneng_pattern,bay_match
         except Exception:continue
     if candidates and not items:raise ValueError('Matching job links found, but no verifiable Bay Area job details')
     return items,{'candidate_links':len(names),'considered':min(50,len(candidates)),'partial':len(candidates)>50}
+def fetch_pinpoint(src,role_pattern,senior_pattern,noneng_pattern,bay_match):
+    """Read the public endpoint advertised by the employer's Pinpoint board."""
+    payload=get_json(src['postings_url'])
+    postings=payload.get('data')
+    if not isinstance(postings,list):raise ValueError('Unexpected Pinpoint postings response')
+    items=[]
+    for job in postings:
+        url=job.get('url','');title=re.sub(r'\s+',' ',job.get('title','')).strip()
+        location=job.get('location',{}).get('name','')
+        if not url or '/postings/' not in url:raise ValueError('Pinpoint posting missing public URL')
+        # Requirements live outside the introductory description. Preserve
+        # section headings so preferred qualifications remain distinguishable.
+        description=' '.join(str(job.get(k) or '') for k in ('description','key_responsibilities_header','key_responsibilities','skills_knowledge_expertise_header','skills_knowledge_expertise'))
+        items.append(dict(url=url,external_id=url.rstrip('/').split('/')[-1],title=title,location=location,description=description,employment=job.get('employment_type_text','Unspecified'),salary=job.get('compensation','') if job.get('compensation_visible') else ''))
+    return items,{'candidate_links':len(postings),'partial':True}
+
 def fetch_workday(src,role_pattern,senior_pattern,noneng_pattern,bay_match):
     base=f"https://{src['host']}/wday/cxs/{src['tenant']}/{src['site']}";jobs={}
     for term in src.get('search_terms',['mechanical']):

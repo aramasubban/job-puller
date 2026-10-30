@@ -22,7 +22,7 @@ from http.client import IncompleteRead
 from urllib.parse import quote, urlsplit
 from src.matching import score_match, VERSION as MATCH_VERSION
 from src.enrichment import enrich, SECTOR_COMPANIES, SECTOR_TITLES
-from src.direct_employers import fetch_official_html, fetch_workday, fetch_amazon, fetch_icims
+from src.direct_employers import fetch_official_html, fetch_workday, fetch_amazon, fetch_icims, fetch_pinpoint
 from src.enterprise_sources import fetch_apple, fetch_microsoft, fetch_google, fetch_tesla
 from urllib.request import Request, urlopen
 
@@ -329,13 +329,13 @@ def fetch_source(src):
                 enriched=enrich(rec,description)
                 if enriched is not None:rows.append(enriched)
         return rows
-    if p in ('workday','official_html','amazon','icims'):
+    if p in ('workday','official_html','amazon','icims','pinpoint'):
         if p=='workday':
             items,detail=fetch_workday(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         elif p=='official_html':
             items,detail=fetch_official_html(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         else:
-            items,detail=({'amazon':fetch_amazon,'icims':fetch_icims}[p])(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
+            items,detail=({'amazon':fetch_amazon,'icims':fetch_icims,'pinpoint':fetch_pinpoint}[p])(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         rows=ScreenedJobs(detail.get('candidate_links',len(items)))
         for item in items:
             title=item['title']
@@ -398,7 +398,7 @@ def run():
                 excluded_roles.extend(audit)
                 filtered_out.update(j['id'] for j in audit if j.get('id'))
                 successful.append(key)
-                source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","amazon","icims","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results),"company_context":src.get("company_context", ""),"careers_url":src.get("careers_url", "")})
+                source_status.append({"source":key,"company":src["company"],"state":"OK — partial" if src["provider"] in ("workday","official_html","amazon","icims","pinpoint","apple_api","microsoft_eightfold","google_sitemap","tesla_api") else "OK","matching":len(results),"company_context":src.get("company_context", ""),"careers_url":src.get("careers_url", "")})
                 source_status[-1].update({'raw_postings': getattr(raw_results, 'raw_count', None),
                     'excluded_relevant': len(audit)})
                 for job in results:

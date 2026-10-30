@@ -748,5 +748,13 @@
     "company": "Muon Space",
     "careers_url": "https://www.muonspace.com/positions/",
     "company_context": "Designs, builds and operates low-Earth-orbit satellite constellations; spacecraft hardware, manufacturing, integration and test in San Jose."
+  },
+  {
+    "provider": "pinpoint",
+    "slug": "astrolab",
+    "company": "Astrolab",
+    "postings_url": "https://astrolab.pinpointhq.com/postings.json",
+    "careers_url": "https://astrolab.pinpointhq.com",
+    "company_context": "Hawthorne planetary-rover hardware; lunar vehicle structures, mechanisms, thermal systems, equipment and test. Confirm experience and May 2027 availability."
   }
 ]
