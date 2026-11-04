@@ -123,20 +123,28 @@ def fetch_workday(src,role_pattern,senior_pattern,noneng_pattern,bay_match):
 def fetch_amazon(src,role,senior,noneng,bay):
     from urllib.parse import urlencode
     jobs={}; checked=0
-    for term in src.get('search_terms',['mechanical','hardware development','manufacturing']):
-        for offset in range(0,int(src.get('max_pages',3))*100,100):
-            query=urlencode({'base_query':term,'offset':offset,'result_limit':100,'country':'USA','region':'California'})
-            page=get_json('https://www.amazon.jobs/en/search.json?'+query)
-            listings=page.get('jobs')
-            if not isinstance(listings,list):raise ValueError('Amazon search has no jobs array')
-            checked+=len(listings)
-            for j in listings:
-                title=j.get('title','');loc=str(j.get('location',''))+'; '+str(j.get('locations',''))
-                if not role.search(title) or senior.search(title) or noneng.search(title) or not bay.search(loc):continue
-                path=j.get('job_path') or '/en/jobs/'+str(j['id']);match=re.search(r'/jobs/(\d+)',path);ident=match.group(1) if match else str(j['id'])
-                desc='Description '+j.get('description','')+' Basic Qualifications '+j.get('basic_qualifications','')+' Preferred Qualifications '+j.get('preferred_qualifications','')
-                jobs[ident]={'external_id':ident,'title':title,'location':loc,'url':urljoin('https://www.amazon.jobs',path),'description':desc,'employment':'FullTime','posted':j.get('posted_date','')}
-            if offset+len(listings)>=page.get('hits',0) or not listings:break
+    for region in src.get('regions',['California','Washington']):
+        for term in src.get('search_terms',['mechanical','hardware development','manufacturing']):
+            for offset in range(0,int(src.get('max_pages',3))*100,100):
+                query=urlencode({'base_query':term,'offset':offset,'result_limit':100,'country':'USA','region':region})
+                page=get_json('https://www.amazon.jobs/en/search.json?'+query)
+                listings=page.get('jobs')
+                if not isinstance(listings,list):raise ValueError('Amazon search has no jobs array')
+                checked+=len(listings)
+                for j in listings:
+                    title=j.get('title','');locs=[str(j.get('location',''))]
+                    for extra in j.get('locations') or []:
+                        try:extra=json.loads(extra) if isinstance(extra,str) else extra
+                        except (ValueError,TypeError):
+                            locs.append(str(extra));continue
+                        if isinstance(extra,str):locs.append(extra)
+                        if isinstance(extra,dict):locs.append(extra.get('location') or ', '.join(str(extra.get(k) or '') for k in ('city','normalizedStateName','normalizedCountryName')))
+                    loc='; '.join(dict.fromkeys(x for x in locs if x))
+                    if not role.search(title) or senior.search(title) or noneng.search(title) or not bay.search(loc):continue
+                    path=j.get('job_path') or '/en/jobs/'+str(j['id']);match=re.search(r'/jobs/(\d+)',path);ident=match.group(1) if match else str(j['id'])
+                    desc='Description '+j.get('description','')+' Basic Qualifications '+j.get('basic_qualifications','')+' Preferred Qualifications '+j.get('preferred_qualifications','')
+                    jobs[ident]={'external_id':ident,'title':title,'location':loc,'url':urljoin('https://www.amazon.jobs',path),'description':desc,'employment':'FullTime','posted':j.get('posted_date','')}
+                if offset+len(listings)>=page.get('hits',0) or not listings:break
     for j in jobs.values():
         if 'Cloud Hardware Development Engineer, AWS - Early Career' in j['title']:
             text=BeautifulSoup(get_html(j['url']),'html.parser').get_text(' ',strip=True)
@@ -183,3 +191,34 @@ def fetch_icims(src,role,senior,noneng,bay):
         items.append({'external_id':re.search(r'/jobs/(\d+)/',u).group(1),'url':u,'title':title,'location':location,'description':text,'employment':'FullTime' if 'Regular Full-Time' in text else 'Unspecified'})
     return items,{'candidate_links':len(names),'partial':True}
 
+
+
+def fetch_smartrecruiters(src,role_pattern,senior_pattern,noneng_pattern,bay_match):
+    """Public employer inventory, followed by full qualifications for matching roles."""
+    base='https://api.smartrecruiters.com/v1/companies/'+src['slug']+'/postings'
+    from http.client import IncompleteRead
+    def read(url):
+        for attempt in range(2):
+            try:return get_json(url)
+            except IncompleteRead:
+                if attempt:raise
+                time.sleep(.75)
+    items=[];offset=0;total=None
+    while total is None or offset<total:
+        page=read(base+'?limit=100&offset='+str(offset))
+        posts=page.get('content');total=page.get('totalFound')
+        if not isinstance(posts,list) or not isinstance(total,int):
+            raise ValueError('Unexpected SmartRecruiters inventory schema')
+        if not posts and offset<total:raise ValueError('Truncated SmartRecruiters inventory')
+        for post in posts:
+            title=post.get('name','');loc=post.get('location',{})
+            location=loc.get('fullLocation') or ', '.join(str(loc.get(k) or '') for k in ('city','region','country'))
+            if not (role_pattern.search(title) and not senior_pattern.search(title) and not noneng_pattern.search(title) and bay_match.search(location)):continue
+            detail=read(base+'/'+str(post['id']))
+            if not isinstance(detail.get('jobAd'),dict):raise ValueError('Missing SmartRecruiters job qualifications')
+            sections=detail['jobAd'].get('sections',{})
+            description=' '.join(str(sections[k].get('title',''))+' '+str(sections[k].get('text','')) for k in ('jobDescription','qualifications','additionalInformation') if isinstance(sections.get(k),dict))
+            if not description.strip():raise ValueError('Empty SmartRecruiters job detail')
+            items.append(dict(external_id=str(post['id']),url=detail.get('applyUrl') or 'https://jobs.smartrecruiters.com/'+src['slug']+'/'+str(post['id']),title=title,location=location,description=description,employment=(detail.get('typeOfEmployment') or {}).get('label','Unspecified'),posted=detail.get('releasedDate','')))
+        offset+=len(posts)
+    return items,{'candidate_links':total,'partial':False}

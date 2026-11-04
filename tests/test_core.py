@@ -15,11 +15,11 @@ class CoreTests(unittest.TestCase):
         self.assertFalse(puller.is_bay_area('Los Angeles, CA'))
     def test_experience_requirement(self):
         self.assertEqual(puller.experience_fit('Mechanical Engineer, New Grad','Requires at least 5 years experience'),'EXCLUDE')
-    def test_medical_and_hvac_excluded(self):
+    def test_medical_allowed_and_hvac_excluded(self):
         job={'title':'HVAC Mechanical Engineer','company':'ACME','location':'Sunnyvale, CA','description':'','employment':'Full-time'}
         self.assertFalse(puller.qualifies(job))
         job['title']='Mechanical Engineer';job['company']='Medtronic'
-        self.assertFalse(puller.qualifies(job))
+        self.assertTrue(puller.qualifies(job))
     def test_link_parser(self):
         links=extract_links('<a href="/careers/search/job/test-mechanical-engineer-123">Mechanical Engineer</a>','https://www.tesla.com/careers/search','/careers/search/job/')
         self.assertEqual(len(links),1)

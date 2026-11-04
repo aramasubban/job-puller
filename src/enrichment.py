@@ -4,8 +4,8 @@ from src.matching import score_match
 TARGET=140_000
 MONEY_RANGE=re.compile(r"\$\s*([\d,]{2,9})(?:\.\d+)?\s*(?:-|–|—|to)\s*\$?\s*([\d,]{2,9})(?:\.\d+)?",re.I)
 K_RANGE=re.compile(r"\$\s*(\d{2,3}(?:\.\d+)?)\s*[kK]\s*(?:-|–|—|to)\s*\$?\s*(\d{2,3}(?:\.\d+)?)\s*[kK]",re.I)
-SECTOR_COMPANIES=re.compile(r"\b(medtronic|stryker|intuitive surgical|intuitive|abbott|dexcom|boston scientific|edwards lifesciences|neuralink|nudge|align technology|illumina)\b",re.I)
-SECTOR_TITLES=re.compile(r"\b(hvac|heating,? ventilation|air conditioning|building services|mep engineer|data center mechanical engineer|facilities mechanical engineer|plumbing|refrigeration|medical devices?|surgical devices?|implant devices?)\b",re.I)
+SECTOR_COMPANIES=re.compile(r"(?!)")
+SECTOR_TITLES=re.compile(r"\b(hvac|heating,? ventilation|air conditioning|building services|mep engineer|data center mechanical engineer|facilities mechanical engineer|plumbing|refrigeration)\b",re.I)
 def salary_range(text):
     text=str(text or ''); matches=[]
     for m in K_RANGE.finditer(text):
