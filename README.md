@@ -11,7 +11,7 @@ Jobs must score **at least 50/100**. The collector filters fresh jobs and retain
 ## Search scope
 54 sources, including existing employers plus Bedrock Robotics, Skydio, Figure, Zipline, 1X, Astranis, Saronic, Dexterity, Form Energy, Hadrian, Agility Robotics, Zoox, Lucid Motors, Redwood Materials, Nuro, Waymo, Saildrone and Antora Energy.
 
-Bay Area full-time new-grad / 0–3 year mechanical design, mechanisms, equipment, manufacturing, NPI, automotive/battery, thermal hardware, testing and reliability. Exclude Tesla, medical devices, building HVAC, software-only roles, senior titles and explicit 4+ year minimums. Pay is a preference, not an exclusion: retain >=50-fit jobs below $140,000 and flag pay. Distinguish published starting pay from a salary ceiling. Include Santa Cruz and Scotts Valley in Bay Area scope.
+Bay Area full-time new-grad / 0–3 year mechanical design, mechanisms, equipment, manufacturing, NPI, automotive/battery, thermal hardware, testing and reliability. Exclude Tesla and building HVAC, software-only roles, senior titles and explicit 4+ year minimums. Pay is a preference, not an exclusion: retain >=50-fit jobs below $140,000 and flag pay. Distinguish published starting pay from a salary ceiling. Include Santa Cruz and Scotts Valley in Bay Area scope. Also include Greater Seattle (Seattle, Bellevue, Redmond, Kirkland, Bothell, Everett, Renton, Kent and nearby hubs). Medical device hardware, surgical robotics and neurotechnology are in scope as of November 4, 2026.
 
 Public company context and career URLs live in the source configuration/feed and are displayed in Coverage. Context explains engineering relevance. Fame, funding and pay add no fit points. Covered companies can have zero qualifying jobs.
 

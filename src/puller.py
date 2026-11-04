@@ -22,7 +22,7 @@ from http.client import IncompleteRead
 from urllib.parse import quote, urlsplit
 from src.matching import score_match, VERSION as MATCH_VERSION
 from src.enrichment import enrich, SECTOR_COMPANIES, SECTOR_TITLES
-from src.direct_employers import fetch_official_html, fetch_workday, fetch_amazon, fetch_icims, fetch_pinpoint
+from src.direct_employers import fetch_official_html, fetch_workday, fetch_amazon, fetch_icims, fetch_pinpoint, fetch_smartrecruiters
 from src.enterprise_sources import fetch_apple, fetch_microsoft, fetch_google, fetch_tesla
 from urllib.request import Request, urlopen
 
@@ -55,13 +55,17 @@ BAY_AREA = re.compile("|".join(BAY_AREA_PATTERNS), re.IGNORECASE)
 LA_CITIES = ["los angeles", "el segundo", "hawthorne", "torrance", "gardena", "redondo beach", "manhattan beach", "hermosa beach", "long beach", "carson", "inglewood", "culver city", "santa monica", "pasadena", "altadena", "burbank", "glendale", "sylmar", "chatsworth", "canoga park", "woodland hills", "northridge", "san fernando", "santa clarita", "valencia", "palmdale", "lancaster", "mojave", "costa mesa", "irvine", "tustin", "huntington beach", "newport beach", "santa ana", "anaheim", "fullerton", "orange county", "lake forest", "foothill ranch", "seal beach", "cypress", "brea", "thousand oaks", "simi valley", "camarillo", "oxnard", "ventura"]
 LA_PATTERNS = [r"\b"+re.escape(city)+r"\b" for city in LA_CITIES]
 GREATER_LA = re.compile("|".join(LA_PATTERNS), re.IGNORECASE)
-TARGET_AREA = re.compile("|".join(BAY_AREA_PATTERNS + LA_PATTERNS), re.IGNORECASE)
+SEATTLE_CITIES = ["seattle", "bellevue", "redmond", "kirkland", "bothell", "woodinville", "everett", "lynnwood", "renton", "kent", "tukwila", "auburn", "bremerton", "issaquah", "sammamish", "mercer island", "mountlake terrace", "mukilteo", "federal way"]
+SEATTLE_PATTERNS = [r"\b"+re.escape(city)+r"\b" for city in SEATTLE_CITIES]
+GREATER_SEATTLE = re.compile("|".join(SEATTLE_PATTERNS), re.IGNORECASE)
+TARGET_AREA = re.compile("|".join(BAY_AREA_PATTERNS + LA_PATTERNS + SEATTLE_PATTERNS), re.IGNORECASE)
 def job_regions(location):
     regions=[]
     for segment in re.split(r";|\n|\s/\s",location or ""):
-        if re.search(r"\b(?:New Jersey|New York|Virginia|Texas|Ohio|Massachusetts|NJ|NY|VA|TX|OH|MA)\b",segment,re.I):continue
+        if re.search(r"\b(?:New Jersey|New York|Virginia|Texas|Ohio|Massachusetts|Oregon|OR|NJ|NY|VA|TX|OH|MA)\b",segment,re.I):continue
         if BAY_AREA.search(segment) and 'Bay Area' not in regions:regions.append('Bay Area')
         if GREATER_LA.search(segment) and 'LA' not in regions:regions.append('LA')
+        if GREATER_SEATTLE.search(segment) and 'Seattle' not in regions:regions.append('Seattle')
     return regions
 
 
@@ -120,7 +124,7 @@ def required_experience_years(description):
     text = re.split(r'\b(?:preferred|nice[- ]to[- ]have|bonus)\s+(?:qualifications|requirements|experience)\b',text,maxsplit=1,flags=re.I)[0]
     minima = [int(m.group(1)) for pattern in (EXP, EXP_BEFORE) for m in pattern.finditer(text)]
     minima += [int(m.group(1)) for m in re.finditer(
-        r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
+        r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|of working|of relevant|of related|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s+or more\s+years?\s+(?:of\s+)?(?:[\w/-]+\s+){0,5}experience\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r"bachelor.{0,40}?related work experience of\s+(\d+)", description, re.I)]
     # Explicit degree-route shorthand still defines the bachelor minimum,
@@ -157,11 +161,11 @@ def exclusion_reasons(job):
     if SECTOR_COMPANIES.search(job.get("company", "")) or SECTOR_TITLES.search(title):
         reasons.append("Excluded sector/company")
     if not job_regions(location):
-        reasons.append("Outside Bay Area / Greater LA")
+        reasons.append("Outside Bay Area / Greater LA / Seattle")
     # A mandatory work-location clause overrides broader portal metadata.
     explicit_work = re.search(r'\bWork Location\s*:\s*This position is based in\s+([^.]+)', desc, re.I)
     if explicit_work and re.search(r'\b(?:India|Singapore|China|Taiwan|Japan|Korea|Israel|Germany|United Kingdom|Netherlands|France|Canada|Mexico)\b', explicit_work.group(1), re.I):
-        reasons.append('Required work location outside Bay Area / Greater LA: '+explicit_work.group(1).strip())
+        reasons.append('Required work location outside Bay Area / Greater LA / Seattle: '+explicit_work.group(1).strip())
     if not ROLE_PATTERN.search(title) or NON_ENGINEERING.search(title):
         reasons.append("Outside full-time physical engineering scope")
     if SENIOR.search(title):
@@ -329,13 +333,13 @@ def fetch_source(src):
                 enriched=enrich(rec,description)
                 if enriched is not None:rows.append(enriched)
         return rows
-    if p in ('workday','official_html','amazon','icims','pinpoint'):
+    if p in ('workday','official_html','amazon','icims','pinpoint','smartrecruiters'):
         if p=='workday':
             items,detail=fetch_workday(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         elif p=='official_html':
             items,detail=fetch_official_html(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         else:
-            items,detail=({'amazon':fetch_amazon,'icims':fetch_icims,'pinpoint':fetch_pinpoint}[p])(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
+            items,detail=({'amazon':fetch_amazon,'icims':fetch_icims,'pinpoint':fetch_pinpoint,'smartrecruiters':fetch_smartrecruiters}[p])(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
         rows=ScreenedJobs(detail.get('candidate_links',len(items)))
         for item in items:
             title=item['title']
@@ -434,7 +438,7 @@ def run():
         "source_status": sorted(source_status,key=lambda x:x["company"]),
         "salary_target_usd": 140000,
         "minimum_fit_score": MIN_FIT_SCORE,
-        "regions": ["Bay Area", "LA"],
+        "regions": ["Bay Area", "LA", "Seattle"],
         "filtered_out_job_ids": sorted(filtered_out),
         "excluded_roles": sorted(excluded_roles, key=lambda j: (j['company'], j['title'], j['id'])),
         "jobs": sorted(found.values(), key=lambda j: (j["company"].lower(), j["title"].lower(), j["id"])),

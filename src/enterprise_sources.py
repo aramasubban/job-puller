@@ -54,7 +54,7 @@ def fetch_apple(src, role, senior, noneng, bay):
         for page in range(1,int(src.get("pages_per_query",2))+1):
             try:
                 data=json.loads(_request("https://jobs.apple.com/api/v1/search",{
-                    "query":term,"filters":{},"page":page,"locale":"en-us","sort":"",
+                    "query":"","filters":{"keywords":[term]},"page":page,"locale":"en-us","sort":"",
                     "format":{"longDate":"MMMM D, YYYY","mediumDate":"MMM D, YYYY"}}))
             except Exception:
                 if checked:break
@@ -71,6 +71,16 @@ def fetch_apple(src, role, senior, noneng, bay):
             if len(matches)<20:break
             time.sleep(1.25)
     if not checked:raise ValueError("No valid Apple search pages")
+    # Search summaries omit mandatory years and education. Screen full details.
+    for rec in all_jobs.values():
+        ident=urlsplit(rec['url']).path.split('/details/',1)[-1].split('/')[0]
+        detail=json.loads(_request('https://jobs.apple.com/api/v1/jobDetails/'+ident)).get('res')
+        if not isinstance(detail,dict) or not detail.get('postingTitle'):
+            raise ValueError('Apple full job detail unavailable')
+        parts=[str(detail.get(k) or '') for k in ('jobSummary','description','minimumQualifications','keyQualifications','educationAndExperience','preferredQualifications','payAndBenefits')]
+        rec['description']=' '.join(parts)
+        if not any(detail.get(k) for k in ('minimumQualifications','keyQualifications','educationAndExperience')):
+            raise ValueError('Apple detail missing qualification fields')
     return list(all_jobs.values())
 
 def _ms_location(pos):
