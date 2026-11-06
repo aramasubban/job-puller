@@ -863,5 +863,13 @@
     "careers_url": "https://science.xyz/careers/",
     "company_context": "Neurotechnology and research devices; precision mechanical design, surgical tools, microfluidics, fixtures and validation.",
     "verified_on": "2026-11-04"
+  },
+  {
+    "provider": "ashby",
+    "company": "Relling",
+    "slug": "Relling",
+    "careers_url": "https://rellingsystems.com/about/careers",
+    "company_context": "Industrial robotic workcells; mechanical integration, mechatronics, factory automation and hardware deployment.",
+    "verified_on": "2026-11-06"
   }
 ]

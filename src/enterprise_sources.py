@@ -79,6 +79,7 @@ def fetch_apple(src, role, senior, noneng, bay):
             raise ValueError('Apple full job detail unavailable')
         parts=[str(detail.get(k) or '') for k in ('jobSummary','description','minimumQualifications','keyQualifications','educationAndExperience','preferredQualifications','payAndBenefits')]
         rec['description']=' '.join(parts)
+        rec['minimum_qualifications']=str(detail.get('minimumQualifications') or '')
         if not any(detail.get(k) for k in ('minimumQualifications','keyQualifications','educationAndExperience')):
             raise ValueError('Apple detail missing qualification fields')
     return list(all_jobs.values())

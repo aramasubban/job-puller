@@ -130,6 +130,7 @@ def required_experience_years(description):
     # Explicit degree-route shorthand still defines the bachelor minimum,
     # even when parenthesized between 'years' and the engineering field.
     minima += [int(m.group(1)) for m in re.finditer(r'\bB\.?S\.?\s*\+\s*(\d{1,2})\b', text, re.I)]
+    minima += [int(m.group(1)) for m in re.finditer(r'(\d{1,2})\s+years?\s+of\s+progressive,?\s+post[- ]baccalaureate\s+experience', text, re.I)]
     return max(minima, default=0)
 
 def experience_fit(title, description):
@@ -158,6 +159,10 @@ def exclusion_reasons(job):
     location = job.get("location", "") or ""
     etype = (job.get("employment", "") or "").lower().replace(" ", "").replace("-", "")
     reasons = []
+    minimum_qualifications = job.get('minimum_qualifications', '') or ''
+    degree_clause = re.split(r'Experience and/or education', minimum_qualifications, maxsplit=1, flags=re.I)[0]
+    if re.search(r"\bmaster[’']?s?\s+degree\b", degree_clause, re.I) and not re.search(r'\bbachelor|\bB\.?S\.?\b', degree_clause, re.I):
+        reasons.append('Required graduate degree; no bachelor route stated')
     if SECTOR_COMPANIES.search(job.get("company", "")) or SECTOR_TITLES.search(title):
         reasons.append("Excluded sector/company")
     if not job_regions(location):
@@ -319,7 +324,7 @@ def fetch_source(src):
         getter={'apple_api':fetch_apple,'microsoft_eightfold':fetch_microsoft,
                 'google_sitemap':fetch_google,'tesla_api':fetch_tesla}[p]
         items=getter(src,ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)
-        rows=[]
+        rows=ScreenedJobs(len(items))
         for item in items:
             title=item['title'];description=plain(item.get('description',''))
             rec={'id':source_key(src)+':'+stable_external_id(src,item['url']),
@@ -329,9 +334,11 @@ def fetch_source(src):
                  'experience_fit':experience_fit(title,description),
                  'salary':str(item.get('salary') or ''),'posted':item.get('posted',''),
                  'apply_url':item['url'],'source_url':item['url'],'source':source_key(src)}
-            if qualifies({**rec,'description':description}):
+            reasons=exclusion_reasons({**rec,'description':description,'minimum_qualifications':plain(item.get('minimum_qualifications',''))})
+            if not reasons:
                 enriched=enrich(rec,description)
                 if enriched is not None:rows.append(enriched)
+            else: rows.record_exclusion(rec,reasons)
         return rows
     if p in ('workday','official_html','amazon','icims','pinpoint','smartrecruiters'):
         if p=='workday':
