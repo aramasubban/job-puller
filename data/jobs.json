@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T20:50:38+00:00",
+  "generated_at": "2026-11-06T20:28:02+00:00",
   "sources_checked": [
     "apple_api:apple",
     "ashby:1x",
@@ -496,7 +496,7 @@
       "source": "greenhouse:relativity",
       "company": "Relativity Space",
       "state": "OK",
-      "matching": 31,
+      "matching": 30,
       "company_context": "Long Beach launch vehicles, structures, additive manufacturing and factory equipment. Review posting-specific export/clearance requirements separately.",
       "careers_url": "https://job-boards.greenhouse.io/relativity"
     },
@@ -584,7 +584,7 @@
       "source": "greenhouse:vast",
       "company": "Vast",
       "state": "OK",
-      "matching": 7,
+      "matching": 9,
       "company_context": "Long Beach/Hawthorne space stations and propulsion; tooling, mechanisms and hardware production. Review posting-specific export/clearance requirements separately.",
       "careers_url": "https://job-boards.greenhouse.io/vast"
     },
@@ -616,7 +616,7 @@
       "source": "greenhouse:flyzipline",
       "company": "Zipline",
       "state": "OK",
-      "matching": 12,
+      "matching": 11,
       "company_context": "Autonomous delivery aircraft and ground systems; structures, mechanisms, hardware testing and manufacturable product design.",
       "careers_url": "https://www.zipline.com/open-roles"
     },
@@ -636,24 +636,42 @@
     "LA"
   ],
   "filtered_out_job_ids": [
+    "apple_api:apple:200607680",
     "apple_api:apple:200664001",
     "apple_api:apple:200671460",
     "apple_api:apple:200682031",
-    "apple_api:apple:200684452",
-    "apple_api:apple:200690522",
-    "apple_api:apple:200690638",
     "apple_api:apple:200690810",
     "apple_api:apple:200690825",
     "apple_api:apple:200690861",
+    "apple_api:apple:200691102",
+    "apple_api:apple:200691250",
+    "apple_api:apple:200691256",
+    "apple_api:apple:200691262",
+    "apple_api:apple:200691299",
+    "apple_api:apple:200691345",
+    "apple_api:apple:200691362",
+    "apple_api:apple:200691408",
+    "apple_api:apple:200691533",
+    "apple_api:apple:200691548",
+    "apple_api:apple:200691554",
+    "apple_api:apple:200691555",
+    "apple_api:apple:200691578",
+    "apple_api:apple:200691585",
+    "apple_api:apple:200691589",
+    "apple_api:apple:200691657",
+    "apple_api:apple:200691703",
     "apple_api:apple:200692107",
-    "apple_api:apple:200692360",
     "apple_api:apple:200692673",
     "apple_api:apple:200692706",
-    "apple_api:apple:200693029",
-    "apple_api:apple:200693056",
-    "apple_api:apple:200693200",
-    "apple_api:apple:200693313",
-    "apple_api:apple:200693365",
+    "apple_api:apple:200693237",
+    "apple_api:apple:200693496",
+    "apple_api:apple:200693502",
+    "apple_api:apple:200693633",
+    "apple_api:apple:200693759",
+    "apple_api:apple:200693760",
+    "apple_api:apple:200693803",
+    "apple_api:apple:200693872",
+    "apple_api:apple:200693876",
     "ashby:american-turbines:c789eac8-a3f0-4ef5-9b55-359a4f383b58",
     "ashby:apex-technology-inc:1ae71f43-31eb-471a-a40e-5f4c48f05ded",
     "ashby:apex-technology-inc:2a4bd6ee-7b45-4a48-ad78-267d57f766df",
@@ -669,6 +687,7 @@
     "ashby:foundry-robotics:681e7d19-5716-4694-b63c-b5a16039bba1",
     "ashby:foundry-robotics:ea9821bb-ab37-49be-8d7a-4d6b814b5b65",
     "ashby:genesis:e260b061-68b2-43d5-9f11-45261234f901",
+    "ashby:hadrian-automation:1e44ac25-3b60-44a2-bf72-5d6cbf40b77d",
     "ashby:hadrian-automation:5ed160a1-e44c-4750-ade0-4c6186b8cd4d",
     "ashby:hadrian-automation:620632cd-94f6-4cb5-8dea-3c62de1f20f7",
     "ashby:hadrian-automation:81a426cb-558c-4ad9-a702-36d866bd2afc",
@@ -708,7 +727,6 @@
     "greenhouse:andurilindustries:4924593007",
     "greenhouse:andurilindustries:5069124007",
     "greenhouse:andurilindustries:5079278007",
-    "greenhouse:andurilindustries:5101774007",
     "greenhouse:andurilindustries:5103060007",
     "greenhouse:andurilindustries:5107130007",
     "greenhouse:andurilindustries:5138275007",
@@ -746,12 +764,12 @@
     "greenhouse:andurilindustries:5260717007",
     "greenhouse:andurilindustries:5261326007",
     "greenhouse:andurilindustries:5261730007",
-    "greenhouse:andurilindustries:5262328007",
     "greenhouse:andurilindustries:5266291007",
     "greenhouse:andurilindustries:5271177007",
     "greenhouse:andurilindustries:5280959007",
     "greenhouse:andurilindustries:5284592007",
     "greenhouse:andurilindustries:5284718007",
+    "greenhouse:andurilindustries:5285545007",
     "greenhouse:astranis:4299740006",
     "greenhouse:astranis:4704619006",
     "greenhouse:astranis:4704620006",
@@ -761,7 +779,6 @@
     "greenhouse:astranis:4705660006",
     "greenhouse:astranis:4705665006",
     "greenhouse:atomicmachines:4038127009",
-    "greenhouse:atomicmachines:4436390009",
     "greenhouse:atomicmachines:4436391009",
     "greenhouse:atomicmachines:4437423009",
     "greenhouse:atomicmachines:4443962009",
@@ -787,7 +804,8 @@
     "greenhouse:flyzipline:7818483003",
     "greenhouse:flyzipline:7827002003",
     "greenhouse:flyzipline:7868140003",
-    "greenhouse:icarus:5281248008",
+    "greenhouse:icarus:5100775008",
+    "greenhouse:icarus:5283386008",
     "greenhouse:icarus:5287116008",
     "greenhouse:k2spacecorporation:5020161008",
     "greenhouse:k2spacecorporation:5031457008",
@@ -808,9 +826,8 @@
     "greenhouse:relativity:8892999002",
     "greenhouse:relativity:8925901002",
     "greenhouse:rocketlab:6765878003",
-    "greenhouse:rocketlab:8055849003",
-    "greenhouse:rocketlab:8055963003",
     "greenhouse:rocketlab:8056192003",
+    "greenhouse:spacex:8512827002",
     "greenhouse:spacex:8569054002",
     "greenhouse:spacex:8586528002",
     "greenhouse:spacex:8595083002",
@@ -858,12 +875,15 @@
     "greenhouse:spacex:8858634002",
     "greenhouse:spacex:8882616002",
     "greenhouse:spacex:8884556002",
+    "greenhouse:spacex:8886620002",
     "greenhouse:spacex:8892801002",
     "greenhouse:spacex:8893579002",
     "greenhouse:spacex:8895969002",
     "greenhouse:spacex:8907194002",
     "greenhouse:spacex:8910221002",
     "greenhouse:spacex:8929638002",
+    "greenhouse:spacex:8932368002",
+    "greenhouse:spacex:8933527002",
     "greenhouse:trueanomalyinc:5098194007",
     "greenhouse:trueanomalyinc:5104248007",
     "greenhouse:trueanomalyinc:5138491007",
@@ -882,7 +902,6 @@
     "greenhouse:vast:4702874006",
     "greenhouse:vast:4705164006",
     "greenhouse:vast:4708985006",
-    "greenhouse:vast:4710094006",
     "greenhouse:vast:4711793006",
     "greenhouse:vast:4712537006",
     "greenhouse:vast:4723039006",
@@ -924,7 +943,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:1x:3398e992-b02a-4d39-aabe-f4ac2bb6591d",
@@ -956,7 +975,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:1x:1fc6f14f-2ecc-4ceb-a988-5d5f7ca041d1",
@@ -988,7 +1007,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:1x:73739950-4a8b-49b5-9f9f-3ccc17882098",
@@ -1020,7 +1039,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:1x:1932c050-c00f-434a-85a4-3076ec613ac4",
@@ -1052,7 +1071,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:agilityrobotics:5986750004",
@@ -1084,7 +1103,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:agilityrobotics:6227252004",
@@ -1116,7 +1135,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:american-turbines:a0292f18-bb53-47cd-b97f-389fea5c0936",
@@ -1148,7 +1167,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:american-turbines:5461d41a-41a0-4cf9-bc4b-1e3285473784",
@@ -1180,7 +1199,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5258587007",
@@ -1210,7 +1229,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5234512007",
@@ -1242,7 +1261,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5200146007",
@@ -1274,7 +1293,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5194656007",
@@ -1306,7 +1325,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5116367007",
@@ -1338,7 +1357,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5196162007",
@@ -1370,7 +1389,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5225761007",
@@ -1402,7 +1421,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5254383007",
@@ -1435,7 +1454,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5267311007",
@@ -1467,7 +1486,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5232438007",
@@ -1499,7 +1518,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5249368007",
@@ -1531,7 +1550,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5122121007",
@@ -1563,7 +1582,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5198082007",
@@ -1595,7 +1614,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5112611007",
@@ -1627,7 +1646,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5182025007",
@@ -1659,7 +1678,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5224014007",
@@ -1691,7 +1710,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5136367007",
@@ -1723,7 +1742,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5220660007",
@@ -1755,7 +1774,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5234527007",
@@ -1787,7 +1806,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5218901007",
@@ -1819,7 +1838,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5219476007",
@@ -1851,7 +1870,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5249772007",
@@ -1883,7 +1902,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:4905442007",
@@ -1915,7 +1934,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "official_html:antora:mechanical-engineer-plant-process-systems",
@@ -1947,7 +1966,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:5281310b-4e3f-4f27-97d3-613fc0797b20",
@@ -1979,7 +1998,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:d1d13abe-56c4-4af6-8075-cb8af82755a8",
@@ -2011,7 +2030,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:b1ab3edb-d296-40ec-a54a-3f6c605617a7",
@@ -2043,7 +2062,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:3a3f2f4b-300d-4010-a13e-efe12e54e14b",
@@ -2075,7 +2094,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:ff4db0b0-df14-4e5a-8072-d5fe65f9075d",
@@ -2107,7 +2126,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:4bf80c92-c4bf-46bd-bafd-40c5b6ef3f57",
@@ -2118,13 +2137,13 @@
       "workstyle": "Unknown",
       "employment": "FullTime",
       "experience_fit": "0–3 years specified",
-      "salary": "$100K - $140K",
-      "posted": "2026-10-07T21:37:41.445+00:00",
+      "salary": "$100K - $145K",
+      "posted": "2026-11-06T17:05:15.827+00:00",
       "apply_url": "https://jobs.ashbyhq.com/apex-technology-inc/4bf80c92-c4bf-46bd-bafd-40c5b6ef3f57/application",
       "source_url": "https://jobs.ashbyhq.com/apex-technology-inc/4bf80c92-c4bf-46bd-bafd-40c5b6ef3f57",
       "source": "ashby:apex-technology-inc",
       "salary_min": 100000,
-      "salary_max": 140000,
+      "salary_max": 145000,
       "salary_fit": "Range reaches $140k",
       "fit_score": 64,
       "match_reasons": "Review / stretch | Matches: mechanical CAD/design, equipment/fixtures, process/reliability testing | Gaps: 3+ years: stretch beyond new-grad experience",
@@ -2139,7 +2158,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:54379e73-c9f1-4c2c-9cdb-0721d4ac6fd9",
@@ -2171,7 +2190,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:367a070f-f712-4a0b-986a-da2fa6f3c8b3",
@@ -2203,7 +2222,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:26d3a331-d989-4b47-bf59-6bae7552bf61",
@@ -2235,7 +2254,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:applied:0820cc79-9305-43d3-836e-2c9654afb39e",
@@ -2267,7 +2286,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:applied:932de549-2882-4c0d-aeca-b4a8ef5f1f41",
@@ -2299,7 +2318,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:astranis:4705260006",
@@ -2331,7 +2350,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:astranis:4350927006",
@@ -2363,7 +2382,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:astranis:4298100006",
@@ -2395,7 +2414,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:astranis:4373868006",
@@ -2427,7 +2446,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:astranis:4663009006",
@@ -2459,7 +2478,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:astranis:4704831006",
@@ -2491,7 +2510,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:astranis:4704829006",
@@ -2523,7 +2542,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:astranis:4349267006",
@@ -2555,7 +2574,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4437065009",
@@ -2587,7 +2606,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4437584009",
@@ -2619,7 +2638,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4478506009",
@@ -2651,7 +2670,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4418921009",
@@ -2683,7 +2702,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4418907009",
@@ -2716,7 +2735,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4386029009",
@@ -2748,7 +2767,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4386034009",
@@ -2780,7 +2799,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4471248009",
@@ -2792,27 +2811,27 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "Not disclosed",
-      "posted": "2026-10-28T14:36:08-04:00",
+      "posted": "2026-11-05T13:23:15-05:00",
       "apply_url": "https://job-boards.greenhouse.io/castelioncorporation/jobs/4471248009",
       "source_url": "https://job-boards.greenhouse.io/castelioncorporation/jobs/4471248009",
       "source": "greenhouse:castelioncorporation",
       "salary_min": null,
       "salary_max": null,
       "salary_fit": "Undisclosed — review",
-      "fit_score": 64,
-      "match_reasons": "Review / stretch | Matches: mechanisms/assemblies, fabrication/DFM, process/reliability testing | Gaps: 3+ years: stretch beyond new-grad experience",
+      "fit_score": 72,
+      "match_reasons": "Review / stretch | Matches: mechanisms/assemblies, fabrication/DFM, process/reliability testing | Gaps: 2+ years: confirm internships count",
       "match_version": "me-v2",
       "match_tier": "Review / stretch",
       "match_gaps": [
-        "3+ years: stretch beyond new-grad experience"
+        "2+ years: confirm internships count"
       ],
-      "shortlist_eligible": false,
+      "shortlist_eligible": true,
       "company_context": "Torrance flight hardware, composites, manufacturing equipment and hardware testing. Review posting-specific export/clearance requirements separately.",
       "careers_url": "https://job-boards.greenhouse.io/castelioncorporation",
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4411308009",
@@ -2844,7 +2863,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4407516009",
@@ -2876,7 +2895,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4413940009",
@@ -2908,7 +2927,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4452630009",
@@ -2940,7 +2959,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4416897009",
@@ -2973,7 +2992,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4390012009",
@@ -3005,7 +3024,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4395518009",
@@ -3037,7 +3056,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4395000009",
@@ -3069,7 +3088,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4421104009",
@@ -3101,7 +3120,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4393756009",
@@ -3133,7 +3152,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4413853009",
@@ -3165,7 +3184,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4386136009",
@@ -3197,7 +3216,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:cerebras:04ce4198-d9b6-4aae-ad11-97708033f94a",
@@ -3227,7 +3246,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:cobot:a29470cd-18d2-40b0-bf85-47a3a038e980",
@@ -3259,7 +3278,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:coram-ai:3dbdcba0-0d78-4e98-b62a-126572a4f01d",
@@ -3291,7 +3310,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:dexmate:e6cb3330-bb25-4bd5-abaa-89be219b3815",
@@ -3323,7 +3342,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:doordashusa:8306636",
@@ -3335,7 +3354,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$109,500 — $161,000 USD",
-      "posted": "2026-11-03T09:27:38-05:00",
+      "posted": "2026-11-04T16:15:15-05:00",
       "apply_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8306636",
       "source_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8306636",
       "source": "greenhouse:doordashusa",
@@ -3355,7 +3374,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:doordashusa:8269219",
@@ -3367,7 +3386,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$139,400 — $205,000 USD",
-      "posted": "2026-11-03T09:27:38-05:00",
+      "posted": "2026-11-04T16:15:15-05:00",
       "apply_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8269219",
       "source_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8269219",
       "source": "greenhouse:doordashusa",
@@ -3387,7 +3406,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:figureai:4375064006",
@@ -3419,7 +3438,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:figureai:4410831006",
@@ -3451,7 +3470,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:figureai:4694160006",
@@ -3483,7 +3502,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:figureai:4596418006",
@@ -3515,7 +3534,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:foundry-robotics:f4a52fae-cf78-4294-a4be-e70ef6099542",
@@ -3547,7 +3566,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "google_sitemap:google:88033579111457478-product-design-engineer",
@@ -3579,7 +3598,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:gradientrobotics:79c1cbc9-a8ca-4cad-9803-bdfdbb6af9b5",
@@ -3609,7 +3628,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:gritt:ed459ec7-84ba-415c-9c44-5be778a7c6b0",
@@ -3641,7 +3660,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:gritt:5a834deb-09aa-406c-8c8d-c5d7cc6818ad",
@@ -3673,7 +3692,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:19e3a4fe-5e6a-4fbd-bc02-42f226928907",
@@ -3705,7 +3724,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:7971f41e-f536-43d6-83ce-73337cae009f",
@@ -3737,7 +3756,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:f6a3e3da-6785-4f1e-a06a-8e84de8a4582",
@@ -3769,7 +3788,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:0e364752-1876-4c2c-84e4-f0f2fc738755",
@@ -3801,7 +3820,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:71c9bcfa-291b-4431-b754-1e439abf99b1",
@@ -3833,7 +3852,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:7c7c32d5-809f-4459-a998-b5a02bc5b064",
@@ -3865,7 +3884,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:4c478d59-08db-4226-9b92-06609d5564a4",
@@ -3897,7 +3916,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:5a3ffe52-83e8-454a-a8e7-7b6a21842743",
@@ -3929,7 +3948,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:a15a7eb7-1b0f-4b61-93db-fbfa22430efb",
@@ -3961,7 +3980,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:hadrian-automation:7b1d500c-3c2e-48b3-9974-917a96b65e32",
@@ -3993,10 +4012,10 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
-      "id": "greenhouse:icarus:5281224008",
+      "id": "greenhouse:icarus:5102826008",
       "company": "Icarus",
       "title": "Manufacturing Engineer",
       "category": "Manufacturing / NPI",
@@ -4004,14 +4023,14 @@
       "workstyle": "Unknown",
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
-      "salary": "$100,000–$160,000 base / year",
-      "posted": "2026-10-13T12:44:51-04:00",
-      "apply_url": "https://job-boards.greenhouse.io/icarus/jobs/5281224008",
-      "source_url": "https://job-boards.greenhouse.io/icarus/jobs/5281224008",
+      "salary": "$180,000–$220,000 base / year",
+      "posted": "2026-11-06T14:00:41-05:00",
+      "apply_url": "https://job-boards.greenhouse.io/icarus/jobs/5102826008",
+      "source_url": "https://job-boards.greenhouse.io/icarus/jobs/5102826008",
       "source": "greenhouse:icarus",
-      "salary_min": 100000,
-      "salary_max": 160000,
-      "salary_fit": "Range reaches $140k",
+      "salary_min": 180000,
+      "salary_max": 220000,
+      "salary_fit": "Target met",
       "fit_score": 76,
       "match_reasons": "Good ME fit | Matches: analysis/tolerances, equipment/fixtures, process/reliability testing | Gaps: Confirm internships satisfy experience minimum",
       "match_version": "me-v2",
@@ -4025,7 +4044,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5224259008",
@@ -4057,7 +4076,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5038677008",
@@ -4089,7 +4108,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5430836008",
@@ -4121,7 +4140,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5396372008",
@@ -4153,7 +4172,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5400313008",
@@ -4185,7 +4204,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5424245008",
@@ -4217,7 +4236,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5433722008",
@@ -4249,7 +4268,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5020121008",
@@ -4281,7 +4300,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5155651008",
@@ -4313,7 +4332,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5020126008",
@@ -4345,7 +4364,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5204344008",
@@ -4377,7 +4396,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5466539008",
@@ -4409,7 +4428,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5031528008",
@@ -4441,7 +4460,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4393124009",
@@ -4473,7 +4492,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4392123009",
@@ -4505,7 +4524,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4387970009",
@@ -4535,7 +4554,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4391830009",
@@ -4567,7 +4586,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4437002009",
@@ -4599,7 +4618,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4455005009",
@@ -4632,7 +4651,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4455036009",
@@ -4664,7 +4683,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4454978009",
@@ -4696,7 +4715,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4456629009",
@@ -4728,7 +4747,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4390072009",
@@ -4760,7 +4779,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:machindustries:4402256009",
@@ -4792,7 +4811,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:maticrobots:bfb0df27-bb17-46a1-919c-afd8c3d09a7d",
@@ -4805,8 +4824,8 @@
       "experience_fit": "0–3 years specified",
       "salary": "$120,000–$200,000 base / year",
       "posted": "2026-09-29T22:01:34.497+00:00",
-      "apply_url": "https://jobs.ashbyhq.com/maticrobots/bfb0df27-bb17-46a1-919c-afd8c3d09a7d/application",
-      "source_url": "https://jobs.ashbyhq.com/maticrobots/bfb0df27-bb17-46a1-919c-afd8c3d09a7d",
+      "apply_url": "https://jobs.ashbyhq.com/MaticRobots/bfb0df27-bb17-46a1-919c-afd8c3d09a7d/application",
+      "source_url": "https://jobs.ashbyhq.com/MaticRobots/bfb0df27-bb17-46a1-919c-afd8c3d09a7d",
       "source": "ashby:maticrobots",
       "salary_min": 120000,
       "salary_max": 200000,
@@ -4824,7 +4843,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:maticrobots:1858e85e-c3be-4d05-9a43-083a84ba3255",
@@ -4837,8 +4856,8 @@
       "experience_fit": "0–3 years specified",
       "salary": "$120,000–$200,000 base / year",
       "posted": "2026-06-27T02:36:11.539+00:00",
-      "apply_url": "https://jobs.ashbyhq.com/maticrobots/1858e85e-c3be-4d05-9a43-083a84ba3255/application",
-      "source_url": "https://jobs.ashbyhq.com/maticrobots/1858e85e-c3be-4d05-9a43-083a84ba3255",
+      "apply_url": "https://jobs.ashbyhq.com/MaticRobots/1858e85e-c3be-4d05-9a43-083a84ba3255/application",
+      "source_url": "https://jobs.ashbyhq.com/MaticRobots/1858e85e-c3be-4d05-9a43-083a84ba3255",
       "source": "ashby:maticrobots",
       "salary_min": 120000,
       "salary_max": 200000,
@@ -4856,7 +4875,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:maticrobots:76c07009-73b5-43e3-affb-d4fc20b9fe49",
@@ -4869,8 +4888,8 @@
       "experience_fit": "0–3 years specified",
       "salary": "$130,000–$200,000 base / year",
       "posted": "2025-05-07T18:54:31.595+00:00",
-      "apply_url": "https://jobs.ashbyhq.com/maticrobots/76c07009-73b5-43e3-affb-d4fc20b9fe49/application",
-      "source_url": "https://jobs.ashbyhq.com/maticrobots/76c07009-73b5-43e3-affb-d4fc20b9fe49",
+      "apply_url": "https://jobs.ashbyhq.com/MaticRobots/76c07009-73b5-43e3-affb-d4fc20b9fe49/application",
+      "source_url": "https://jobs.ashbyhq.com/MaticRobots/76c07009-73b5-43e3-affb-d4fc20b9fe49",
       "source": "ashby:maticrobots",
       "salary_min": 130000,
       "salary_max": 200000,
@@ -4888,7 +4907,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5057431007",
@@ -4920,7 +4939,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5138283007",
@@ -4952,7 +4971,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5226810007",
@@ -4984,7 +5003,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5274007007",
@@ -5016,7 +5035,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5258985007",
@@ -5048,7 +5067,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5278244007",
@@ -5080,7 +5099,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:nuro:8187498",
@@ -5112,7 +5131,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:openai:56aafd17-7db9-473a-b3b4-957b6d926cdf",
@@ -5145,7 +5164,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:openai:a8a421d1-c9bb-4e37-8418-4e4d6b2ba29d",
@@ -5178,7 +5197,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:openai:2b87bb06-ba33-4cab-b950-0df12ca85dcf",
@@ -5210,7 +5229,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:openai:88e65467-7e19-4164-a1de-1d49d3f2dd52",
@@ -5242,7 +5261,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:openai:65b255da-4fd9-414e-98d4-0bec4eecf8ff",
@@ -5274,7 +5293,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:openai:8a86b02b-6063-4124-863f-7e41e9849e22",
@@ -5306,7 +5325,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:openai:30a1d941-f12c-4589-a7a0-dad116b9aa33",
@@ -5338,7 +5357,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:radiant-industries:556077a3-b938-4e18-a83e-436c6525f062",
@@ -5370,7 +5389,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:radiant-industries:75159ba3-fa50-448f-92ea-54c260d44200",
@@ -5402,7 +5421,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:radiant-industries:9e747724-d154-488d-93d6-067ee7d42cf2",
@@ -5434,7 +5453,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:redwoodmaterials:5835808004",
@@ -5466,7 +5485,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:redwoodmaterials:6219628004",
@@ -5478,7 +5497,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$177,500 — $235,000 USD",
-      "posted": "2026-11-04T12:51:21-05:00",
+      "posted": "2026-11-06T10:31:10-05:00",
       "apply_url": "https://boards.greenhouse.io/redwoodmaterials/jobs/6219628004?gh_jid=6219628004",
       "source_url": "https://boards.greenhouse.io/redwoodmaterials/jobs/6219628004?gh_jid=6219628004",
       "source": "greenhouse:redwoodmaterials",
@@ -5498,7 +5517,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8615771002",
@@ -5530,7 +5549,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8822916002",
@@ -5562,7 +5581,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8918048002",
@@ -5594,7 +5613,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8697118002",
@@ -5626,7 +5645,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8573525002",
@@ -5658,7 +5677,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8547676002",
@@ -5670,7 +5689,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$104,000 — $143,000 USD",
-      "posted": "2026-11-02T16:34:00-05:00",
+      "posted": "2026-11-05T13:16:17-05:00",
       "apply_url": "https://boards.greenhouse.io/relativity/jobs/8547676002?gh_jid=8547676002",
       "source_url": "https://boards.greenhouse.io/relativity/jobs/8547676002?gh_jid=8547676002",
       "source": "greenhouse:relativity",
@@ -5690,39 +5709,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
-    },
-    {
-      "id": "greenhouse:relativity:8629044002",
-      "company": "Relativity Space",
-      "title": "Manufacturing Engineer II, Integrated Components",
-      "category": "Manufacturing / NPI",
-      "location": "Long Beach, California",
-      "workstyle": "Unknown",
-      "employment": "Unspecified",
-      "experience_fit": "0–3 years specified",
-      "salary": "$102,000 — $156,000 USD",
-      "posted": "2026-11-02T16:34:00-05:00",
-      "apply_url": "https://boards.greenhouse.io/relativity/jobs/8629044002?gh_jid=8629044002",
-      "source_url": "https://boards.greenhouse.io/relativity/jobs/8629044002?gh_jid=8629044002",
-      "source": "greenhouse:relativity",
-      "salary_min": 102000,
-      "salary_max": 156000,
-      "salary_fit": "Range reaches $140k",
-      "fit_score": 74,
-      "match_reasons": "Review / stretch | Matches: analysis/tolerances, equipment/fixtures, fabrication/DFM | Gaps: 2+ years: confirm internships count",
-      "match_version": "me-v2",
-      "match_tier": "Review / stretch",
-      "match_gaps": [
-        "2+ years: confirm internships count"
-      ],
-      "shortlist_eligible": true,
-      "company_context": "Long Beach launch vehicles, structures, additive manufacturing and factory equipment. Review posting-specific export/clearance requirements separately.",
-      "careers_url": "https://job-boards.greenhouse.io/relativity",
-      "regions": [
-        "LA"
-      ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8205991002",
@@ -5754,7 +5741,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8910141002",
@@ -5786,7 +5773,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8766875002",
@@ -5818,7 +5805,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8914636002",
@@ -5850,7 +5837,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8918138002",
@@ -5882,7 +5869,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8862051002",
@@ -5914,7 +5901,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8889032002",
@@ -5946,7 +5933,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8892579002",
@@ -5978,7 +5965,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8884022002",
@@ -6010,7 +5997,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8787370002",
@@ -6042,7 +6029,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8599101002",
@@ -6074,7 +6061,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8880122002",
@@ -6106,7 +6093,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8929211002",
@@ -6138,7 +6125,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8656529002",
@@ -6170,7 +6157,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8900787002",
@@ -6202,7 +6189,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8900805002",
@@ -6234,7 +6221,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8885963002",
@@ -6266,7 +6253,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8770685002",
@@ -6298,7 +6285,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8927177002",
@@ -6330,7 +6317,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8716864002",
@@ -6362,7 +6349,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8892926002",
@@ -6394,7 +6381,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8694528002",
@@ -6426,7 +6413,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8790152002",
@@ -6458,7 +6445,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:relativity:8621864002",
@@ -6490,7 +6477,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:rocketlab:8037710003",
@@ -6522,7 +6509,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:rocketlab:7932677003",
@@ -6554,7 +6541,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:rocketlab:7850667003",
@@ -6586,7 +6573,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:skydio:31884513-c028-4ea2-ad65-d3f948a32afa",
@@ -6618,7 +6605,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:skydio:ba62805c-ebe7-4b99-85af-f58c807b4dd1",
@@ -6650,7 +6637,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:skydio:97f41217-653b-4a2c-bc91-86c76ecf85e3",
@@ -6682,7 +6669,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8816517002",
@@ -6694,7 +6681,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8816517002?gh_jid=8816517002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8816517002?gh_jid=8816517002",
       "source": "greenhouse:spacex",
@@ -6714,7 +6701,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8784827002",
@@ -6726,7 +6713,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8784827002?gh_jid=8784827002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8784827002?gh_jid=8784827002",
       "source": "greenhouse:spacex",
@@ -6746,7 +6733,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8784191002",
@@ -6758,7 +6745,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8784191002?gh_jid=8784191002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8784191002?gh_jid=8784191002",
       "source": "greenhouse:spacex",
@@ -6779,7 +6766,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8738577002",
@@ -6791,7 +6778,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8738577002?gh_jid=8738577002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8738577002?gh_jid=8738577002",
       "source": "greenhouse:spacex",
@@ -6811,7 +6798,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8639275002",
@@ -6823,7 +6810,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8639275002?gh_jid=8639275002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8639275002?gh_jid=8639275002",
       "source": "greenhouse:spacex",
@@ -6843,7 +6830,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8842018002",
@@ -6855,7 +6842,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8842018002?gh_jid=8842018002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8842018002?gh_jid=8842018002",
       "source": "greenhouse:spacex",
@@ -6875,7 +6862,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8682164002",
@@ -6887,7 +6874,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8682164002?gh_jid=8682164002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8682164002?gh_jid=8682164002",
       "source": "greenhouse:spacex",
@@ -6907,7 +6894,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8904042002",
@@ -6919,7 +6906,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8904042002?gh_jid=8904042002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8904042002?gh_jid=8904042002",
       "source": "greenhouse:spacex",
@@ -6939,7 +6926,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8696659002",
@@ -6951,7 +6938,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$120,000–$170,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8696659002?gh_jid=8696659002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8696659002?gh_jid=8696659002",
       "source": "greenhouse:spacex",
@@ -6971,7 +6958,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8635886002",
@@ -6983,7 +6970,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8635886002?gh_jid=8635886002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8635886002?gh_jid=8635886002",
       "source": "greenhouse:spacex",
@@ -7003,7 +6990,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8843919002",
@@ -7015,7 +7002,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8843919002?gh_jid=8843919002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8843919002?gh_jid=8843919002",
       "source": "greenhouse:spacex",
@@ -7035,7 +7022,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8817807002",
@@ -7047,7 +7034,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8817807002?gh_jid=8817807002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8817807002?gh_jid=8817807002",
       "source": "greenhouse:spacex",
@@ -7067,7 +7054,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8601813002",
@@ -7079,7 +7066,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8601813002?gh_jid=8601813002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8601813002?gh_jid=8601813002",
       "source": "greenhouse:spacex",
@@ -7099,7 +7086,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8742759002",
@@ -7111,7 +7098,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8742759002?gh_jid=8742759002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8742759002?gh_jid=8742759002",
       "source": "greenhouse:spacex",
@@ -7131,7 +7118,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8927499002",
@@ -7143,7 +7130,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8927499002?gh_jid=8927499002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8927499002?gh_jid=8927499002",
       "source": "greenhouse:spacex",
@@ -7163,7 +7150,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8896018002",
@@ -7175,7 +7162,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8896018002?gh_jid=8896018002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8896018002?gh_jid=8896018002",
       "source": "greenhouse:spacex",
@@ -7195,7 +7182,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8876413002",
@@ -7207,7 +7194,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8876413002?gh_jid=8876413002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8876413002?gh_jid=8876413002",
       "source": "greenhouse:spacex",
@@ -7227,7 +7214,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8679026002",
@@ -7239,7 +7226,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8679026002?gh_jid=8679026002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8679026002?gh_jid=8679026002",
       "source": "greenhouse:spacex",
@@ -7259,7 +7246,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8803023002",
@@ -7271,7 +7258,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8803023002?gh_jid=8803023002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8803023002?gh_jid=8803023002",
       "source": "greenhouse:spacex",
@@ -7291,7 +7278,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8849297002",
@@ -7303,7 +7290,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8849297002?gh_jid=8849297002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8849297002?gh_jid=8849297002",
       "source": "greenhouse:spacex",
@@ -7323,7 +7310,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8623357002",
@@ -7335,7 +7322,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8623357002?gh_jid=8623357002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8623357002?gh_jid=8623357002",
       "source": "greenhouse:spacex",
@@ -7355,7 +7342,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8508315002",
@@ -7367,7 +7354,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8508315002?gh_jid=8508315002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8508315002?gh_jid=8508315002",
       "source": "greenhouse:spacex",
@@ -7387,7 +7374,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8815104002",
@@ -7399,7 +7386,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8815104002?gh_jid=8815104002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8815104002?gh_jid=8815104002",
       "source": "greenhouse:spacex",
@@ -7419,7 +7406,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8748535002",
@@ -7431,7 +7418,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8748535002?gh_jid=8748535002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8748535002?gh_jid=8748535002",
       "source": "greenhouse:spacex",
@@ -7451,7 +7438,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8681151002",
@@ -7463,7 +7450,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8681151002?gh_jid=8681151002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8681151002?gh_jid=8681151002",
       "source": "greenhouse:spacex",
@@ -7483,7 +7470,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8920445002",
@@ -7495,7 +7482,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8920445002?gh_jid=8920445002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8920445002?gh_jid=8920445002",
       "source": "greenhouse:spacex",
@@ -7515,7 +7502,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8604794002",
@@ -7527,7 +7514,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8604794002?gh_jid=8604794002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8604794002?gh_jid=8604794002",
       "source": "greenhouse:spacex",
@@ -7547,7 +7534,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8649465002",
@@ -7559,7 +7546,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$110,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8649465002?gh_jid=8649465002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8649465002?gh_jid=8649465002",
       "source": "greenhouse:spacex",
@@ -7579,7 +7566,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8900388002",
@@ -7591,7 +7578,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8900388002?gh_jid=8900388002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8900388002?gh_jid=8900388002",
       "source": "greenhouse:spacex",
@@ -7611,7 +7598,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8727087002",
@@ -7623,7 +7610,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$110,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8727087002?gh_jid=8727087002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8727087002?gh_jid=8727087002",
       "source": "greenhouse:spacex",
@@ -7643,7 +7630,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8661010002",
@@ -7655,7 +7642,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8661010002?gh_jid=8661010002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8661010002?gh_jid=8661010002",
       "source": "greenhouse:spacex",
@@ -7675,7 +7662,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8604710002",
@@ -7687,7 +7674,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8604710002?gh_jid=8604710002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8604710002?gh_jid=8604710002",
       "source": "greenhouse:spacex",
@@ -7707,7 +7694,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8607193002",
@@ -7719,7 +7706,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8607193002?gh_jid=8607193002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8607193002?gh_jid=8607193002",
       "source": "greenhouse:spacex",
@@ -7739,7 +7726,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8569011002",
@@ -7751,7 +7738,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8569011002?gh_jid=8569011002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8569011002?gh_jid=8569011002",
       "source": "greenhouse:spacex",
@@ -7771,7 +7758,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8752547002",
@@ -7783,7 +7770,7 @@
       "employment": "Unspecified",
       "experience_fit": "New grad / early career",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8752547002?gh_jid=8752547002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8752547002?gh_jid=8752547002",
       "source": "greenhouse:spacex",
@@ -7801,7 +7788,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8766964002",
@@ -7813,7 +7800,7 @@
       "employment": "Unspecified",
       "experience_fit": "New grad / early career",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8766964002?gh_jid=8766964002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8766964002?gh_jid=8766964002",
       "source": "greenhouse:spacex",
@@ -7831,7 +7818,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8811663002",
@@ -7843,7 +7830,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8811663002?gh_jid=8811663002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8811663002?gh_jid=8811663002",
       "source": "greenhouse:spacex",
@@ -7863,7 +7850,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8700050002",
@@ -7875,7 +7862,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8700050002?gh_jid=8700050002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8700050002?gh_jid=8700050002",
       "source": "greenhouse:spacex",
@@ -7895,7 +7882,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8703535002",
@@ -7907,7 +7894,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8703535002?gh_jid=8703535002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8703535002?gh_jid=8703535002",
       "source": "greenhouse:spacex",
@@ -7927,7 +7914,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8904025002",
@@ -7939,7 +7926,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8904025002?gh_jid=8904025002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8904025002?gh_jid=8904025002",
       "source": "greenhouse:spacex",
@@ -7959,7 +7946,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8632389002",
@@ -7971,7 +7958,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8632389002?gh_jid=8632389002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8632389002?gh_jid=8632389002",
       "source": "greenhouse:spacex",
@@ -7991,7 +7978,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8654572002",
@@ -8003,7 +7990,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8654572002?gh_jid=8654572002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8654572002?gh_jid=8654572002",
       "source": "greenhouse:spacex",
@@ -8023,7 +8010,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8895875002",
@@ -8035,7 +8022,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8895875002?gh_jid=8895875002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8895875002?gh_jid=8895875002",
       "source": "greenhouse:spacex",
@@ -8055,7 +8042,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8817976002",
@@ -8067,7 +8054,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8817976002?gh_jid=8817976002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8817976002?gh_jid=8817976002",
       "source": "greenhouse:spacex",
@@ -8087,7 +8074,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8766418002",
@@ -8099,7 +8086,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8766418002?gh_jid=8766418002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8766418002?gh_jid=8766418002",
       "source": "greenhouse:spacex",
@@ -8119,7 +8106,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8900987002",
@@ -8131,7 +8118,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8900987002?gh_jid=8900987002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8900987002?gh_jid=8900987002",
       "source": "greenhouse:spacex",
@@ -8151,7 +8138,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8928854002",
@@ -8163,7 +8150,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "Not disclosed",
-      "posted": "2026-11-03T13:54:04-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8928854002?gh_jid=8928854002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8928854002?gh_jid=8928854002",
       "source": "greenhouse:spacex",
@@ -8183,7 +8170,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8652841002",
@@ -8195,7 +8182,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8652841002?gh_jid=8652841002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8652841002?gh_jid=8652841002",
       "source": "greenhouse:spacex",
@@ -8215,7 +8202,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8646249002",
@@ -8227,7 +8214,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8646249002?gh_jid=8646249002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8646249002?gh_jid=8646249002",
       "source": "greenhouse:spacex",
@@ -8247,7 +8234,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8871031002",
@@ -8259,7 +8246,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8871031002?gh_jid=8871031002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8871031002?gh_jid=8871031002",
       "source": "greenhouse:spacex",
@@ -8279,7 +8266,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8687744002",
@@ -8291,7 +8278,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8687744002?gh_jid=8687744002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8687744002?gh_jid=8687744002",
       "source": "greenhouse:spacex",
@@ -8311,7 +8298,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8644018002",
@@ -8323,7 +8310,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$140,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8644018002?gh_jid=8644018002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8644018002?gh_jid=8644018002",
       "source": "greenhouse:spacex",
@@ -8343,7 +8330,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:spacex:8918376002",
@@ -8355,7 +8342,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$115,000–$160,000 base / year",
-      "posted": "2026-11-03T10:06:14-05:00",
+      "posted": "2026-11-04T18:30:16-05:00",
       "apply_url": "https://boards.greenhouse.io/spacex/jobs/8918376002?gh_jid=8918376002",
       "source_url": "https://boards.greenhouse.io/spacex/jobs/8918376002?gh_jid=8918376002",
       "source": "greenhouse:spacex",
@@ -8375,7 +8362,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:specter:463b9708-1e48-436e-894e-17a014be99e2",
@@ -8407,7 +8394,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:specter:5cd498d6-9f71-474f-a0c7-964ed4d24282",
@@ -8439,7 +8426,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:trueanomalyinc:5104217007",
@@ -8469,7 +8456,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:trueanomalyinc:5120414007",
@@ -8501,7 +8488,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:trueanomalyinc:5104245007",
@@ -8533,39 +8520,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
-    },
-    {
-      "id": "greenhouse:vardaspace:8045994003",
-      "company": "Varda Space Industries",
-      "title": "Ground Support Mechanical Design Engineer II",
-      "category": "Mechanical / hardware design",
-      "location": "El Segundo, California, United States",
-      "workstyle": "Unknown",
-      "employment": "Unspecified",
-      "experience_fit": "0–3 years specified",
-      "salary": "$119,543–$152,749 base / year",
-      "posted": "2026-10-29T16:00:37-04:00",
-      "apply_url": "https://job-boards.greenhouse.io/vardaspace/jobs/8045994003",
-      "source_url": "https://job-boards.greenhouse.io/vardaspace/jobs/8045994003",
-      "source": "greenhouse:vardaspace",
-      "salary_min": 119543,
-      "salary_max": 152749,
-      "salary_fit": "Range reaches $140k",
-      "fit_score": 64,
-      "match_reasons": "Review / stretch | Matches: mechanical CAD/design, equipment/fixtures, fabrication/DFM | Gaps: 3+ years: stretch beyond new-grad experience",
-      "match_version": "me-v2",
-      "match_tier": "Review / stretch",
-      "match_gaps": [
-        "3+ years: stretch beyond new-grad experience"
-      ],
-      "shortlist_eligible": false,
-      "company_context": "El Segundo reentry spacecraft; structures, mechanisms, manufacturing and testing. Review posting-specific export/clearance requirements separately.",
-      "careers_url": "https://job-boards.greenhouse.io/vardaspace",
-      "regions": [
-        "LA"
-      ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8016297003",
@@ -8597,7 +8552,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8010110003",
@@ -8629,7 +8584,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8043396003",
@@ -8661,7 +8616,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8043387003",
@@ -8693,7 +8648,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8010106003",
@@ -8725,7 +8680,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:7989663003",
@@ -8757,7 +8712,39 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
+    },
+    {
+      "id": "greenhouse:vardaspace:8197068003",
+      "company": "Varda Space Industries",
+      "title": "Materials and Process Engineer II",
+      "category": "Manufacturing / NPI",
+      "location": "El Segundo, California, United States",
+      "workstyle": "Unknown",
+      "employment": "Unspecified",
+      "experience_fit": "Experience not stated — review",
+      "salary": "$119,543–$172,673 base / year",
+      "posted": "2026-11-05T15:17:50-05:00",
+      "apply_url": "https://job-boards.greenhouse.io/vardaspace/jobs/8197068003",
+      "source_url": "https://job-boards.greenhouse.io/vardaspace/jobs/8197068003",
+      "source": "greenhouse:vardaspace",
+      "salary_min": 119543,
+      "salary_max": 172673,
+      "salary_fit": "Range reaches $140k",
+      "fit_score": 79,
+      "match_reasons": "Good ME fit | Matches: equipment/fixtures, mechanisms/assemblies, fabrication/DFM | Gaps: Experience/start date not confirmed",
+      "match_version": "me-v2",
+      "match_tier": "Good ME fit",
+      "match_gaps": [
+        "Experience/start date not confirmed"
+      ],
+      "shortlist_eligible": true,
+      "company_context": "El Segundo reentry spacecraft; structures, mechanisms, manufacturing and testing. Review posting-specific export/clearance requirements separately.",
+      "careers_url": "https://job-boards.greenhouse.io/vardaspace",
+      "regions": [
+        "LA"
+      ],
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:7997888003",
@@ -8789,7 +8776,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8017264003",
@@ -8821,7 +8808,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8012030003",
@@ -8853,7 +8840,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vast:4585081006",
@@ -8865,7 +8852,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$120,000 — $245,000 USD",
-      "posted": "2026-11-02T15:34:16-05:00",
+      "posted": "2026-11-05T13:32:59-05:00",
       "apply_url": "https://boards.greenhouse.io/vast/jobs/4585081006?gh_jid=4585081006",
       "source_url": "https://boards.greenhouse.io/vast/jobs/4585081006?gh_jid=4585081006",
       "source": "greenhouse:vast",
@@ -8885,7 +8872,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vast:4709836006",
@@ -8897,7 +8884,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$120,000 — $245,000 USD",
-      "posted": "2026-10-27T19:11:56-04:00",
+      "posted": "2026-11-05T13:32:59-05:00",
       "apply_url": "https://boards.greenhouse.io/vast/jobs/4709836006?gh_jid=4709836006",
       "source_url": "https://boards.greenhouse.io/vast/jobs/4709836006?gh_jid=4709836006",
       "source": "greenhouse:vast",
@@ -8917,7 +8904,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vast:4694236006",
@@ -8929,7 +8916,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$86,000 — $195,000 USD",
-      "posted": "2026-10-30T12:32:50-04:00",
+      "posted": "2026-11-05T13:32:59-05:00",
       "apply_url": "https://boards.greenhouse.io/vast/jobs/4694236006?gh_jid=4694236006",
       "source_url": "https://boards.greenhouse.io/vast/jobs/4694236006?gh_jid=4694236006",
       "source": "greenhouse:vast",
@@ -8949,7 +8936,39 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
+    },
+    {
+      "id": "greenhouse:vast:4705109006",
+      "company": "Vast",
+      "title": "Manufacturing Engineer II, Environmental Test",
+      "category": "Manufacturing / NPI",
+      "location": "Long Beach, California, United States",
+      "workstyle": "Unknown",
+      "employment": "Unspecified",
+      "experience_fit": "0–3 years specified",
+      "salary": "$112,000 — $159,000 USD",
+      "posted": "2026-11-06T12:31:22-05:00",
+      "apply_url": "https://boards.greenhouse.io/vast/jobs/4705109006?gh_jid=4705109006",
+      "source_url": "https://boards.greenhouse.io/vast/jobs/4705109006?gh_jid=4705109006",
+      "source": "greenhouse:vast",
+      "salary_min": 112000,
+      "salary_max": 159000,
+      "salary_fit": "Range reaches $140k",
+      "fit_score": 58,
+      "match_reasons": "Review / stretch | Matches: equipment/fixtures, process/reliability testing | Gaps: 3+ years: stretch beyond new-grad experience",
+      "match_version": "me-v2",
+      "match_tier": "Review / stretch",
+      "match_gaps": [
+        "3+ years: stretch beyond new-grad experience"
+      ],
+      "shortlist_eligible": false,
+      "company_context": "Long Beach/Hawthorne space stations and propulsion; tooling, mechanisms and hardware production. Review posting-specific export/clearance requirements separately.",
+      "careers_url": "https://job-boards.greenhouse.io/vast",
+      "regions": [
+        "LA"
+      ],
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vast:4621291006",
@@ -8961,7 +8980,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$110,000 — $155,000 USD",
-      "posted": "2026-10-27T19:11:31-04:00",
+      "posted": "2026-11-05T13:32:59-05:00",
       "apply_url": "https://boards.greenhouse.io/vast/jobs/4621291006?gh_jid=4621291006",
       "source_url": "https://boards.greenhouse.io/vast/jobs/4621291006?gh_jid=4621291006",
       "source": "greenhouse:vast",
@@ -8981,7 +9000,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vast:4712934006",
@@ -8993,7 +9012,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$112,340 — $230,000 USD",
-      "posted": "2026-11-04T12:49:49-05:00",
+      "posted": "2026-11-05T13:32:59-05:00",
       "apply_url": "https://boards.greenhouse.io/vast/jobs/4712934006?gh_jid=4712934006",
       "source_url": "https://boards.greenhouse.io/vast/jobs/4712934006?gh_jid=4712934006",
       "source": "greenhouse:vast",
@@ -9013,7 +9032,39 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
+    },
+    {
+      "id": "greenhouse:vast:4727476006",
+      "company": "Vast",
+      "title": "Mechanisms Engineer",
+      "category": "Hardware test / reliability",
+      "location": "Long Beach, California, United States",
+      "workstyle": "Unknown",
+      "employment": "Unspecified",
+      "experience_fit": "0–3 years specified",
+      "salary": "$112,340 — $230,000 USD",
+      "posted": "2026-11-05T13:32:59-05:00",
+      "apply_url": "https://boards.greenhouse.io/vast/jobs/4727476006?gh_jid=4727476006",
+      "source_url": "https://boards.greenhouse.io/vast/jobs/4727476006?gh_jid=4727476006",
+      "source": "greenhouse:vast",
+      "salary_min": 112340,
+      "salary_max": 230000,
+      "salary_fit": "Range reaches $140k",
+      "fit_score": 74,
+      "match_reasons": "Review / stretch | Matches: mechanical CAD/design, analysis/tolerances, mechanisms/assemblies | Gaps: 2+ years: confirm internships count",
+      "match_version": "me-v2",
+      "match_tier": "Review / stretch",
+      "match_gaps": [
+        "2+ years: confirm internships count"
+      ],
+      "shortlist_eligible": true,
+      "company_context": "Long Beach/Hawthorne space stations and propulsion; tooling, mechanisms and hardware production. Review posting-specific export/clearance requirements separately.",
+      "careers_url": "https://job-boards.greenhouse.io/vast",
+      "regions": [
+        "LA"
+      ],
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vast:4703949006",
@@ -9025,7 +9076,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$86,000 — $190,000 USD",
-      "posted": "2026-10-27T19:11:51-04:00",
+      "posted": "2026-11-05T13:32:59-05:00",
       "apply_url": "https://boards.greenhouse.io/vast/jobs/4703949006?gh_jid=4703949006",
       "source_url": "https://boards.greenhouse.io/vast/jobs/4703949006?gh_jid=4703949006",
       "source": "greenhouse:vast",
@@ -9045,7 +9096,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:vast:4702107006",
@@ -9057,7 +9108,7 @@
       "employment": "Unspecified",
       "experience_fit": "0–3 years specified",
       "salary": "$86,100 — $195,552 USD",
-      "posted": "2026-10-27T19:11:50-04:00",
+      "posted": "2026-11-05T13:32:59-05:00",
       "apply_url": "https://boards.greenhouse.io/vast/jobs/4702107006?gh_jid=4702107006",
       "source_url": "https://boards.greenhouse.io/vast/jobs/4702107006?gh_jid=4702107006",
       "source": "greenhouse:vast",
@@ -9077,7 +9128,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:westmag:1eadb4b5-9b25-4f17-b115-73c5341e3745",
@@ -9109,7 +9160,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "ashby:westmag:64a93fb9-ce73-4fe1-8936-52ee259be5fe",
@@ -9141,7 +9192,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7811811003",
@@ -9152,13 +9203,13 @@
       "workstyle": "Unknown",
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
-      "salary": "$100,000–$160,000 base / year",
-      "posted": "2026-10-29T18:01:14-04:00",
+      "salary": "$117,000–$165,000 base / year",
+      "posted": "2026-11-04T19:51:11-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7811811003?gh_jid=7811811003",
       "source_url": "https://www.zipline.com/open-roles/7811811003?gh_jid=7811811003",
       "source": "greenhouse:flyzipline",
-      "salary_min": 100000,
-      "salary_max": 160000,
+      "salary_min": 117000,
+      "salary_max": 165000,
       "salary_fit": "Range reaches $140k",
       "fit_score": 62,
       "match_reasons": "Review / stretch | Matches: mechanical CAD/design, analysis/tolerances, process/reliability testing | Gaps: Experience/start date not confirmed",
@@ -9173,37 +9224,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
-    },
-    {
-      "id": "greenhouse:flyzipline:8040731003",
-      "company": "Zipline",
-      "title": "Manufacturing Engineer, Early Career",
-      "category": "Manufacturing / NPI",
-      "location": "South San Francisco, California, USA",
-      "workstyle": "Unknown",
-      "employment": "Unspecified",
-      "experience_fit": "New grad / early career",
-      "salary": "$104,000–$140,000 base / year",
-      "posted": "2026-10-29T21:32:10-04:00",
-      "apply_url": "https://www.zipline.com/open-roles/8040731003?gh_jid=8040731003",
-      "source_url": "https://www.zipline.com/open-roles/8040731003?gh_jid=8040731003",
-      "source": "greenhouse:flyzipline",
-      "salary_min": 104000,
-      "salary_max": 140000,
-      "salary_fit": "Range reaches $140k",
-      "fit_score": 76,
-      "match_reasons": "Good ME fit | Matches: mechanical CAD/design, equipment/fixtures, process/reliability testing | Check: May 2027 start availability",
-      "match_version": "me-v2",
-      "match_tier": "Good ME fit",
-      "match_gaps": [],
-      "shortlist_eligible": true,
-      "company_context": "Autonomous delivery aircraft and ground systems; structures, mechanisms, hardware testing and manufacturable product design.",
-      "careers_url": "https://www.zipline.com/open-roles",
-      "regions": [
-        "Bay Area"
-      ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7986086003",
@@ -9235,7 +9256,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7868268003",
@@ -9246,14 +9267,14 @@
       "workstyle": "Unknown",
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
-      "salary": "$145,000–$225,000 base / year",
-      "posted": "2026-10-29T18:01:14-04:00",
+      "salary": "$125,000–$240,000 base / year",
+      "posted": "2026-11-05T17:28:24-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7868268003?gh_jid=7868268003",
       "source_url": "https://www.zipline.com/open-roles/7868268003?gh_jid=7868268003",
       "source": "greenhouse:flyzipline",
-      "salary_min": 145000,
-      "salary_max": 225000,
-      "salary_fit": "Target met",
+      "salary_min": 125000,
+      "salary_max": 240000,
+      "salary_fit": "Range reaches $140k",
       "fit_score": 79,
       "match_reasons": "Good ME fit | Matches: analysis/tolerances, equipment/fixtures, mechanisms/assemblies | Gaps: Experience/start date not confirmed",
       "match_version": "me-v2",
@@ -9267,7 +9288,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7808622003",
@@ -9299,7 +9320,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7868241003",
@@ -9329,7 +9350,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7848978003",
@@ -9361,7 +9382,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7849130003",
@@ -9393,7 +9414,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7849112003",
@@ -9425,7 +9446,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7855194003",
@@ -9457,7 +9478,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7810502003",
@@ -9489,7 +9510,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7807663003",
@@ -9500,13 +9521,13 @@
       "workstyle": "Unknown",
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
-      "salary": "$130,000–$180,000 base / year",
-      "posted": "2026-10-29T18:01:14-04:00",
+      "salary": "$130,000–$200,000 base / year",
+      "posted": "2026-11-05T21:00:41-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7807663003?gh_jid=7807663003",
       "source_url": "https://www.zipline.com/open-roles/7807663003?gh_jid=7807663003",
       "source": "greenhouse:flyzipline",
       "salary_min": 130000,
-      "salary_max": 180000,
+      "salary_max": 200000,
       "salary_fit": "Range reaches $140k",
       "fit_score": 92,
       "match_reasons": "Strong ME fit | Matches: mechanical CAD/design, analysis/tolerances, equipment/fixtures | Check: May 2027 start availability",
@@ -9519,7 +9540,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     },
     {
       "id": "lever:zoox:e6a4bbe1-20ab-4f1f-af07-f06fabedeabd",
@@ -9551,7 +9572,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-04T20:50:38+00:00"
+      "last_seen": "2026-11-06T20:28:02+00:00"
     }
   ]
 }
