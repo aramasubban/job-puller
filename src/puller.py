@@ -179,6 +179,8 @@ def exclusion_reasons(job):
         reasons.append('Talent pool, not a specific open full-time role')
     if re.search(r'able to start full[ -]time in 2026', desc, re.I):
         reasons.append('Required 2026 full-time start conflicts with May 2027 graduation')
+    if re.search(r'\bwinter\s+2027\b', title, re.I) and re.search(r"currently hold.{0,30}bachelor", desc, re.I):
+        reasons.append('Winter 2027 cohort requires completed bachelor degree before May 2027 availability')
     if re.search(r'\b(?:ph\.?d|masters? degree)\b',title,re.I):
         reasons.append('Graduate-degree cohort conflicts with bachelor-level target')
     if etype and etype not in ("fulltime", "regular", "permanent", "unspecified"):
@@ -259,7 +261,8 @@ def parse_board(src, payload):
             for block in pay_blocks:
                 if block not in base_blocks: block.decompose()
             description = str(soup)
-            published = j.get("updated_at", "")
+            # An edit timestamp does not establish when the employer posted a role.
+            published = j.get("first_published") or j.get("published_at") or ""
         elif p == "lever":
             categories = j.get("categories") or {}
             locs = [categories.get("location", "")]

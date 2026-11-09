@@ -542,7 +542,7 @@
     ],
     "link_fragment": "/careers/",
     "title_selector": "h1",
-    "location_pattern": "(San Francisco, CA)\\s*[\u00b7\u2022]\\s*On-site",
+    "location_pattern": "(San Francisco, CA)\\s*[·•]\\s*On-site",
     "careers_url": "https://www.weaverobotics.com/careers",
     "company_context": "San Francisco home robotics; articulated mechanisms, actuators, manufacturing equipment and mechatronics. Review each required experience level.",
     "location_selector": "header:has(h1)"
@@ -695,7 +695,7 @@
     "detail_paths": [
       "/job/Structural---Mechanical-Engineer-I---Early-Career--2027-Starts-_R71329"
     ],
-    "salary_pattern": "CA applicants is \\$([\\d,]+\\.\\d+)\\s*[-\u2013]\\s*\\$([\\d,]+\\.\\d+)",
+    "salary_pattern": "CA applicants is \\$([\\d,]+\\.\\d+)\\s*[-–]\\s*\\$([\\d,]+\\.\\d+)",
     "careers_url": "https://blueorigin.wd5.myworkdayjobs.com/en-US/BlueOrigin",
     "company_context": "Launch and spacecraft hardware; 2027 structural/mechanical early-career hiring includes LA among alternative placements. Confirm LA team assignment and start date; posting-specific export controls apply."
   },
@@ -871,5 +871,29 @@
     "careers_url": "https://rellingsystems.com/about/careers",
     "company_context": "Industrial robotic workcells; mechanical integration, mechatronics, factory automation and hardware deployment.",
     "verified_on": "2026-11-06"
+  },
+  {
+    "provider": "ashby",
+    "company": "Charge Robotics",
+    "slug": "charge-robotics",
+    "careers_url": "https://www.chargerobotics.com/careers",
+    "company_context": "Solar-farm construction robots; mechanical design, manufacturing engineering, fixtures and field-deployed automation.",
+    "verified_on": "2026-11-09"
+  },
+  {
+    "provider": "lever",
+    "company": "Capstan Medical",
+    "slug": "capstan-medical",
+    "careers_url": "https://jobs.lever.co/capstan-medical",
+    "company_context": "Robotic delivery of structural-heart implants; surgical devices, electromechanical systems, manufacturing and verification.",
+    "verified_on": "2026-11-09"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Lodestar",
+    "slug": "lodestarspace",
+    "careers_url": "https://job-boards.eu.greenhouse.io/lodestarspace",
+    "company_context": "Spacecraft payloads and autonomous space systems; mechanical/optical integration, hardware qualification and environmental testing.",
+    "verified_on": "2026-11-09"
   }
 ]
