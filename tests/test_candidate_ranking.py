@@ -32,3 +32,11 @@ class EvidenceRankingTests(unittest.TestCase):
   self.assertIn('Preferred Qualifications:',d)
   self.assertIn('Build fixtures',d)
   self.assertNotIn('years required',generic_score_match({'title':'Battery Mechanical Engineer'},d)['match_reasons'])
+
+class LiveQualityRegression(unittest.TestCase):
+ def test_tesla_missing_space_still_requires_five_years(self):
+  from src.puller import required_experience_years
+  self.assertEqual(required_experience_years('Required Qualifications: 5+ yearsas a process controls and modeling engineer'),5)
+ def test_winter_associate_is_not_may_eligible(self):
+  from src.puller import exclusion_reasons
+  self.assertTrue(exclusion_reasons({'title':'Environmental Test Engineer Associate (Winter 2027)','location':'San Francisco','description':'Associate Engineer positions typically last for twelve weeks.'}))

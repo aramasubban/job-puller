@@ -118,13 +118,13 @@ def required_experience_years(description):
     # Never let an entry-level title override an explicit 4+ year minimum.
     # Only explicit 'years of experience' or 'minimum X years' phrases;
     # does not mistake 'founded 5 years ago' for a requirement.
-    text = description[:25000]
+    text = re.sub(r'(\b\d{1,2}\+?\s*years)(?=[A-Za-z])', r'\1 ', description[:25000], flags=re.I)
     # Preferred/nice-to-have years are not a mandatory minimum. When a board
     # provides heading-style qualification sections, screen the required text.
     text = re.split(r'\b(?:preferred|nice[- ]to[- ]have|bonus)\s+(?:qualifications|requirements|experience)\b',text,maxsplit=1,flags=re.I)[0]
     minima = [int(m.group(1)) for pattern in (EXP, EXP_BEFORE) for m in pattern.finditer(text)]
     minima += [int(m.group(1)) for m in re.finditer(
-        r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|of working|of relevant|of related|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
+        r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:as|in|of professional|of hands.on|of working|of relevant|of related|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s+or more\s+years?\s+(?:of\s+)?(?:[\w/-]+\s+){0,5}experience\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r"bachelor.{0,40}?related work experience of\s+(\d+)", description, re.I)]
     # Explicit degree-route shorthand still defines the bachelor minimum,
@@ -163,6 +163,10 @@ def exclusion_reasons(job):
     location = job.get("location", "") or ""
     etype = (job.get("employment", "") or "").lower().replace(" ", "").replace("-", "")
     reasons = []
+    if re.search(r'\bwinter\s+2027\b',title,re.I):
+        reasons.append('Winter 2027 start conflicts with May 2027 graduation')
+    if re.search(r'positions? typically last.{0,30}(?:twelve|12) weeks|(?:temporary|fixed.term).{0,20}(?:position|role)',desc,re.I):
+        reasons.append('Temporary program, not permanent full-time employment')
     minimum_qualifications = job.get('minimum_qualifications', '') or ''
     degree_clause = re.split(r'Experience and/or education', minimum_qualifications, maxsplit=1, flags=re.I)[0]
     if re.search(r"\bmaster[’']?s?\s+degree\b", degree_clause, re.I) and not re.search(r'\bbachelor|\bB\.?S\.?\b', degree_clause, re.I):
@@ -322,6 +326,8 @@ def parse_board(src, payload):
 def stable_external_id(src, url):
     """Stable posting identifier; don't collapse Apple's distinct job numbers by slug."""
     segments=urlsplit(url).path.strip('/').split('/')
+    if src.get('provider')=='tesla_api':
+        return segments[-1].rsplit('-',1)[-1]
     if src.get('provider')=='apple_api' and 'details' in segments:
         idx=segments.index('details')+1
         if idx<len(segments):

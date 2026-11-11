@@ -52,6 +52,10 @@ def candidate_score(job, description, baseline, profile_path):
     if years>=4:score=min(score,29)
     if has(r'electrochemist|cell chemist|cathode formulation',title):score=min(score,39);gaps.append('Specialist battery chemistry is not demonstrated')
     if has(r'\b(?:electrochemistry|cathode formulation|cell chemistry)\b',core):score=max(0,score-12)
+    if has(r'embedded',title) and has(r'hardware.in.the.loop|HIL|telematics|CAN',core):
+        score=min(score,74);gaps.append('Adjacent embedded/HIL validation; vehicle networks and embedded stack depth not demonstrated')
+    if has(r'PCBA|power module',title) and has(r'soldering|encapsulation|power electronics module',core):
+        score=min(score,74);gaps.append('Specialist electronics assembly process depth not demonstrated')
     tier='Strong evidence fit' if score>=85 else 'Good evidence fit' if score>=75 else 'Review / stretch' if score>=50 else 'Low fit / eligibility gap'
     components={'domain':domain,'duties':duties,'tools':tools,'experience':experience}
     evidence=[]
