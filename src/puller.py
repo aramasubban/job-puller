@@ -76,7 +76,7 @@ ROLE_PATTERN = re.compile(
     r"process engineer|production engineer|industrial engineer|equipment engineer|"
     r"hardware (?:design|test|development|integration|systems?)|"
     r"electromechanical|robotics? (?:engineer|hardware|integration)|"
-    r"automation engineer|battery engineer|mechanism(?:s)? engineer|quality engineer|reliability engineer|test engineer|"
+    r"automation engineer|battery engineer|supplier (?:development|industrialization) engineer|mechanism(?:s)? engineer|quality engineer|reliability engineer|test engineer|"
     r"propulsion engineer|structures engineer|fluids? engineer|vehicle integration engineer|cad (?:engineer|designer)|structural engineer)\b", re.IGNORECASE
 )
 NON_ENGINEERING = re.compile(
@@ -145,13 +145,17 @@ def experience_fit(title, description):
 
 def role_family(title):
     t = title.lower()
-    if re.search(r"manufactur|npi|process engineer|production engineer|industrial engineer|quality engineer|tooling", t):
+    if re.search(r"manufactur|npi|process engineer|production engineer|industrial engineer|quality engineer|supplier development|supplier industrialization|tooling", t):
         return "Manufacturing / NPI"
     if re.search(r"robot|mechatron|automation|electromechanical", t):
         return "Robotics / mechatronics"
     if re.search(r"design|cad|product|mechanical|structural|thermal|hardware", t):
         return "Mechanical / hardware design"
     return "Hardware test / reliability"
+
+def requires_start_before_may_2027(description, as_of=None):
+    early = (datetime(2027, 5, 1, tzinfo=timezone.utc) - (as_of or datetime.now(timezone.utc))).days > 60
+    return bool(early and re.search(r'completed.{0,30}degree requirements', description, re.I) and re.search(r'within\s+30\s*[-–—]\s*60\s+days', description, re.I))
 
 def exclusion_reasons(job):
     title = job.get("title", "") or ""
@@ -179,11 +183,13 @@ def exclusion_reasons(job):
         reasons.append('Talent pool, not a specific open full-time role')
     if re.search(r'able to start full[ -]time in 2026', desc, re.I):
         reasons.append('Required 2026 full-time start conflicts with May 2027 graduation')
+    if requires_start_before_may_2027(desc):
+        reasons.append('Completed degree and start within 30–60 days required; conflicts with May 2027 availability')
     if re.search(r'\bwinter\s+2027\b', title, re.I) and re.search(r"currently hold.{0,30}bachelor", desc, re.I):
         reasons.append('Winter 2027 cohort requires completed bachelor degree before May 2027 availability')
     if re.search(r'\b(?:ph\.?d|masters? degree)\b',title,re.I):
         reasons.append('Graduate-degree cohort conflicts with bachelor-level target')
-    if etype and etype not in ("fulltime", "regular", "permanent", "unspecified"):
+    if etype and etype not in ("fulltime", "fulltimeemployee", "regular", "permanent", "unspecified"):
         reasons.append("Not full-time permanent employment")
     # For Greenhouse with no structured employment type, reject explicit
     # internship or temporary wording in the title; full-time is unverified.
@@ -274,6 +280,7 @@ def parse_board(src, payload):
             description = j.get("descriptionPlain") or j.get("description") or ""
             if j.get("lists"):
                 description += " " + " ".join(plain(x.get("content", "")) for x in j["lists"] if isinstance(x, dict))
+            description += " " + (j.get("additionalPlain") or j.get("additional") or "")
             employment = categories.get("commitment", "Unspecified")
             workstyle = j.get("workplaceType", "Unknown")
             compensation = (j.get("salaryRange") or {}).get("text", "")

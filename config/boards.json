@@ -895,5 +895,29 @@
     "careers_url": "https://job-boards.eu.greenhouse.io/lodestarspace",
     "company_context": "Spacecraft payloads and autonomous space systems; mechanical/optical integration, hardware qualification and environmental testing.",
     "verified_on": "2026-11-09"
+  },
+  {
+    "provider": "lever",
+    "company": "Shield AI",
+    "slug": "shieldai",
+    "careers_url": "https://shield.ai/careers/",
+    "company_context": "Autonomous aircraft and flight hardware; Seattle mechanical test systems, structures, manufacturing and validation.",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Oura",
+    "slug": "oura",
+    "careers_url": "https://job-boards.greenhouse.io/oura",
+    "company_context": "Wearable health hardware and batteries; supplier industrialization, automated assembly, mechanical integration and process validation.",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Noble Machines",
+    "slug": "undercontrolroboticsinc",
+    "careers_url": "https://job-boards.greenhouse.io/undercontrolroboticsinc",
+    "company_context": "Industrial robots and autonomy; electromechanical robot hardware, test equipment, manufacturing and systems integration.",
+    "verified_on": "2026-11-11"
   }
 ]
