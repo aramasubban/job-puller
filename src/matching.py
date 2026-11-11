@@ -38,7 +38,7 @@ ECE = [
     (r'\b(?:firmware development|embedded software|embedded c\+\+|device drivers|bsp|rtos)\b', 'embedded/firmware'),
 ]
 
-def score_match(job, description):
+def generic_score_match(job, description):
     title = job.get('title', '')
     core, full = role_text(description)
     alternative_tracks = has(r'across a variety of domain expertise',description) and has(r'mechanical design|thermal and heat transfer',description) and has(r'process of obtaining.{0,100}mechanical',description)
@@ -112,3 +112,14 @@ def score_match(job, description):
     else:reason+=' | Check: May 2027 start availability'
     return {'fit_score':score,'match_reasons':reason,'match_version':VERSION,'match_tier':tier,
             'match_gaps':gaps,'shortlist_eligible':score>=70}
+
+
+def score_match(job, description):
+    # Private candidate evidence is deliberately absent from the public repository.
+    import os
+    profile = os.environ.get('JOB_CANDIDATE_PROFILE')
+    baseline = generic_score_match(job, description)
+    if not profile:
+        return baseline
+    from src.candidate_matching import candidate_score
+    return candidate_score(job, description, baseline, profile)

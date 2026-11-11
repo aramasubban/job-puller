@@ -542,7 +542,7 @@
     ],
     "link_fragment": "/careers/",
     "title_selector": "h1",
-    "location_pattern": "(San Francisco, CA)\\s*[·•]\\s*On-site",
+    "location_pattern": "(San Francisco, CA)\\s*[\u00b7\u2022]\\s*On-site",
     "careers_url": "https://www.weaverobotics.com/careers",
     "company_context": "San Francisco home robotics; articulated mechanisms, actuators, manufacturing equipment and mechatronics. Review each required experience level.",
     "location_selector": "header:has(h1)"
@@ -695,7 +695,7 @@
     "detail_paths": [
       "/job/Structural---Mechanical-Engineer-I---Early-Career--2027-Starts-_R71329"
     ],
-    "salary_pattern": "CA applicants is \\$([\\d,]+\\.\\d+)\\s*[-–]\\s*\\$([\\d,]+\\.\\d+)",
+    "salary_pattern": "CA applicants is \\$([\\d,]+\\.\\d+)\\s*[-\u2013]\\s*\\$([\\d,]+\\.\\d+)",
     "careers_url": "https://blueorigin.wd5.myworkdayjobs.com/en-US/BlueOrigin",
     "company_context": "Launch and spacecraft hardware; 2027 structural/mechanical early-career hiring includes LA among alternative placements. Confirm LA team assignment and start date; posting-specific export controls apply."
   },
@@ -919,5 +919,26 @@
     "careers_url": "https://job-boards.greenhouse.io/undercontrolroboticsinc",
     "company_context": "Industrial robots and autonomy; electromechanical robot hardware, test equipment, manufacturing and systems integration.",
     "verified_on": "2026-11-11"
+  },
+  {
+    "provider": "tesla_api",
+    "company": "Tesla",
+    "slug": "tesla",
+    "careers_url": "https://www.tesla.com/careers/search",
+    "max_details": 150,
+    "company_context": "Battery/cell equipment, mechanical design, robotics, manufacturing and validation; full official requirements retrieved."
+  },
+  {
+    "provider": "official_html",
+    "company": "Mundane",
+    "slug": "mundane",
+    "list_urls": [
+      "https://mundane.co/careers"
+    ],
+    "link_fragment": "/careers/",
+    "title_selector": "h1",
+    "location_pattern": "Location\\s+(Palo Alto, CA)",
+    "careers_url": "https://mundane.co/careers",
+    "company_context": "Palo Alto industrial teleoperation robot/exoskeleton hardware startup. Near-term start and professional experience require review."
   }
 ]

@@ -29,4 +29,5 @@ def enrich(job,description):
         job['salary_min']=job['published_starting_pay'];job['salary_max']=None
         job['salary_fit']='Published starting pay; ceiling unlisted — review'
     job.update(score_match(job, description))
+    job['description'] = description  # Public JD evidence, for reproducible rescoring.
     return job

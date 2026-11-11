@@ -41,7 +41,7 @@ class EnterpriseAPITests(unittest.TestCase):
  def test_tesla_state_fields(self):
   payload={'lookup':{'locations':{'33':'Fremont, California'}},
            'listings':[{'id':'273339','t':'Mechanical Design Engineer, Automation','l':'33'}]}
-  with patch('src.enterprise_sources._request',return_value=__import__('json').dumps(payload)):
+  with patch('src.enterprise_sources._request',side_effect=[__import__('json').dumps(payload), __import__('json').dumps({'id':'273339','title':'Mechanical Design Engineer, Automation','jobRequirements':'BS Mechanical Engineering and CAD; fixtures and validation.'})]):
    out=fetch_tesla({},ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
   self.assertEqual(len(out),1)
   self.assertTrue(out[0]['url'].endswith('-273339'))
