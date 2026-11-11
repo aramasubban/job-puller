@@ -77,8 +77,8 @@ def fetch_apple(src, role, senior, noneng, bay):
         detail=json.loads(_request('https://jobs.apple.com/api/v1/jobDetails/'+ident)).get('res')
         if not isinstance(detail,dict) or not detail.get('postingTitle'):
             raise ValueError('Apple full job detail unavailable')
-        parts=[label+': '+str(detail.get(k)) for k,label in [('jobSummary','Summary'),('description','Responsibilities'),('minimumQualifications','Minimum Qualifications'),('keyQualifications','Required Qualifications'),('educationAndExperience','Education and Experience'),('preferredQualifications','Preferred Qualifications'),('payAndBenefits','Pay and Benefits')] if detail.get(k)]
-        rec['description']=' '.join(parts)
+        parts=[label+': '+str(detail.get(k)) for k,label in [('jobSummary','Summary'),('description','About the role'),('responsibilities','Responsibilities'),('minimumQualifications','Minimum Qualifications'),('keyQualifications','Required Qualifications'),('educationAndExperience','Education and Experience'),('preferredQualifications','Preferred Qualifications'),('payAndBenefits','Pay and Benefits')] if detail.get(k)]
+        rec['description']=' '.join(parts)+' '+ ' '.join(str(loc.get('content') or '') for f in detail.get('postingFooters',[]) for group in f.get('localizations',{}).values() for loc in group)
         rec['minimum_qualifications']=str(detail.get('minimumQualifications') or '')
         if not any(detail.get(k) for k in ('minimumQualifications','keyQualifications','educationAndExperience')):
             raise ValueError('Apple detail missing qualification fields')

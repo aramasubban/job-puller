@@ -26,8 +26,9 @@ class EvidenceRankingTests(unittest.TestCase):
   with self.assertRaises(FileNotFoundError):candidate_score({},'',{},self.path+'missing')
  def test_apple_retains_required_preferred_labels(self):
   search={'res':{'searchResults':[{'postingTitle':'Battery Mechanical Engineer','positionId':'123','locations':[{'name':'Cupertino'}]}]}}
-  detail={'res':{'postingTitle':'Battery Mechanical Engineer','description':'Mechanical design and testing.','minimumQualifications':'BS and CAD.','preferredQualifications':'3 years of experience.'}}
+  detail={'res':{'postingTitle':'Battery Mechanical Engineer','description':'Mechanical design introduction.','responsibilities':'Build fixtures, characterize mechanical cells with DOE and GD&T, and validate designs.','minimumQualifications':'BS and CAD.','preferredQualifications':'3 years of experience.'}}
   with patch('src.enterprise_sources._request',side_effect=[json.dumps(search),json.dumps(detail)]),patch('src.enterprise_sources.time.sleep'):
    d=fetch_apple({'search_terms':['battery'],'pages_per_query':1},ROLE_PATTERN,SENIOR,NON_ENGINEERING,TARGET_AREA)[0]['description']
   self.assertIn('Preferred Qualifications:',d)
+  self.assertIn('Build fixtures',d)
   self.assertNotIn('years required',generic_score_match({'title':'Battery Mechanical Engineer'},d)['match_reasons'])

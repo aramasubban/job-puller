@@ -34,12 +34,15 @@ def candidate_score(job, description, baseline, profile_path):
     years=required_experience_years(core)
     junior=has(r'new.grad|early.career|entry.level|junior|engineer (?:i|1)\b',title+' '+core)
     if has(r'new grads?.{0,65}(?:welcome|encouraged|considered)|(?:welcome|encourage|consider).{0,50}new grads?',core) and years<=3: years=0;junior=True
-    experience=0 if years>=4 else 10 if years==3 else 13 if years==2 else 17 if years==1 else 20 if junior else 18
+    experience=0 if years>=4 else 10 if years==3 else 13 if years==2 else 17 if years==1 else 20 if junior else 14
     gaps=[]
     if years: gaps.append(f'{years}+ years required; confirm whether internships/projects count')
     else:gaps.append('May 2027 start not confirmed')
+    preferred=re.search(r'preferred qualifications[: ]+(.+)',full,re.I)
+    if preferred and has(r'\b(?:[2-9]\+? years?|MS degree|master)',preferred.group(1)):
+        gaps.append('Preferred graduate degree/industry experience is not fully demonstrated; not a minimum requirement')
     if unknown:gaps.append('Tools/specialties not demonstrated: '+', '.join(unknown))
-    safety=[g for g in baseline['match_gaps'] if not any(x in g for x in ['years','Experience/start date','internships'])]
+    safety=[g for g in baseline['match_gaps'] if not any(x in g for x in ['years','Experience/start date','internships','Limited mechanical-duty evidence'])]
     gaps+=safety
     score=min(98,domain+duties+tools+experience)
     # Retain real discipline, degree, start-window and missing-evidence gates.
