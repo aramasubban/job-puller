@@ -3,6 +3,13 @@ from src.matching import score_match
 from src.enrichment import enrich
 
 ME='About the role: Design mechanical assemblies using SolidWorks and CAD. Build fixtures, enclosures and actuators. Use FEA, GD&T, rapid prototyping and DFM. Perform root cause analysis, DOE and Python data analysis. '
+class DisclaimerBoundaryTests(unittest.TestCase):
+ def test_late_disclaimer_responsibilities_do_not_erase_duties(self):
+  from src.matching import role_text
+  core,_=role_text('Mechanical engineering and CAD assemblies with equipment integration. Equal opportunity employer. This job description does not cover all responsibilities.')
+  self.assertIn('CAD assemblies',core)
+  self.assertNotIn('This job description',core)
+
 class MatchingTests(unittest.TestCase):
     def test_ece_new_grad_cannot_be_top_match(self):
         d='About the role: Design schematics and PCB layouts. Board-level bring-up and circuit design. Electrical Engineering or Computer Engineering degree. Validate embedded systems. Nice to have: automotive robotics and DFM.'
