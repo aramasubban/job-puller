@@ -209,9 +209,15 @@ def fetch_tesla(src,role,senior,noneng,bay):
         return rec
     # Bounded, explicit partial scan; prioritize strongest relevant specialties.
     jobs.sort(key=lambda j:(0 if re.search(r'battery|cell',j['title'],re.I) else 1 if re.search(r'equipment|tooling|robot|test',j['title'],re.I) else 2,j['url']))
+    limit=int(src.get('max_details',150))
+    battery=[j for j in jobs if re.search(r'battery|cell',j['title'],re.I)]
+    other=[j for j in jobs if j not in battery]
+    offset=int(src.get('rotation_offset',0)) % max(1,len(other))
+    other=other[offset:]+other[:offset]
+    selected=(battery+other)[:limit]
     out=[]
     with ThreadPoolExecutor(max_workers=6) as pool:
-        for f in as_completed([pool.submit(detail,j) for j in jobs[:int(src.get('max_details',150))]]):
+        for f in as_completed([pool.submit(detail,j) for j in selected]):
             try:out.append(f.result())
             except Exception:continue
     if jobs and not out:raise ValueError('Tesla inventory succeeded but all detail requests failed')
