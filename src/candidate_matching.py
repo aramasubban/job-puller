@@ -56,6 +56,8 @@ def candidate_score(job, description, baseline, profile_path):
         score=min(score,74);gaps.append('Adjacent embedded/HIL validation; vehicle networks and embedded stack depth not demonstrated')
     if has(r'PCBA|power module',title) and has(r'soldering|encapsulation|power electronics module',core):
         score=min(score,74);gaps.append('Specialist electronics assembly process depth not demonstrated')
+    if has(r'Avionics.*Test|Production Test Engineer|Test Automation Engineer.*Hardware.in.the.Loop',title) and has(r'Linux|firmware|oscilloscope|electrical engineering',core):
+        score=min(score,49);gaps.append('Specialist avionics/software test infrastructure depth not established')
     tier='Strong evidence fit' if score>=85 else 'Good evidence fit' if score>=75 else 'Review / stretch' if score>=50 else 'Low fit / eligibility gap'
     components={'domain':domain,'duties':duties,'tools':tools,'experience':experience}
     evidence=[]
