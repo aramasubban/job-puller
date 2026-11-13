@@ -409,14 +409,6 @@
   },
   {
     "provider": "greenhouse",
-    "company": "SpaceX",
-    "slug": "spacex",
-    "careers_url": "https://job-boards.greenhouse.io/spacex",
-    "company_context": "Rocket and spacecraft design, tooling, manufacturing equipment and test; Hawthorne. Review posting-specific export/clearance requirements separately.",
-    "verified_on": "2026-10-15"
-  },
-  {
-    "provider": "greenhouse",
     "company": "Rocket Lab",
     "slug": "rocketlab",
     "careers_url": "https://job-boards.greenhouse.io/rocketlab",
@@ -756,5 +748,176 @@
     "postings_url": "https://astrolab.pinpointhq.com/postings.json",
     "careers_url": "https://astrolab.pinpointhq.com",
     "company_context": "Hawthorne planetary-rover hardware; lunar vehicle structures, mechanisms, thermal systems, equipment and test. Confirm experience and May 2027 availability."
+  },
+  {
+    "provider": "ashby",
+    "slug": "Antares",
+    "company": "Antares",
+    "careers_url": "https://jobs.ashbyhq.com/Antares",
+    "company_context": "Los Angeles nuclear power systems for space and terrestrial applications; mechanical design, thermal hardware, manufacturing and test. Review posting-specific export/clearance requirements."
+  },
+  {
+    "provider": "official_html",
+    "slug": "drover-labs",
+    "company": "Drover Labs",
+    "careers_url": "https://www.droverlabs.ai/careers",
+    "list_urls": [
+      "https://www.droverlabs.ai/careers"
+    ],
+    "link_fragment": "/careers/",
+    "title_selector": "h1",
+    "location_pattern": "(Berkeley, CA)",
+    "company_context": "Berkeley autonomous robotic inspection systems; mechanisms, prototype manufacturing and hardware test. Confirm two-year minimum and May 2027 availability."
+  },
+  {
+    "provider": "ashby",
+    "slug": "spinorenergy",
+    "company": "Spinor Energy",
+    "careers_url": "https://jobs.ashbyhq.com/spinorenergy",
+    "company_context": "Power conversion hardware using superconducting materials, cryogenics and vacuum systems; review location, experience and export requirements per posting."
+  },
+  {
+    "provider": "smartrecruiters",
+    "company": "Intuitive",
+    "slug": "Intuitive",
+    "careers_url": "https://careers.intuitive.com/en/jobs/",
+    "company_context": "Surgical robotics and instruments; mechanical product design, manufacturing equipment, NPI and verification.",
+    "verified_on": "2026-11-04"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Neuralink",
+    "slug": "neuralink",
+    "careers_url": "https://neuralink.com/careers/",
+    "company_context": "Brain-computer interfaces and surgical robots; precision mechanisms, implants, tooling and manufacturing.",
+    "verified_on": "2026-11-04"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Noah Medical",
+    "slug": "noahmedical",
+    "careers_url": "https://www.noahmed.com/careers-at-noah-medical",
+    "company_context": "Robotic bronchoscopy systems; catheter mechanisms, electromechanical instruments, test and manufacturing.",
+    "verified_on": "2026-11-04"
+  },
+  {
+    "provider": "ashby",
+    "company": "Nudge",
+    "slug": "nudge",
+    "careers_url": "https://www.nudge.com/careers/",
+    "company_context": "Ultrasound brain interfaces; precision hardware, acoustics, prototyping and manufacturing.",
+    "verified_on": "2026-11-04"
+  },
+  {
+    "provider": "lever",
+    "company": "Cellares",
+    "slug": "cellares",
+    "careers_url": "https://www.cellares.com/careers",
+    "company_context": "Automated cell-therapy manufacturing platforms; equipment design, robotics, fluidics, validation and NPI.",
+    "verified_on": "2026-11-04"
+  },
+  {
+    "provider": "workday",
+    "company": "PROCEPT BioRobotics",
+    "careers_url": "https://www.procept-biorobotics.com/careers/open-positions",
+    "company_context": "Robotic surgical systems; mechanical design, capital equipment, manufacturing and product verification.",
+    "verified_on": "2026-11-04",
+    "host": "proceptbiorobotics.wd108.myworkdayjobs.com",
+    "tenant": "proceptbiorobotics",
+    "site": "PROCEPT",
+    "search_terms": [
+      "mechanical",
+      "manufacturing",
+      "quality engineer"
+    ],
+    "max_pages": 3
+  },
+  {
+    "provider": "workday",
+    "company": "Stryker",
+    "host": "stryker.wd1.myworkdayjobs.com",
+    "tenant": "stryker",
+    "site": "StrykerCareers",
+    "search_terms": [
+      "mechanical",
+      "manufacturing",
+      "product development",
+      "quality engineer"
+    ],
+    "max_pages": 3,
+    "careers_url": "https://careers.stryker.com/",
+    "company_context": "Endoscopy, surgical robotics and emergency-care devices; Bay Area and Seattle-area hardware, NPI, verification and equipment roles.",
+    "verified_on": "2026-11-04"
+  },
+  {
+    "provider": "official_html",
+    "company": "Science Corporation",
+    "slug": "science",
+    "list_urls": [
+      "https://science.xyz/careers/open-positions/"
+    ],
+    "link_fragment": "/careers/",
+    "title_selector": "h1",
+    "location_selector": "p.subtitle",
+    "location_pattern": "(.+)",
+    "careers_url": "https://science.xyz/careers/",
+    "company_context": "Neurotechnology and research devices; precision mechanical design, surgical tools, microfluidics, fixtures and validation.",
+    "verified_on": "2026-11-04"
+  },
+  {
+    "provider": "ashby",
+    "company": "Relling",
+    "slug": "Relling",
+    "careers_url": "https://rellingsystems.com/about/careers",
+    "company_context": "Industrial robotic workcells; mechanical integration, mechatronics, factory automation and hardware deployment.",
+    "verified_on": "2026-11-06"
+  },
+  {
+    "provider": "ashby",
+    "company": "Charge Robotics",
+    "slug": "charge-robotics",
+    "careers_url": "https://www.chargerobotics.com/careers",
+    "company_context": "Solar-farm construction robots; mechanical design, manufacturing engineering, fixtures and field-deployed automation.",
+    "verified_on": "2026-11-09"
+  },
+  {
+    "provider": "lever",
+    "company": "Capstan Medical",
+    "slug": "capstan-medical",
+    "careers_url": "https://jobs.lever.co/capstan-medical",
+    "company_context": "Robotic delivery of structural-heart implants; surgical devices, electromechanical systems, manufacturing and verification.",
+    "verified_on": "2026-11-09"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Lodestar",
+    "slug": "lodestarspace",
+    "careers_url": "https://job-boards.eu.greenhouse.io/lodestarspace",
+    "company_context": "Spacecraft payloads and autonomous space systems; mechanical/optical integration, hardware qualification and environmental testing.",
+    "verified_on": "2026-11-09"
+  },
+  {
+    "provider": "lever",
+    "company": "Shield AI",
+    "slug": "shieldai",
+    "careers_url": "https://shield.ai/careers/",
+    "company_context": "Autonomous aircraft and flight hardware; Seattle mechanical test systems, structures, manufacturing and validation.",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Oura",
+    "slug": "oura",
+    "careers_url": "https://job-boards.greenhouse.io/oura",
+    "company_context": "Wearable health hardware and batteries; supplier industrialization, automated assembly, mechanical integration and process validation.",
+    "verified_on": "2026-11-11"
+  },
+  {
+    "provider": "greenhouse",
+    "company": "Noble Machines",
+    "slug": "undercontrolroboticsinc",
+    "careers_url": "https://job-boards.greenhouse.io/undercontrolroboticsinc",
+    "company_context": "Industrial robots and autonomy; electromechanical robot hardware, test equipment, manufacturing and systems integration.",
+    "verified_on": "2026-11-11"
   }
 ]

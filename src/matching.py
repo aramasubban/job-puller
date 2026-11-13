@@ -5,7 +5,7 @@ bounded skill and experience scores. Preferred skills cannot supply core fit.
 """
 import re
 from html import unescape
-VERSION = 'me-v2.2'
+VERSION = 'me-v2.3'
 
 def has(pattern, text):
     return bool(re.search(pattern, text, re.I))
@@ -89,6 +89,8 @@ def score_match(job, description):
         cap=min(cap,59);gaps.insert(0,'Mixed ME/ECE: electronics depth not demonstrated')
     elif not alternative_tracks and has(r'\b(?:electrical|computer) engineering\b',core) and not has(r'\b(?:mechanical|mechatronics) engineering\b',core) and ee:
         cap=min(cap,39);gaps.insert(0,'EE/CE-focused requirements; ME fit weak')
+    if not alternative_tracks and has(r'\bDFT\b|design for testability',core) and has(r'\bJTAG\b|boundary scan',core) and has(r'schematic.{0,30}layout|schematic/layout',core):
+        cap=min(cap,25);gaps.insert(0,'Circuit-board test engineering requires DFT/JTAG and schematic-layout expertise')
     if has(r'\b(?:electrical|firmware|rf|fpga|asic|rtl|physical design)\b',title) or (has(r'\belectronics\b',title) and not direct and len(me)<3):
         cap=min(cap,25);gaps.insert(0,'Electrical/embedded role')
     if has(r'\b(?:december|summer|fall|spring) 2026\b',title) or (has(r'(?:graduat\w*|complet\w*).{0,45}(?:by|end of).{0,20}2026',core) and not has(r'(?:summer|may|spring) 2027',core)):
