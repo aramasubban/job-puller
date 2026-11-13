@@ -10,3 +10,5 @@ secrets*
 *credentials*.json
 *token*.json
 *resume*.pdf
+
+*.private.json

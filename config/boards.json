@@ -919,5 +919,33 @@
     "careers_url": "https://job-boards.greenhouse.io/undercontrolroboticsinc",
     "company_context": "Industrial robots and autonomy; electromechanical robot hardware, test equipment, manufacturing and systems integration.",
     "verified_on": "2026-11-11"
+  },
+  {
+    "provider": "tesla_api",
+    "company": "Tesla",
+    "slug": "tesla",
+    "careers_url": "https://www.tesla.com/careers/search",
+    "max_details": 150,
+    "company_context": "Battery/cell equipment, mechanical design, robotics, manufacturing and validation; full official requirements retrieved."
+  },
+  {
+    "provider": "official_html",
+    "company": "Mundane",
+    "slug": "mundane",
+    "list_urls": [
+      "https://mundane.co/careers"
+    ],
+    "link_fragment": "/careers/",
+    "title_selector": "h1",
+    "location_pattern": "Location\\s+(Palo Alto, CA)",
+    "careers_url": "https://mundane.co/careers",
+    "company_context": "Palo Alto industrial teleoperation robot/exoskeleton hardware startup. Near-term start and professional experience require review."
+  },
+  {
+    "provider": "lever",
+    "slug": "ambirobotics",
+    "company": "Ambi Robotics",
+    "careers_url": "https://www.ambirobotics.com/careers",
+    "company_context": "Berkeley robotic material-handling systems, customer mechanical integration, deployment and fabrication."
   }
 ]

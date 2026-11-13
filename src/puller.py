@@ -80,16 +80,16 @@ ROLE_PATTERN = re.compile(
     r"propulsion engineer|structures engineer|fluids? engineer|vehicle integration engineer|cad (?:engineer|designer)|structural engineer)\b", re.IGNORECASE
 )
 NON_ENGINEERING = re.compile(
-    r"\b(technician|inspector|planner|temporary|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
+    r"\b(technician|assembler|instructor|technical trainer|leadership|inspector|planner|temporary|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
     r"recruiter|technologist|research scientist|designer,? ux|product manager|"
     r"software engineer|firmware engineer|front[ -]?end|back[ -]?end|"
     r"data engineer|machine learning engineer|sales engineer|"
-    r"engineering manager|program manager|project manager|director|"
+    r"robotics tech|mechatronics tech|engineering manager|program manager|project manager|director|"
     r"vice president|head of|chief of|operations manager)\b", re.IGNORECASE
 )
 SENIOR = re.compile(r"\b(senior|sr\.?|staff|principal|lead|manager|supervisor|director|architect|expert|head of)\b", re.IGNORECASE)
 ENTRY = re.compile(r"\b(new grad(?:uate)?|graduate|entry.level|early.career|junior|associate|engineer i\b|engineer 1\b)\b", re.IGNORECASE)
-EXP = re.compile(r"(?<!\d)(\d{1,2})\s*(?:\+|[-–—]\s*(\d{1,2})|\s+to\s+(\d{1,2}))?\s*(?:years?|yrs?)\s+(?:of\s+)?(?:(?:[A-Za-z][A-Za-z/-]*\s+){0,5})?experience\b", re.IGNORECASE)
+EXP = re.compile(r"(?<!\d)(\d{1,2})\s*(?:\+|[-–—]\s*(\d{1,2})|\s+to\s+(\d{1,2}))?\s*(?:years?|yrs?)\s+(?:of\s+)?(?:(?:[A-Za-z][A-Za-z/’\x27-]*\s+){0,15})?experience\b", re.IGNORECASE)
 EXP_BEFORE = re.compile(r"\b(?:minimum(?: of)?|at least|require[ds]?|have|possess|with)\s+(\d{1,2})\+?\s*(?:years?|yrs?)\b", re.IGNORECASE)
 
 class _StripHTML(HTMLParser):
@@ -118,19 +118,24 @@ def required_experience_years(description):
     # Never let an entry-level title override an explicit 4+ year minimum.
     # Only explicit 'years of experience' or 'minimum X years' phrases;
     # does not mistake 'founded 5 years ago' for a requirement.
-    text = description[:25000]
+    text = re.sub(r'(\b\d{1,2}\+?\s*years)(?=[A-Za-z])', r'\1 ', description[:25000], flags=re.I)
     # Preferred/nice-to-have years are not a mandatory minimum. When a board
     # provides heading-style qualification sections, screen the required text.
-    text = re.split(r'\b(?:preferred|nice[- ]to[- ]have|bonus)\s+(?:qualifications|requirements|experience)\b',text,maxsplit=1,flags=re.I)[0]
+    required_section = re.search(r'\b(?:basic|minimum|required) qualifications\b', text, re.I)
+    preferred_section = re.search(r'\b(?:preferred|nice[- ]to[- ]have|bonus)\s+(?:qualifications|requirements|experience)\b', text[required_section.end() if required_section else 0:], re.I)
+    if preferred_section:
+        text=text[:(required_section.end() if required_section else 0)+preferred_section.start()]
     minima = [int(m.group(1)) for pattern in (EXP, EXP_BEFORE) for m in pattern.finditer(text)]
     minima += [int(m.group(1)) for m in re.finditer(
-        r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:in|of professional|of hands.on|of working|of relevant|of related|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
+        r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:as|in|of professional|of hands.on|of working|of relevant|of related|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\s+or more\s+years?\s+(?:of\s+)?(?:[\w/-]+\s+){0,5}experience\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r"bachelor.{0,40}?related work experience of\s+(\d+)", description, re.I)]
     # Explicit degree-route shorthand still defines the bachelor minimum,
     # even when parenthesized between 'years' and the engineering field.
     minima += [int(m.group(1)) for m in re.finditer(r'\bB\.?S\.?\s*\+\s*(\d{1,2})\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r'(\d{1,2})\s+years?\s+of\s+progressive,?\s+post[- ]baccalaureate\s+experience', text, re.I)]
+    if required_section:
+        minima += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\+\s+years?\s+of\b',text[required_section.end():],re.I)]
     return max(minima, default=0)
 
 def experience_fit(title, description):
@@ -163,6 +168,10 @@ def exclusion_reasons(job):
     location = job.get("location", "") or ""
     etype = (job.get("employment", "") or "").lower().replace(" ", "").replace("-", "")
     reasons = []
+    if re.search(r'\bwinter\s+2027\b',title,re.I):
+        reasons.append('Winter 2027 start conflicts with May 2027 graduation')
+    if re.search(r'positions? typically last.{0,30}(?:twelve|12) weeks|(?:temporary|fixed.term).{0,20}(?:position|role)',desc,re.I):
+        reasons.append('Temporary program, not permanent full-time employment')
     minimum_qualifications = job.get('minimum_qualifications', '') or ''
     degree_clause = re.split(r'Experience and/or education', minimum_qualifications, maxsplit=1, flags=re.I)[0]
     if re.search(r"\bmaster[’']?s?\s+degree\b", degree_clause, re.I) and not re.search(r'\bbachelor|\bB\.?S\.?\b', degree_clause, re.I):
@@ -279,7 +288,7 @@ def parse_board(src, payload):
             ext_id = str(j.get("id", ""))
             description = j.get("descriptionPlain") or j.get("description") or ""
             if j.get("lists"):
-                description += " " + " ".join(plain(x.get("content", "")) for x in j["lists"] if isinstance(x, dict))
+                description += " " + " ".join(plain(x.get("text", "")) + " " + plain(x.get("content", "")) for x in j["lists"] if isinstance(x, dict))
             description += " " + (j.get("additionalPlain") or j.get("additional") or "")
             employment = categories.get("commitment", "Unspecified")
             workstyle = j.get("workplaceType", "Unknown")
@@ -322,6 +331,8 @@ def parse_board(src, payload):
 def stable_external_id(src, url):
     """Stable posting identifier; don't collapse Apple's distinct job numbers by slug."""
     segments=urlsplit(url).path.strip('/').split('/')
+    if src.get('provider')=='tesla_api':
+        return segments[-1].rsplit('-',1)[-1]
     if src.get('provider')=='apple_api' and 'details' in segments:
         idx=segments.index('details')+1
         if idx<len(segments):

@@ -41,10 +41,26 @@ class EnterpriseAPITests(unittest.TestCase):
  def test_tesla_state_fields(self):
   payload={'lookup':{'locations':{'33':'Fremont, California'}},
            'listings':[{'id':'273339','t':'Mechanical Design Engineer, Automation','l':'33'}]}
-  with patch('src.enterprise_sources._request',return_value=__import__('json').dumps(payload)):
+  with patch('src.enterprise_sources._request',side_effect=[__import__('json').dumps(payload), __import__('json').dumps({'id':'273339','title':'Mechanical Design Engineer, Automation','jobRequirements':'BS Mechanical Engineering and CAD; fixtures and validation.'})]):
    out=fetch_tesla({},ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
   self.assertEqual(len(out),1)
   self.assertTrue(out[0]['url'].endswith('-273339'))
+ def test_tesla_rotation_preserves_battery_priority_and_bound(self):
+  import json
+  payload={'lookup':{'locations':{'1':'Fremont, California'}},'listings':[
+    {'id':'1','t':'Battery Mechanical Engineer','l':'1'},
+    {'id':'2','t':'Equipment Mechanical Engineer A','l':'1'},
+    {'id':'3','t':'Equipment Mechanical Engineer B','l':'1'},
+    {'id':'4','t':'Equipment Mechanical Engineer C','l':'1'}]}
+  fetched=[]
+  def request(url):
+   if url.endswith('/state'):return json.dumps(payload)
+   ident=url.rsplit('/',1)[-1];fetched.append(ident)
+   return json.dumps({'id':ident,'jobRequirements':'BS Mechanical Engineering and CAD; fixtures and validation.'})
+  with patch('src.enterprise_sources._request',side_effect=request):
+   out=fetch_tesla({'max_details':2,'rotation_offset':1},ROLE_PATTERN,SENIOR,NON_ENGINEERING,BAY_AREA)
+  self.assertEqual(set(fetched),{'1','3'})
+  self.assertEqual(len(out),2)
  def test_tesla_refusal_is_error(self):
   with patch('src.enterprise_sources._request',side_effect=PermissionError('HTTP 403')):
    with self.assertRaises(PermissionError):
