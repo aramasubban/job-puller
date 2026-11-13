@@ -283,7 +283,7 @@ def parse_board(src, payload):
             ext_id = str(j.get("id", ""))
             description = j.get("descriptionPlain") or j.get("description") or ""
             if j.get("lists"):
-                description += " " + " ".join(plain(x.get("content", "")) for x in j["lists"] if isinstance(x, dict))
+                description += " " + " ".join(plain(x.get("text", "")) + " " + plain(x.get("content", "")) for x in j["lists"] if isinstance(x, dict))
             description += " " + (j.get("additionalPlain") or j.get("additional") or "")
             employment = categories.get("commitment", "Unspecified")
             workstyle = j.get("workplaceType", "Unknown")
