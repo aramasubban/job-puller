@@ -15,10 +15,10 @@ def role_text(description):
     for _ in range(2): text = unescape(text)
     text = re.sub(r'<[^>]+>', ' ', text)
     text = re.sub(r'\s+', ' ', text).strip()
+    text = re.split(r'\b(?:equal opportunity|don[’\x27]t meet every|for us-based roles|compensation at|benefits and perks)\b', text, flags=re.I)[0]
     start = re.search(r'\b(?:about (?:the|this) (?:role|position)|the role|minimum qualifications|required qualifications|qualifications|what you(?:’|\x27| wi)ll do|responsibilities)\b', text, re.I)
     if start:
         text = text[start.start():]
-    text = re.split(r'\b(?:equal opportunity|don[’\x27]t meet every|for us-based roles|compensation at|benefits and perks)\b', text, flags=re.I)[0]
     core = re.sub(r'\b(?:nice to have|preferred qualifications|bonus points|what makes you stand out|it[’\x27]s a plus)\b.*?(?=\b(?:about the job|responsibilities|required qualifications|minimum qualifications)\b|$)', '', text, flags=re.I)
     return core, text
 
