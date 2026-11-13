@@ -80,16 +80,16 @@ ROLE_PATTERN = re.compile(
     r"propulsion engineer|structures engineer|fluids? engineer|vehicle integration engineer|cad (?:engineer|designer)|structural engineer)\b", re.IGNORECASE
 )
 NON_ENGINEERING = re.compile(
-    r"\b(technician|inspector|planner|temporary|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
+    r"\b(technician|assembler|instructor|technical trainer|leadership|inspector|planner|temporary|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
     r"recruiter|technologist|research scientist|designer,? ux|product manager|"
     r"software engineer|firmware engineer|front[ -]?end|back[ -]?end|"
     r"data engineer|machine learning engineer|sales engineer|"
-    r"engineering manager|program manager|project manager|director|"
+    r"robotics tech|mechatronics tech|engineering manager|program manager|project manager|director|"
     r"vice president|head of|chief of|operations manager)\b", re.IGNORECASE
 )
 SENIOR = re.compile(r"\b(senior|sr\.?|staff|principal|lead|manager|supervisor|director|architect|expert|head of)\b", re.IGNORECASE)
 ENTRY = re.compile(r"\b(new grad(?:uate)?|graduate|entry.level|early.career|junior|associate|engineer i\b|engineer 1\b)\b", re.IGNORECASE)
-EXP = re.compile(r"(?<!\d)(\d{1,2})\s*(?:\+|[-–—]\s*(\d{1,2})|\s+to\s+(\d{1,2}))?\s*(?:years?|yrs?)\s+(?:of\s+)?(?:(?:[A-Za-z][A-Za-z/-]*\s+){0,5})?experience\b", re.IGNORECASE)
+EXP = re.compile(r"(?<!\d)(\d{1,2})\s*(?:\+|[-–—]\s*(\d{1,2})|\s+to\s+(\d{1,2}))?\s*(?:years?|yrs?)\s+(?:of\s+)?(?:(?:[A-Za-z][A-Za-z/’\x27-]*\s+){0,15})?experience\b", re.IGNORECASE)
 EXP_BEFORE = re.compile(r"\b(?:minimum(?: of)?|at least|require[ds]?|have|possess|with)\s+(\d{1,2})\+?\s*(?:years?|yrs?)\b", re.IGNORECASE)
 
 class _StripHTML(HTMLParser):
@@ -121,7 +121,10 @@ def required_experience_years(description):
     text = re.sub(r'(\b\d{1,2}\+?\s*years)(?=[A-Za-z])', r'\1 ', description[:25000], flags=re.I)
     # Preferred/nice-to-have years are not a mandatory minimum. When a board
     # provides heading-style qualification sections, screen the required text.
-    text = re.split(r'\b(?:preferred|nice[- ]to[- ]have|bonus)\s+(?:qualifications|requirements|experience)\b',text,maxsplit=1,flags=re.I)[0]
+    required_section = re.search(r'\b(?:basic|minimum|required) qualifications\b', text, re.I)
+    preferred_section = re.search(r'\b(?:preferred|nice[- ]to[- ]have|bonus)\s+(?:qualifications|requirements|experience)\b', text[required_section.end() if required_section else 0:], re.I)
+    if preferred_section:
+        text=text[:(required_section.end() if required_section else 0)+preferred_section.start()]
     minima = [int(m.group(1)) for pattern in (EXP, EXP_BEFORE) for m in pattern.finditer(text)]
     minima += [int(m.group(1)) for m in re.finditer(
         r'(?<!\d)(\d{1,2})\+?\s+years?\s+(?:as|in|of professional|of hands.on|of working|of relevant|of related|designing|building|developing|working|leading|managing|taking)\b', text, re.I)]
@@ -131,6 +134,8 @@ def required_experience_years(description):
     # even when parenthesized between 'years' and the engineering field.
     minima += [int(m.group(1)) for m in re.finditer(r'\bB\.?S\.?\s*\+\s*(\d{1,2})\b', text, re.I)]
     minima += [int(m.group(1)) for m in re.finditer(r'(\d{1,2})\s+years?\s+of\s+progressive,?\s+post[- ]baccalaureate\s+experience', text, re.I)]
+    if required_section:
+        minima += [int(m.group(1)) for m in re.finditer(r'(?<!\d)(\d{1,2})\+\s+years?\s+of\b',text[required_section.end():],re.I)]
     return max(minima, default=0)
 
 def experience_fit(title, description):
