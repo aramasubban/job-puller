@@ -21,6 +21,9 @@ class EvidenceRankingTests(unittest.TestCase):
   r=self.score('Battery Mechanical Engineer',d);self.assertIn('Experience stretch',r['eligibility'])
  def test_ee_cannot_gain_from_battery_title(self):
   self.assertLess(self.score('Battery Hardware Engineer','Responsibilities: PCB layout, schematic circuit design and Verilog. Electrical Engineering degree required.')['fit_score'],50)
+ def test_electrical_test_instruments_do_not_pass_me_gate(self):
+  d='Responsibilities: mechanical fixtures, equipment validation, root cause testing and CAD. Basic Qualifications: Electrical Engineering degree, Linux and oscilloscopes and spectrum analyzers.'
+  self.assertLess(self.score('Development Test Engineer',d)['fit_score'],50)
  def test_missing_jd_stays_low(self):self.assertLess(self.score('Battery Mechanical Engineer','')['fit_score'],50)
  def test_unavailable_profile_fails_loudly(self):
   with self.assertRaises(FileNotFoundError):candidate_score({},'',{},self.path+'missing')
