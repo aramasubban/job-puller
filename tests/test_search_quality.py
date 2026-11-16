@@ -63,3 +63,12 @@ class ExperienceRangeBoundaryTests(unittest.TestCase):
   from src.puller import required_experience_years
   for phrase,want in [('0–3 years of relevant engineering experience',0),('2-4 years of mechanical design experience',2),('3 to 6 years of hardware validation experience',3)]:
    self.assertEqual(required_experience_years('Basic Qualifications: '+phrase),want,phrase)
+
+class LicenseAndTrainingScopeTests(unittest.TestCase):
+ def test_required_professional_license_excluded(self):
+  from src.puller import exclusion_reasons
+  self.assertIn('Licensed structural/professional engineer required',exclusion_reasons({'title':'Structural Engineer','location':'Palo Alto, CA','description':'Required Qualifications: Licensed Structural Engineer, in at least one state (California preferred).'}))
+ def test_training_and_coordinator_titles_excluded(self):
+  from src.puller import exclusion_reasons
+  for title in ['START Manufacturing Trainee','Manufacturing Coordinator, Avionics']:
+   self.assertTrue(exclusion_reasons({'title':title,'location':'Fremont, CA','description':'Mechanical CAD and testing.'}))
