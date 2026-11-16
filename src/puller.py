@@ -80,7 +80,7 @@ ROLE_PATTERN = re.compile(
     r"propulsion engineer|structures engineer|fluids? engineer|vehicle integration engineer|cad (?:engineer|designer)|structural engineer)\b", re.IGNORECASE
 )
 NON_ENGINEERING = re.compile(
-    r"\b(technician|assembler|instructor|technical trainer|leadership|inspector|planner|temporary|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
+    r"\b(technician|trainee|coordinator|assembler|instructor|technical trainer|leadership|inspector|planner|temporary|intern(?:ship)?|co[ -]?op|apprentice|contractor|"
     r"recruiter|technologist|research scientist|designer,? ux|product manager|"
     r"software engineer|firmware engineer|front[ -]?end|back[ -]?end|"
     r"data engineer|machine learning engineer|sales engineer|"
@@ -174,6 +174,10 @@ def exclusion_reasons(job):
         reasons.append('Winter 2027 start conflicts with May 2027 graduation')
     if re.search(r'positions? typically last.{0,30}(?:twelve|12) weeks|(?:temporary|fixed.term).{0,20}(?:position|role)',desc,re.I):
         reasons.append('Temporary program, not permanent full-time employment')
+    license_core=re.split(r'\b(?:preferred qualifications|preferred skills|nice.to.have)\b',desc,flags=re.I)[0]
+    required_license=re.search(r'\blicensed (?:structural|professional) engineer\b',license_core,re.I)
+    if required_license and not re.search(r'licensed (?:structural|professional) engineer\s+(?:is\s+)?preferred',license_core,re.I):
+        reasons.append('Licensed structural/professional engineer required')
     minimum_qualifications = job.get('minimum_qualifications', '') or ''
     degree_clause = re.split(r'Experience and/or education', minimum_qualifications, maxsplit=1, flags=re.I)[0]
     if re.search(r"\bmaster[’']?s?\s+degree\b", degree_clause, re.I) and not re.search(r'\bbachelor|\bB\.?S\.?\b', degree_clause, re.I):
