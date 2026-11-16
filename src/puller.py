@@ -119,6 +119,8 @@ def required_experience_years(description):
     # Only explicit 'years of experience' or 'minimum X years' phrases;
     # does not mistake 'founded 5 years ago' for a requirement.
     text = re.sub(r'(\b\d{1,2}\+?\s*years)(?=[A-Za-z])', r'\1 ', description[:25000], flags=re.I)
+    # A range states a lower-bound requirement; never rescan its upper bound.
+    text = re.sub(r'(?<!\d)(\d{1,2})\s*(?:[-–—]|to)\s*\d{1,2}\s*(years?|yrs?)\b', r'\1 \2', text, flags=re.I)
     # Preferred/nice-to-have years are not a mandatory minimum. When a board
     # provides heading-style qualification sections, screen the required text.
     required_section = re.search(r'\b(?:basic|minimum|required) qualifications\b', text, re.I)
