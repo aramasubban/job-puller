@@ -32,7 +32,7 @@ def candidate_score(job, description, baseline, profile_path):
     tools=min(20,14+known*2) if known else 10
     tools=max(0,tools-min(12,4*len(unknown)))
     years=required_experience_years(core)
-    junior=has(r'new.grad|early.career|entry.level|junior|engineer (?:i|1)\b',title+' '+core)
+    junior=has(r'new.grad|early.career|entry.level|junior|engineer (?:i|1)\b|\b0\s*[-–—]\s*[1-3]\s+years?\b',title+' '+core)
     if has(r'new grads?.{0,65}(?:welcome|encouraged|considered)|(?:welcome|encourage|consider).{0,50}new grads?',core) and years<=3: years=0;junior=True
     experience=0 if years>=4 else 10 if years==3 else 13 if years==2 else 17 if years==1 else 20 if junior else 14
     gaps=[]
@@ -58,8 +58,18 @@ def candidate_score(job, description, baseline, profile_path):
         score=min(score,74);gaps.append('Specialist electronics assembly process depth not demonstrated')
     if has(r'Avionics.*Test|Production Test Engineer|Test Automation Engineer.*Hardware.in.the.Loop',title) and has(r'Linux|firmware|oscilloscope|electrical engineering',core):
         score=min(score,49);gaps.append('Specialist avionics/software test infrastructure depth not established')
-    if has(r'electrical engineering',core) and not has(r'mechanical engineering',core) and has(r'oscilloscopes?|spectrum analyzers?|logic analyzers?',core):
+    if has(r'electrical engineering',core) and not has(r'degree.{0,80}(?:mechanical|mechatronic)|(?:mechanical|mechatronic).{0,30}(?:degree|engineering)',core) and has(r'oscilloscopes?|spectrum analyzers?|logic analyzers?',core):
         score=min(score,39);gaps.append('Electrical test qualification and instrument depth not demonstrated')
+    if has(r'\bsoftware\b',title) and has(r'C/C\+\+|C\+\+|firmware|software development',core):
+        score=min(score,49);gaps.append('Software/embedded diagnostic depth not demonstrated')
+    if has(r'EMC/EMI|EMI/EMC|electromagnetic (?:compatibility|effects)',title):
+        score=min(score,39);gaps.append('Specialist electromagnetic compatibility depth not demonstrated')
+    if has(r'CFD', ' '.join(unknown)) and has(r'strong|demonstrated|expert|proven',core):
+        score=min(score,74);gaps.append('Independent CFD simulation ownership not established')
+    if has(r'IC package|chip thermal',title+' '+core):
+        score=min(score,74);gaps.append('Specialist IC-package thermal characterization depth not established')
+    if has(r'PCBA|electronics|electronic',title) and has(r'SMT|reflow|conformal coating|underfill|electronic assembly',core):
+        score=min(score,74);gaps.append('Specialist electronics assembly/process depth not established')
     tier='Strong evidence fit' if score>=85 else 'Good evidence fit' if score>=75 else 'Review / stretch' if score>=50 else 'Low fit / eligibility gap'
     components={'domain':domain,'duties':duties,'tools':tools,'experience':experience}
     evidence=[]
