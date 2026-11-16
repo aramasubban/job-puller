@@ -947,5 +947,40 @@
     "company": "Ambi Robotics",
     "careers_url": "https://www.ambirobotics.com/careers",
     "company_context": "Berkeley robotic material-handling systems, customer mechanical integration, deployment and fabrication."
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "psiquantum",
+    "company": "PsiQuantum",
+    "careers_url": "https://www.psiquantum.com/careers",
+    "company_context": "Milpitas and Palo Alto quantum-computing hardware, cryogenic mechanics, equipment and manufacturing."
+  },
+  {
+    "provider": "lever",
+    "slug": "until",
+    "company": "Until",
+    "careers_url": "https://jobs.lever.co/until",
+    "company_context": "Bay Area organ-preservation medical hardware, thermal-fluid systems and mechanical prototyping."
+  },
+  {
+    "provider": "ashby",
+    "slug": "observable-space",
+    "company": "Observable Space",
+    "careers_url": "https://jobs.ashbyhq.com/observable-space",
+    "company_context": "Los Angeles telescope and space hardware, optomechanical structures, mechanisms and validation."
+  },
+  {
+    "provider": "ashby",
+    "slug": "northwoodspace",
+    "company": "Northwood Space",
+    "careers_url": "https://www.northwoodspace.io/careers",
+    "company_context": "Torrance ground-station mechanical hardware, field reliability, deployment, test and manufacturing."
+  },
+  {
+    "provider": "greenhouse",
+    "slug": "gitai",
+    "company": "GITAI",
+    "careers_url": "https://job-boards.greenhouse.io/gitai",
+    "company_context": "Los Angeles space-robotics mechanisms, structures, test and spacecraft hardware."
   }
 ]
