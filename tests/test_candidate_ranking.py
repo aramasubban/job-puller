@@ -24,6 +24,18 @@ class EvidenceRankingTests(unittest.TestCase):
  def test_electrical_test_instruments_do_not_pass_me_gate(self):
   d='Responsibilities: mechanical fixtures, equipment validation, root cause testing and CAD. Basic Qualifications: Electrical Engineering degree, Linux and oscilloscopes and spectrum analyzers.'
   self.assertLess(self.score('Development Test Engineer',d)['fit_score'],50)
+ def test_software_integration_keeps_specialist_gap(self):
+  d='Responsibilities: mechanical CAD, fixtures, tolerances, testing and firmware. Required Qualifications: C/C++ software development.'
+  self.assertLess(self.score('Software Integration Engineer, Thermal Systems',d)['fit_score'],50)
+ def test_zero_to_three_years_is_explicit_early_career(self):
+  d='Responsibilities: mechanical engineering design, tolerances and testing with CAD. Basic Qualifications: 0–3 years of relevant engineering experience.'
+  self.assertEqual(self.score('Battery Mechanical Engineer',d)['match_components']['experience'],20)
+ def test_mixed_degree_list_is_not_electrical_only(self):
+  d='Responsibilities: mechanical engineering, tolerances, testing, CAD and oscilloscopes. Basic Qualifications: Degree in Mechanical, Electrical or related engineering. Build instrumented physical prototypes, validate the assembly against engineering requirements, and document each test result.'
+  self.assertGreaterEqual(self.score('Battery Test Engineer',d)['fit_score'],50)
+ def test_electromagnetic_warfare_product_is_not_emc_specialist(self):
+  d='Responsibilities: mechanical engineering, tolerances, fixtures and testing with CAD. Basic Qualifications: Mechanical Engineering degree. Build instrumented physical prototypes, validate the assembly against engineering requirements, and document each test result.'
+  self.assertGreaterEqual(self.score('Manufacturing Engineer, Electromagnetic Warfare',d)['fit_score'],50)
  def test_missing_jd_stays_low(self):self.assertLess(self.score('Battery Mechanical Engineer','')['fit_score'],50)
  def test_unavailable_profile_fails_loudly(self):
   with self.assertRaises(FileNotFoundError):candidate_score({},'',{},self.path+'missing')
