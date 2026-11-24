@@ -15,10 +15,10 @@ def role_text(description):
     for _ in range(2): text = unescape(text)
     text = re.sub(r'<[^>]+>', ' ', text)
     text = re.sub(r'\s+', ' ', text).strip()
+    text = re.split(r'\b(?:equal opportunity|don[’\x27]t meet every|for us-based roles|compensation at|benefits and perks)\b', text, flags=re.I)[0]
     start = re.search(r'\b(?:about (?:the|this) (?:role|position)|the role|minimum qualifications|required qualifications|qualifications|what you(?:’|\x27| wi)ll do|responsibilities)\b', text, re.I)
     if start:
         text = text[start.start():]
-    text = re.split(r'\b(?:equal opportunity|don[’\x27]t meet every|for us-based roles|compensation at|benefits and perks)\b', text, flags=re.I)[0]
     core = re.sub(r'\b(?:nice to have|preferred qualifications|bonus points|what makes you stand out|it[’\x27]s a plus)\b.*?(?=\b(?:about the job|responsibilities|required qualifications|minimum qualifications)\b|$)', '', text, flags=re.I)
     return core, text
 
@@ -38,7 +38,7 @@ ECE = [
     (r'\b(?:firmware development|embedded software|embedded c\+\+|device drivers|bsp|rtos)\b', 'embedded/firmware'),
 ]
 
-def score_match(job, description):
+def generic_score_match(job, description):
     title = job.get('title', '')
     core, full = role_text(description)
     alternative_tracks = has(r'across a variety of domain expertise',description) and has(r'mechanical design|thermal and heat transfer',description) and has(r'process of obtaining.{0,100}mechanical',description)
@@ -112,3 +112,14 @@ def score_match(job, description):
     else:reason+=' | Check: May 2027 start availability'
     return {'fit_score':score,'match_reasons':reason,'match_version':VERSION,'match_tier':tier,
             'match_gaps':gaps,'shortlist_eligible':score>=70}
+
+
+def score_match(job, description):
+    # Private candidate evidence is deliberately absent from the public repository.
+    import os
+    profile = os.environ.get('JOB_CANDIDATE_PROFILE')
+    baseline = generic_score_match(job, description)
+    if not profile:
+        return baseline
+    from src.candidate_matching import candidate_score
+    return candidate_score(job, description, baseline, profile)

@@ -77,8 +77,8 @@ def fetch_apple(src, role, senior, noneng, bay):
         detail=json.loads(_request('https://jobs.apple.com/api/v1/jobDetails/'+ident)).get('res')
         if not isinstance(detail,dict) or not detail.get('postingTitle'):
             raise ValueError('Apple full job detail unavailable')
-        parts=[str(detail.get(k) or '') for k in ('jobSummary','description','minimumQualifications','keyQualifications','educationAndExperience','preferredQualifications','payAndBenefits')]
-        rec['description']=' '.join(parts)
+        parts=[label+': '+str(detail.get(k)) for k,label in [('jobSummary','Summary'),('description','About the role'),('responsibilities','Responsibilities'),('minimumQualifications','Minimum Qualifications'),('keyQualifications','Required Qualifications'),('educationAndExperience','Education and Experience'),('preferredQualifications','Preferred Qualifications'),('payAndBenefits','Pay and Benefits')] if detail.get(k)]
+        rec['description']=' '.join(parts)+' '+ ' '.join(str(loc.get('content') or '') for f in detail.get('postingFooters',[]) for group in f.get('localizations',{}).values() for loc in group)
         rec['minimum_qualifications']=str(detail.get('minimumQualifications') or '')
         if not any(detail.get(k) for k in ('minimumQualifications','keyQualifications','educationAndExperience')):
             raise ValueError('Apple detail missing qualification fields')
@@ -196,4 +196,29 @@ def fetch_tesla(src,role,senior,noneng,bay):
         ident=str(p.get("id",""));url=f"https://www.tesla.com/careers/search/job/{slug}-{ident}"
         if ident:jobs.append({"title":title,"location":loc,"url":url,"description":"",
                 "employment":"Unspecified","posted":""})
-    return jobs
+    # Inventory alone is insufficient: retrieve duties and qualification evidence.
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    def detail(rec):
+        ident=rec['url'].rsplit('-',1)[-1]
+        d=json.loads(_request('https://www.tesla.com/cua-api/careers/job/'+ident))
+        if str(d.get('id'))!=ident or not d.get('jobRequirements'):
+            raise ValueError('Tesla detail missing ID/requirements')
+        rec.update(title=d.get('title') or rec['title'],location=d.get('location') or rec['location'],
+                   employment=d.get('timeType') or 'Unspecified',
+                   description=' '.join(label+': '+str(d.get(k) or '') for k,label in [('jobDescription','About the role'),('jobResponsibilities','Responsibilities'),('jobRequirements','Required Qualifications'),('jobCompensationAndBenefits','Pay and Benefits')]))
+        return rec
+    # Bounded, explicit partial scan; prioritize strongest relevant specialties.
+    jobs.sort(key=lambda j:(0 if re.search(r'battery|cell',j['title'],re.I) else 1 if re.search(r'equipment|tooling|robot|test',j['title'],re.I) else 2,j['url']))
+    limit=int(src.get('max_details',150))
+    battery=[j for j in jobs if re.search(r'battery|cell',j['title'],re.I)]
+    other=[j for j in jobs if j not in battery]
+    offset=int(src.get('rotation_offset',0)) % max(1,len(other))
+    other=other[offset:]+other[:offset]
+    selected=(battery+other)[:limit]
+    out=[]
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for f in as_completed([pool.submit(detail,j) for j in selected]):
+            try:out.append(f.result())
+            except Exception:continue
+    if jobs and not out:raise ValueError('Tesla inventory succeeded but all detail requests failed')
+    return out

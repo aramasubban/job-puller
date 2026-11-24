@@ -47,3 +47,28 @@ The scheduled sheet task must compare a bounded discovery search against the reg
 
 ## Search-quality correction (October 19)
 Amazon, KLA, Joby Aviation and Applied Materials now have registered employer adapters. Amazon uses official search JSON with all listed locations; Joby uses paginated iCIMS plus independently discovered posting URLs; KLA and Applied Materials use Workday with configurable pagination, targeted queries and pinned known posting paths. Workday, iCIMS and search-limited sources are partial and their absence cannot establish closure. NPI equipment/motion-control work is scored as mechanical systems; mixed alternative-domain recruitment must not be treated as mandatory expertise in every electrical discipline. Degree-specific required experience is evaluated against the bachelor route. ECE-only roles remain below 50. Explicitly report registry coverage, candidate totals, exclusions and source failures separately. K2 Development Test Engineer 5038677008 was already present at 71.
+
+
+## Evidence ranking (optional private candidate profile)
+
+Set `JOB_CANDIDATE_PROFILE` to a JSON file with evidence-backed domains, duty
+patterns and supported/undemonstrated tools. With no profile the existing generic
+ME heuristic remains available. The tracker automation MUST supply its private
+profile and assert `match_version == evidence-v1` before publishing scores.
+Profile files, personalized feeds/reasons and application data must not be
+committed. Public JD descriptions are retained in output for reproducible
+rescoring; missing descriptions never qualify from a title alone.
+
+Personal ranking uses domain relevance /25, transferable responsibilities /35,
+tool coverage /20, and experience alignment /20. Caps enforce missing evidence,
+wrong discipline, required graduate degrees and incompatible start windows.
+Scores are heuristic priority values, not hiring probabilities. Full-time years
+are not inferred from overlapping student projects. Required and preferred
+qualifications remain distinct. Salary and employer prestige earn no points.
+The evidence field supplies the particular prior work behind each score and
+shows the component breakdown and eligibility checks. A score change does not
+make a job new or reset its first-seen date.
+
+Tesla uses its public inventory plus full job-detail API, bounded to 150
+relevant details and honestly marked partial; detail failures cannot imply
+closure. Search-index-only roles are leads, never verified open jobs.

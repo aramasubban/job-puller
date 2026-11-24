@@ -44,3 +44,31 @@ class SearchQualityTests(unittest.TestCase):
   with patch('src.puller.fetch_workday',return_value=([item,item],{'candidate_links':2})):
    result=fetch_source({'provider':'workday','slug':'test','company':'Test'})
    self.assertEqual(len(result),1)
+
+class ScopeBoundaryRegressionTests(unittest.TestCase):
+ def test_required_long_and_apostrophe_experience(self):
+  from src.puller import required_experience_years
+  self.assertEqual(required_experience_years("Minimum Qualifications: 5+ years of post bachelor's experience working with test systems. Preferred Qualifications: 10 years."),5)
+  self.assertEqual(required_experience_years('Basic Qualifications: 10+ years of space vehicle thermal control system and algorithm analysis, design, development, verification, and validation.'),10)
+ def test_prose_preferred_does_not_hide_later_minimum(self):
+  from src.puller import required_experience_years
+  self.assertEqual(required_experience_years('Even if you do not meet all preferred qualifications apply. Basic Qualifications: 4+ years of commissioning experience. Preferred Qualifications: 8 years.'),4)
+ def test_technical_support_and_leadership_titles_excluded(self):
+  from src.puller import exclusion_reasons
+  for title in ['Manufacturing Assembler, Contract','Mechanical Engineering Leadership','Mechatronics & Robotics Tech','NPI Instructor']:
+   self.assertTrue(exclusion_reasons({'title':title,'location':'Berkeley, California','description':'Mechanical CAD and assemblies.'}),title)
+
+class ExperienceRangeBoundaryTests(unittest.TestCase):
+ def test_year_ranges_use_lower_bound(self):
+  from src.puller import required_experience_years
+  for phrase,want in [('0–3 years of relevant engineering experience',0),('2-4 years of mechanical design experience',2),('3 to 6 years of hardware validation experience',3)]:
+   self.assertEqual(required_experience_years('Basic Qualifications: '+phrase),want,phrase)
+
+class LicenseAndTrainingScopeTests(unittest.TestCase):
+ def test_required_professional_license_excluded(self):
+  from src.puller import exclusion_reasons
+  self.assertIn('Licensed structural/professional engineer required',exclusion_reasons({'title':'Structural Engineer','location':'Palo Alto, CA','description':'Required Qualifications: Licensed Structural Engineer, in at least one state (California preferred).'}))
+ def test_training_and_coordinator_titles_excluded(self):
+  from src.puller import exclusion_reasons
+  for title in ['START Manufacturing Trainee','Manufacturing Coordinator, Avionics']:
+   self.assertTrue(exclusion_reasons({'title':title,'location':'Fremont, CA','description':'Mechanical CAD and testing.'}))
