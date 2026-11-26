@@ -119,6 +119,9 @@ def required_experience_years(description):
     # Only explicit 'years of experience' or 'minimum X years' phrases;
     # does not mistake 'founded 5 years ago' for a requirement.
     text = re.sub(r'(\b\d{1,2}\+?\s*years)(?=[A-Za-z])', r'\1 ', description[:25000], flags=re.I)
+    word_years = dict(zip(('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'), range(1, 11)))
+    text = re.sub(r'\b(one|two|three|four|five|six|seven|eight|nine|ten)(?=\s+(?:(?:or more|to \w+)\s+)?years?\b)', lambda m: str(word_years[m.group(1).lower()]), text, flags=re.I)
+    text = re.sub(r'\b(\d{1,2})\s+or more\s+(years?)\b', r'\1+ \2', text, flags=re.I)
     # A range states a lower-bound requirement; never rescan its upper bound.
     text = re.sub(r'(?<!\d)(\d{1,2})\s*(?:[-–—]|to)\s*\d{1,2}\s*(years?|yrs?)\b', r'\1 \2', text, flags=re.I)
     # Preferred/nice-to-have years are not a mandatory minimum. When a board
