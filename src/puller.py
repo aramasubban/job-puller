@@ -172,6 +172,7 @@ def exclusion_reasons(job):
     desc = job.get("description", "") or ""
     location = job.get("location", "") or ""
     etype = (job.get("employment", "") or "").lower().replace(" ", "").replace("-", "")
+    etype = re.sub(r"^ft(?=$|\()", "fulltime", etype)
     # Exempt/non-exempt describe payroll classification, not contract duration.
     etype = re.sub(r"^fulltime\((?:non)?exempt\)$", "fulltime", etype)
     reasons = []

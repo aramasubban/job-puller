@@ -14,12 +14,12 @@ class EmploymentLabelTests(unittest.TestCase):
         })
 
     def test_payroll_classification_does_not_exclude_full_time(self):
-        for label in ('Full-time (Exempt)', 'Full-time (Non-Exempt)', 'Full-time'):
+        for label in ('Full-time (Exempt)', 'Full-time (Non-Exempt)', 'Full-time', 'FT', 'FT (Exempt)'):
             with self.subTest(label=label):
                 self.assertNotIn('Not full-time permanent employment', self.reasons(label))
 
     def test_temporary_and_contract_labels_still_excluded(self):
-        for label in ('Full-time (Contract)', 'Part-time (Exempt)', 'Temporary', 'Contract'):
+        for label in ('Full-time (Contract)', 'Part-time (Exempt)', 'Temporary', 'Contract', 'FT (Contract)', 'PT'):
             with self.subTest(label=label):
                 self.assertIn('Not full-time permanent employment', self.reasons(label))
 
