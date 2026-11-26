@@ -169,6 +169,8 @@ def exclusion_reasons(job):
     desc = job.get("description", "") or ""
     location = job.get("location", "") or ""
     etype = (job.get("employment", "") or "").lower().replace(" ", "").replace("-", "")
+    # Exempt/non-exempt describe payroll classification, not contract duration.
+    etype = re.sub(r"^fulltime\((?:non)?exempt\)$", "fulltime", etype)
     reasons = []
     if re.search(r'\bwinter\s+2027\b',title,re.I):
         reasons.append('Winter 2027 start conflicts with May 2027 graduation')
