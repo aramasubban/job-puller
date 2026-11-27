@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T23:08:27+00:00",
+  "generated_at": "2026-11-27T22:44:47+00:00",
   "sources_checked": [
     "apple_api:apple",
     "ashby:1x",
@@ -637,7 +637,6 @@
   ],
   "filtered_out_job_ids": [
     "apple_api:apple:200598796",
-    "apple_api:apple:200620776",
     "apple_api:apple:200688780",
     "apple_api:apple:200689200",
     "apple_api:apple:200689625",
@@ -649,7 +648,6 @@
     "apple_api:apple:200693486",
     "apple_api:apple:200693502",
     "apple_api:apple:200693592",
-    "apple_api:apple:200693633",
     "apple_api:apple:200693872",
     "apple_api:apple:200693876",
     "apple_api:apple:200694768",
@@ -709,7 +707,6 @@
     "ashby:tar:fe58b0d9-b34d-47d7-bff2-f6e645124701",
     "ashby:westmag:a276f437-4c6e-4bac-b7ac-9f4af09c2649",
     "google_sitemap:google:107682898529657542-hardware-systems-test-engineer",
-    "google_sitemap:google:122071200032531142-electrical-manufacturing-engineer",
     "greenhouse:andurilindustries:4672961007",
     "greenhouse:andurilindustries:4674195007",
     "greenhouse:andurilindustries:4768437007",
@@ -897,7 +894,7 @@
     "greenhouse:vardaspace:8016145003",
     "greenhouse:vardaspace:8016301003",
     "greenhouse:vardaspace:8208956003",
-    "greenhouse:vardaspace:8213803003",
+    "greenhouse:vardaspace:8217429003",
     "greenhouse:vast:4605709006",
     "greenhouse:vast:4664779006",
     "greenhouse:vast:4696280006",
@@ -946,7 +943,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:1x:0eb854f8-97f7-43a0-8818-f138178586f8",
@@ -978,7 +975,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:1x:d6c59043-7a78-48ba-8f35-6d47b987a871",
@@ -1010,7 +1007,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:1x:3398e992-b02a-4d39-aabe-f4ac2bb6591d",
@@ -1042,7 +1039,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:1x:ad316a76-6d96-40fb-8b3f-47a44aada5c2",
@@ -1074,7 +1071,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:1x:1fc6f14f-2ecc-4ceb-a988-5d5f7ca041d1",
@@ -1106,7 +1103,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:1x:73739950-4a8b-49b5-9f9f-3ccc17882098",
@@ -1138,7 +1135,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:1x:1932c050-c00f-434a-85a4-3076ec613ac4",
@@ -1170,7 +1167,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:american-turbines:a0292f18-bb53-47cd-b97f-389fea5c0936",
@@ -1202,7 +1199,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:american-turbines:5461d41a-41a0-4cf9-bc4b-1e3285473784",
@@ -1234,7 +1231,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5258587007",
@@ -1264,7 +1261,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5234512007",
@@ -1296,7 +1293,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5200146007",
@@ -1328,7 +1325,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5116367007",
@@ -1360,7 +1357,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5196162007",
@@ -1392,7 +1389,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5225761007",
@@ -1424,7 +1421,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5254383007",
@@ -1456,7 +1453,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5232438007",
@@ -1488,7 +1485,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5209455007",
@@ -1520,7 +1517,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5249368007",
@@ -1552,7 +1549,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5293515007",
@@ -1584,7 +1581,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5122121007",
@@ -1616,7 +1613,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5198082007",
@@ -1648,7 +1645,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5112611007",
@@ -1680,7 +1677,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5280991007",
@@ -1712,7 +1709,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5225973007",
@@ -1744,7 +1741,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5136367007",
@@ -1776,7 +1773,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5220660007",
@@ -1808,7 +1805,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5234527007",
@@ -1840,7 +1837,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5218901007",
@@ -1872,7 +1869,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5219476007",
@@ -1904,7 +1901,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:5249772007",
@@ -1936,7 +1933,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:andurilindustries:4905442007",
@@ -1968,7 +1965,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "official_html:antora:mechanical-engineer-plant-process-systems",
@@ -2000,7 +1997,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:5281310b-4e3f-4f27-97d3-613fc0797b20",
@@ -2032,7 +2029,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:d1d13abe-56c4-4af6-8075-cb8af82755a8",
@@ -2064,7 +2061,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:b1ab3edb-d296-40ec-a54a-3f6c605617a7",
@@ -2096,7 +2093,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:3a3f2f4b-300d-4010-a13e-efe12e54e14b",
@@ -2128,7 +2125,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:ff4db0b0-df14-4e5a-8072-d5fe65f9075d",
@@ -2160,7 +2157,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:4bf80c92-c4bf-46bd-bafd-40c5b6ef3f57",
@@ -2192,7 +2189,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:54379e73-c9f1-4c2c-9cdb-0721d4ac6fd9",
@@ -2224,7 +2221,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:367a070f-f712-4a0b-986a-da2fa6f3c8b3",
@@ -2256,7 +2253,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:apex-technology-inc:26d3a331-d989-4b47-bf59-6bae7552bf61",
@@ -2288,7 +2285,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "apple_api:apple:200696100",
@@ -2320,7 +2317,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "apple_api:apple:200694307",
@@ -2352,7 +2349,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:applied:932de549-2882-4c0d-aeca-b4a8ef5f1f41",
@@ -2384,7 +2381,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:astranis:4705260006",
@@ -2416,7 +2413,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:astranis:4728059006",
@@ -2448,7 +2445,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:astranis:4350927006",
@@ -2480,7 +2477,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:astranis:4298100006",
@@ -2512,7 +2509,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:astranis:4663009006",
@@ -2544,7 +2541,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:astranis:4704831006",
@@ -2576,7 +2573,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:astranis:4704829006",
@@ -2608,7 +2605,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:astranis:4349267006",
@@ -2640,7 +2637,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4437065009",
@@ -2672,7 +2669,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4437584009",
@@ -2704,7 +2701,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:atomicmachines:4478506009",
@@ -2736,7 +2733,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4418921009",
@@ -2768,7 +2765,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4418907009",
@@ -2801,7 +2798,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4386029009",
@@ -2833,7 +2830,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4386034009",
@@ -2865,7 +2862,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4471248009",
@@ -2897,7 +2894,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4411308009",
@@ -2929,7 +2926,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4407516009",
@@ -2961,7 +2958,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4413940009",
@@ -2993,7 +2990,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4452630009",
@@ -3025,7 +3022,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4465980009",
@@ -3057,7 +3054,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4416897009",
@@ -3090,7 +3087,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4390012009",
@@ -3122,7 +3119,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4395000009",
@@ -3154,7 +3151,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4421104009",
@@ -3186,7 +3183,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4393756009",
@@ -3218,7 +3215,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4413853009",
@@ -3250,7 +3247,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:castelioncorporation:4386136009",
@@ -3282,7 +3279,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:cerebras:04ce4198-d9b6-4aae-ad11-97708033f94a",
@@ -3312,7 +3309,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:cobot:a29470cd-18d2-40b0-bf85-47a3a038e980",
@@ -3344,7 +3341,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:coram-ai:3dbdcba0-0d78-4e98-b62a-126572a4f01d",
@@ -3376,7 +3373,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:dexmate:a778a888-08ae-40f2-97bb-3fd9378ac408",
@@ -3408,7 +3405,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:dexmate:e6cb3330-bb25-4bd5-abaa-89be219b3815",
@@ -3440,7 +3437,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:doordashusa:8306636",
@@ -3472,7 +3469,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:doordashusa:8269219",
@@ -3504,7 +3501,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:figureai:4375064006",
@@ -3536,7 +3533,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:figureai:4410831006",
@@ -3568,7 +3565,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:figureai:4596418006",
@@ -3600,7 +3597,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:figureai:4728462006",
@@ -3632,7 +3629,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:foundry-robotics:f4a52fae-cf78-4294-a4be-e70ef6099542",
@@ -3664,7 +3661,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:gritt:ed459ec7-84ba-415c-9c44-5be778a7c6b0",
@@ -3696,7 +3693,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:gritt:5a834deb-09aa-406c-8c8d-c5d7cc6818ad",
@@ -3728,14 +3725,14 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:19e3a4fe-5e6a-4fbd-bc02-42f226928907",
       "company": "Hadrian",
       "title": "Manufacturing Engineer, Battery Assembly",
       "category": "Manufacturing / NPI",
-      "location": "Los Angeles, CA; San Francisco Bay Area, CA",
+      "location": "Los Angeles, CA",
       "workstyle": "OnSite",
       "employment": "FullTime",
       "experience_fit": "0–3 years specified",
@@ -3758,10 +3755,9 @@
       "company_context": "Torrance and Bay Area autonomous precision manufacturing; equipment, tooling, fixtures and factory automation.",
       "careers_url": "https://www.hadrian.co/careers",
       "regions": [
-        "LA",
-        "Bay Area"
+        "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:7971f41e-f536-43d6-83ce-73337cae009f",
@@ -3794,7 +3790,7 @@
         "LA",
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:f6a3e3da-6785-4f1e-a06a-8e84de8a4582",
@@ -3827,7 +3823,7 @@
         "LA",
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:0e364752-1876-4c2c-84e4-f0f2fc738755",
@@ -3860,14 +3856,14 @@
         "LA",
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:71c9bcfa-291b-4431-b754-1e439abf99b1",
       "company": "Hadrian",
       "title": "Manufacturing Engineer, Welding",
       "category": "Manufacturing / NPI",
-      "location": "Los Angeles, CA; San Francisco Bay Area, CA",
+      "location": "Los Angeles, CA",
       "workstyle": "OnSite",
       "employment": "FullTime",
       "experience_fit": "0–3 years specified",
@@ -3890,10 +3886,9 @@
       "company_context": "Torrance and Bay Area autonomous precision manufacturing; equipment, tooling, fixtures and factory automation.",
       "careers_url": "https://www.hadrian.co/careers",
       "regions": [
-        "LA",
-        "Bay Area"
+        "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:7c7c32d5-809f-4459-a998-b5a02bc5b064",
@@ -3926,7 +3921,7 @@
         "LA",
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:4c478d59-08db-4226-9b92-06609d5564a4",
@@ -3959,14 +3954,14 @@
         "LA",
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:5a3ffe52-83e8-454a-a8e7-7b6a21842743",
       "company": "Hadrian",
       "title": "Mechanical Engineer, Welding",
       "category": "Mechanical / hardware design",
-      "location": "Los Angeles, CA; San Francisco Bay Area, CA",
+      "location": "Los Angeles, CA",
       "workstyle": "OnSite",
       "employment": "FullTime",
       "experience_fit": "0–3 years specified",
@@ -3989,10 +3984,9 @@
       "company_context": "Torrance and Bay Area autonomous precision manufacturing; equipment, tooling, fixtures and factory automation.",
       "careers_url": "https://www.hadrian.co/careers",
       "regions": [
-        "LA",
-        "Bay Area"
+        "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:a15a7eb7-1b0f-4b61-93db-fbfa22430efb",
@@ -4025,7 +4019,7 @@
         "LA",
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:536321d0-70cd-4ffb-af14-6b552ab52bbb",
@@ -4058,14 +4052,14 @@
         "LA",
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:hadrian-automation:7b1d500c-3c2e-48b3-9974-917a96b65e32",
       "company": "Hadrian",
       "title": "Tooling Engineer",
       "category": "Manufacturing / NPI",
-      "location": "Los Angeles, CA; San Francisco Bay Area, CA",
+      "location": "Los Angeles, CA",
       "workstyle": "OnSite",
       "employment": "FullTime",
       "experience_fit": "Experience not stated — review",
@@ -4088,10 +4082,9 @@
       "company_context": "Torrance and Bay Area autonomous precision manufacturing; equipment, tooling, fixtures and factory automation.",
       "careers_url": "https://www.hadrian.co/careers",
       "regions": [
-        "LA",
-        "Bay Area"
+        "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:icarus:5475970008",
@@ -4103,7 +4096,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$100,000–$140,000 base / year",
-      "posted": "2026-11-20T15:07:55-05:00",
+      "posted": "2026-11-25T22:37:43-05:00",
       "apply_url": "https://job-boards.greenhouse.io/icarus/jobs/5475970008",
       "source_url": "https://job-boards.greenhouse.io/icarus/jobs/5475970008",
       "source": "greenhouse:icarus",
@@ -4123,7 +4116,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:icarus:5102826008",
@@ -4135,7 +4128,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$180,000–$220,000 base / year",
-      "posted": "2026-11-20T15:04:48-05:00",
+      "posted": "2026-11-25T22:39:55-05:00",
       "apply_url": "https://job-boards.greenhouse.io/icarus/jobs/5102826008",
       "source_url": "https://job-boards.greenhouse.io/icarus/jobs/5102826008",
       "source": "greenhouse:icarus",
@@ -4155,7 +4148,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5224259008",
@@ -4187,7 +4180,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5038677008",
@@ -4219,7 +4212,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5430836008",
@@ -4251,7 +4244,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5478655008",
@@ -4283,7 +4276,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5400313008",
@@ -4315,7 +4308,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5424245008",
@@ -4347,7 +4340,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5433722008",
@@ -4379,7 +4372,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5020121008",
@@ -4411,7 +4404,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5479317008",
@@ -4443,7 +4436,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5020126008",
@@ -4475,7 +4468,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5204344008",
@@ -4507,7 +4500,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5466539008",
@@ -4539,7 +4532,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5478486008",
@@ -4571,7 +4564,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:k2spacecorporation:5031528008",
@@ -4603,7 +4596,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4393124009",
@@ -4635,7 +4628,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4392123009",
@@ -4667,7 +4660,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4387970009",
@@ -4697,7 +4690,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4437002009",
@@ -4729,7 +4722,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4455005009",
@@ -4762,7 +4755,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4455036009",
@@ -4794,7 +4787,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4454978009",
@@ -4826,7 +4819,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4390072009",
@@ -4858,7 +4851,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:machindustries:4402256009",
@@ -4890,7 +4883,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:maticrobots:bfb0df27-bb17-46a1-919c-afd8c3d09a7d",
@@ -4922,7 +4915,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:maticrobots:1858e85e-c3be-4d05-9a43-083a84ba3255",
@@ -4954,7 +4947,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:maticrobots:76c07009-73b5-43e3-affb-d4fc20b9fe49",
@@ -4986,7 +4979,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5057431007",
@@ -5018,7 +5011,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5138283007",
@@ -5050,7 +5043,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5226810007",
@@ -5082,7 +5075,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5258985007",
@@ -5114,7 +5107,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:nerostechnologies:5278244007",
@@ -5146,7 +5139,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:nuro:8187498",
@@ -5178,7 +5171,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "workday:nvidia:Thermal-Design-Engineer_JR2029574",
@@ -5190,7 +5183,7 @@
       "employment": "Full time",
       "experience_fit": "0–3 years specified",
       "salary": "Not disclosed",
-      "posted": "Posted Today",
+      "posted": "Posted 2 Days Ago",
       "apply_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Thermal-Design-Engineer_JR2029574",
       "source_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Thermal-Design-Engineer_JR2029574",
       "source": "workday:nvidia",
@@ -5210,7 +5203,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:openai:56aafd17-7db9-473a-b3b4-957b6d926cdf",
@@ -5243,7 +5236,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:openai:a8a421d1-c9bb-4e37-8418-4e4d6b2ba29d",
@@ -5276,7 +5269,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:openai:2b87bb06-ba33-4cab-b950-0df12ca85dcf",
@@ -5308,7 +5301,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:openai:88e65467-7e19-4164-a1de-1d49d3f2dd52",
@@ -5340,7 +5333,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:openai:0cbc1196-37ee-4c41-b02b-12653309a8f7",
@@ -5372,7 +5365,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:openai:8a86b02b-6063-4124-863f-7e41e9849e22",
@@ -5404,7 +5397,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:radiant-industries:9a8c81a5-1a5d-47bf-8112-6dfdf30a7814",
@@ -5436,7 +5429,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:radiant-industries:7c03b63f-6eea-4452-8141-ea5a10be7fda",
@@ -5468,7 +5461,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:radiant-industries:556077a3-b938-4e18-a83e-436c6525f062",
@@ -5500,7 +5493,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:radiant-industries:75159ba3-fa50-448f-92ea-54c260d44200",
@@ -5532,7 +5525,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:radiant-industries:973dc667-7bd2-468a-a162-35732363a3b7",
@@ -5564,7 +5557,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:redwoodmaterials:5835808004",
@@ -5596,7 +5589,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8615771002",
@@ -5628,7 +5621,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8822916002",
@@ -5660,7 +5653,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8918048002",
@@ -5692,7 +5685,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8697118002",
@@ -5724,7 +5717,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8547676002",
@@ -5756,7 +5749,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8205991002",
@@ -5788,7 +5781,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8910141002",
@@ -5820,7 +5813,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8936583002",
@@ -5852,7 +5845,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8914636002",
@@ -5884,7 +5877,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8918138002",
@@ -5916,7 +5909,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8862051002",
@@ -5948,7 +5941,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8889032002",
@@ -5980,7 +5973,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8787370002",
@@ -6012,7 +6005,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8929211002",
@@ -6044,7 +6037,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8900787002",
@@ -6076,7 +6069,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8900805002",
@@ -6108,7 +6101,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8885963002",
@@ -6140,7 +6133,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8770685002",
@@ -6172,7 +6165,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8927177002",
@@ -6204,7 +6197,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8716864002",
@@ -6236,7 +6229,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8638781002",
@@ -6268,7 +6261,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8892926002",
@@ -6300,7 +6293,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8694528002",
@@ -6332,7 +6325,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8948123002",
@@ -6364,7 +6357,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8937117002",
@@ -6396,7 +6389,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8934084002",
@@ -6428,7 +6421,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:relativity:8943519002",
@@ -6460,7 +6453,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:rocketlab:8037710003",
@@ -6492,7 +6485,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:rocketlab:7932677003",
@@ -6524,7 +6517,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:rocketlab:7850667003",
@@ -6556,7 +6549,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:skydio:31884513-c028-4ea2-ad65-d3f948a32afa",
@@ -6588,7 +6581,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:skydio:ba62805c-ebe7-4b99-85af-f58c807b4dd1",
@@ -6620,7 +6613,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:skydio:97f41217-653b-4a2c-bc91-86c76ecf85e3",
@@ -6652,7 +6645,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8816517002",
@@ -6684,7 +6677,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8784827002",
@@ -6716,7 +6709,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8784191002",
@@ -6749,7 +6742,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8738577002",
@@ -6781,7 +6774,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8639275002",
@@ -6813,7 +6806,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8842018002",
@@ -6845,7 +6838,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8682164002",
@@ -6877,7 +6870,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8904042002",
@@ -6909,7 +6902,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8696659002",
@@ -6941,7 +6934,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8635886002",
@@ -6973,7 +6966,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8843919002",
@@ -7005,7 +6998,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8950837002",
@@ -7037,7 +7030,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8817807002",
@@ -7069,7 +7062,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8601813002",
@@ -7101,7 +7094,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8742759002",
@@ -7133,7 +7126,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8927499002",
@@ -7165,7 +7158,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8896018002",
@@ -7197,7 +7190,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8876413002",
@@ -7229,7 +7222,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8679026002",
@@ -7261,7 +7254,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8803023002",
@@ -7293,7 +7286,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8849297002",
@@ -7325,7 +7318,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8623357002",
@@ -7357,7 +7350,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8939418002",
@@ -7389,7 +7382,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8815104002",
@@ -7421,7 +7414,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8748535002",
@@ -7453,7 +7446,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8681151002",
@@ -7485,7 +7478,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8920445002",
@@ -7517,7 +7510,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8952403002",
@@ -7549,7 +7542,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8950291002",
@@ -7581,7 +7574,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8649465002",
@@ -7613,7 +7606,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8900388002",
@@ -7645,7 +7638,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8727087002",
@@ -7677,7 +7670,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8661010002",
@@ -7709,7 +7702,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8604710002",
@@ -7741,7 +7734,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8607193002",
@@ -7773,7 +7766,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8569011002",
@@ -7805,7 +7798,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8752547002",
@@ -7835,7 +7828,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8766964002",
@@ -7865,7 +7858,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8811663002",
@@ -7897,7 +7890,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8700050002",
@@ -7929,7 +7922,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8703535002",
@@ -7961,7 +7954,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8904025002",
@@ -7993,7 +7986,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8632389002",
@@ -8025,7 +8018,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8654572002",
@@ -8057,7 +8050,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8895875002",
@@ -8089,7 +8082,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8817976002",
@@ -8121,7 +8114,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8766418002",
@@ -8153,7 +8146,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8933926002",
@@ -8185,7 +8178,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8959423002",
@@ -8217,7 +8210,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8948664002",
@@ -8249,7 +8242,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8900987002",
@@ -8281,7 +8274,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8928854002",
@@ -8313,7 +8306,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8652841002",
@@ -8345,7 +8338,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8946484002",
@@ -8377,7 +8370,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8646249002",
@@ -8409,7 +8402,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8871031002",
@@ -8441,7 +8434,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8687744002",
@@ -8473,7 +8466,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8644018002",
@@ -8505,7 +8498,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:spacex:8918376002",
@@ -8537,7 +8530,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:specter:463b9708-1e48-436e-894e-17a014be99e2",
@@ -8569,7 +8562,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:specter:5cd498d6-9f71-474f-a0c7-964ed4d24282",
@@ -8601,7 +8594,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:trueanomalyinc:5104217007",
@@ -8631,7 +8624,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:trueanomalyinc:5104245007",
@@ -8663,7 +8656,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8016297003",
@@ -8695,7 +8688,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8010110003",
@@ -8727,7 +8720,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8043396003",
@@ -8759,7 +8752,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8043387003",
@@ -8791,7 +8784,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8010106003",
@@ -8823,7 +8816,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:7989663003",
@@ -8855,7 +8848,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8197068003",
@@ -8887,7 +8880,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8199325003",
@@ -8919,7 +8912,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8017264003",
@@ -8951,7 +8944,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vardaspace:8012030003",
@@ -8983,7 +8976,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4585081006",
@@ -9015,7 +9008,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4709836006",
@@ -9047,7 +9040,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4694236006",
@@ -9079,7 +9072,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4705109006",
@@ -9111,7 +9104,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4729654006",
@@ -9143,7 +9136,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4621291006",
@@ -9175,7 +9168,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4712934006",
@@ -9207,7 +9200,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4727476006",
@@ -9239,7 +9232,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4703949006",
@@ -9271,7 +9264,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:vast:4702107006",
@@ -9303,7 +9296,7 @@
       "regions": [
         "LA"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:westmag:1eadb4b5-9b25-4f17-b115-73c5341e3745",
@@ -9335,7 +9328,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "ashby:westmag:64a93fb9-ce73-4fe1-8936-52ee259be5fe",
@@ -9367,7 +9360,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7811811003",
@@ -9379,7 +9372,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$117,000–$165,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7811811003?gh_jid=7811811003",
       "source_url": "https://www.zipline.com/open-roles/7811811003?gh_jid=7811811003",
       "source": "greenhouse:flyzipline",
@@ -9399,7 +9392,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7986086003",
@@ -9411,7 +9404,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$130,000–$186,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7986086003?gh_jid=7986086003",
       "source_url": "https://www.zipline.com/open-roles/7986086003?gh_jid=7986086003",
       "source": "greenhouse:flyzipline",
@@ -9431,7 +9424,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7868268003",
@@ -9443,7 +9436,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$125,000–$240,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7868268003?gh_jid=7868268003",
       "source_url": "https://www.zipline.com/open-roles/7868268003?gh_jid=7868268003",
       "source": "greenhouse:flyzipline",
@@ -9463,7 +9456,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7808622003",
@@ -9475,7 +9468,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$135,000–$225,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7808622003?gh_jid=7808622003",
       "source_url": "https://www.zipline.com/open-roles/7808622003?gh_jid=7808622003",
       "source": "greenhouse:flyzipline",
@@ -9495,7 +9488,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7868241003",
@@ -9507,7 +9500,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$130,000–$220,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7868241003?gh_jid=7868241003",
       "source_url": "https://www.zipline.com/open-roles/7868241003?gh_jid=7868241003",
       "source": "greenhouse:flyzipline",
@@ -9525,7 +9518,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7849130003",
@@ -9537,7 +9530,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$135,000–$225,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7849130003?gh_jid=7849130003",
       "source_url": "https://www.zipline.com/open-roles/7849130003?gh_jid=7849130003",
       "source": "greenhouse:flyzipline",
@@ -9557,7 +9550,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:8209557003",
@@ -9569,7 +9562,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$130,000–$240,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/8209557003?gh_jid=8209557003",
       "source_url": "https://www.zipline.com/open-roles/8209557003?gh_jid=8209557003",
       "source": "greenhouse:flyzipline",
@@ -9587,7 +9580,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7849112003",
@@ -9599,7 +9592,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$145,000–$225,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7849112003?gh_jid=7849112003",
       "source_url": "https://www.zipline.com/open-roles/7849112003?gh_jid=7849112003",
       "source": "greenhouse:flyzipline",
@@ -9619,7 +9612,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7855194003",
@@ -9631,7 +9624,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$130,000–$200,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7855194003?gh_jid=7855194003",
       "source_url": "https://www.zipline.com/open-roles/7855194003?gh_jid=7855194003",
       "source": "greenhouse:flyzipline",
@@ -9651,7 +9644,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7810502003",
@@ -9663,7 +9656,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$135,000–$220,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7810502003?gh_jid=7810502003",
       "source_url": "https://www.zipline.com/open-roles/7810502003?gh_jid=7810502003",
       "source": "greenhouse:flyzipline",
@@ -9683,7 +9676,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "greenhouse:flyzipline:7807663003",
@@ -9695,7 +9688,7 @@
       "employment": "Unspecified",
       "experience_fit": "Experience not stated — review",
       "salary": "$130,000–$200,000 base / year",
-      "posted": "2026-11-24T08:21:19-05:00",
+      "posted": "2026-11-25T18:56:18-05:00",
       "apply_url": "https://www.zipline.com/open-roles/7807663003?gh_jid=7807663003",
       "source_url": "https://www.zipline.com/open-roles/7807663003?gh_jid=7807663003",
       "source": "greenhouse:flyzipline",
@@ -9713,7 +9706,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "lever:zoox:d53c9355-98ca-4d28-a769-cd54e85ff025",
@@ -9745,7 +9738,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     },
     {
       "id": "lever:zoox:e6a4bbe1-20ab-4f1f-af07-f06fabedeabd",
@@ -9777,7 +9770,7 @@
       "regions": [
         "Bay Area"
       ],
-      "last_seen": "2026-11-25T23:08:27+00:00"
+      "last_seen": "2026-11-27T22:44:47+00:00"
     }
   ]
 }
